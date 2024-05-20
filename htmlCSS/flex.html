@@ -60,13 +60,28 @@
         }
         .formulario {
             background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.307));
+
+            section {
+                margin-top: 15px;
+            }
 
             section h2 {
                 text-align: center;
             }
-            section p {
-
+            legend {
+                font-size: 0.9em;
+                margin:5px 0px;
             }
+            fieldset {
+                border: 0px;
+            }
+            #inputName {
+                margin: 10px 0px 10px 5px;
+            }
+
 
         }
     </style>
@@ -82,7 +97,7 @@
             <li>Contratos </li>
         </ul>
 
-        <p><a href="https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Falbqvictor1508&e=AT0ZYXY0Yi4LkLiY2B4GOW6V5mnmFxRT3VlYSzUZqx1SOThkXStErfvVOS9zVWoCDiuExdKNMbfVskbtTxIZLWChZRacxonpWYpToXE"><button>Sobre mim!</button></a></p>
+        <p><a href="https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2Falbqvictor1508&e=AT0ZYXY0Yi4LkLiY2B4GOW6V5mnmFxRT3VlYSzUZqx1SOThkXStErfvVOS9zVWoCDiuExdKNMbfVskbtTxIZLWChZRacxonpWYpToXE"target="_blank"><button>Sobre mim!</button></a></p>
         
     </header>
 
@@ -96,17 +111,44 @@
                     
                         <fieldset>
                             <label for="inputName">Nome:</label>
-                            <input type="text" name="nome" id="inputName">
+                            <input type="text" name="nome" id="inputName" required>
+                            <!-- required: Mini validação de formulário-->
                         </fieldset>
                     
                     <fieldset>
                         <label for="senha">Senha:</label>
-                        <input type="password" name="senha" id="senha">
+                        <input type="password" name="senha" id="senha" required>
                     </fieldset>
+                    <section>
+                        <fieldset>
+
+                            <p>
+                            <label for="dev">É dev?</label>
+                            <input type="checkbox"name="dev" id="dev" required>
+                            </p>
+
+                            <label for="check">É um homem?</label>
+
+                            Sim! <input type="radio" name="check" id="check" required checked>
+
+                            Não! <input type="radio" name="check" id="check" required>
+                        </fieldset>
+                        <fieldset>
+                            <p style="display: flex;justify-content: center; margin-top: 10px; gap: 10px;">
+                                <!--Não faça isso!(fiquei com preguiça)-->
+                                <button type="reset">
+                                    Resetar!
+                                </button>
+                                <button type="submit">
+                                    Enviar!
+                                </button>
+                            </p>
+                        </fieldset>
+                    </section>
                 </section>
             </form>
         </div>
     </main>
-    
 </body>
 </html>
+
