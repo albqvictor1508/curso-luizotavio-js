@@ -37,7 +37,7 @@ ainda mais simples, pode ser feito como: "grid-column: span x" ou "grid-row: spa
 
     x = quantidade de mesclagens
 
-
+assim como as tabelas
 
 
 
