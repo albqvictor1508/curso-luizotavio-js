@@ -13,6 +13,10 @@ header {
     justify-content: space-between;
     background-color: lightgray;
 
+    & h3 {
+        font-size: 1.5em;
+        margin-left: 5px;
+    }
     nav ul {
         list-style: none;
         display: flex;
@@ -20,6 +24,7 @@ header {
         margin-right: 15px;
     }
     li {
+        font-size: 1.2em;
         padding: 10px 5px;
     }
     li:hover {
@@ -37,11 +42,31 @@ body {
     font-size: 62.5%;
     font-family: 'Open Sans';
 }
+.image-bg {
+    background: lightgray radial-gradient(white, rgb(155, 155, 155));
+    padding: 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-main {
-    
+    & .nissangtr-text {
 
-    .bg-
+    & p {
+        max-width: 320px;
+    } 
+
+    & h2 {
+        margin-bottom: 15px;
+        font-size: 2.2rem;
+    }
+    }
+    & .img-nissangtr {
+        margin-right: -70px;
+        & img {
+            max-width: 420px;
+            
+        }
+    }
 }
 
 h1,h2,h3,h4,h5,h6 {
