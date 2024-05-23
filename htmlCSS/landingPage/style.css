@@ -11,7 +11,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: lightgray;
+    position: sticky;
 
     & h3 {
         font-size: 1.5em;
@@ -25,15 +25,16 @@ header {
     }
     li {
         font-size: 1.2em;
-        padding: 10px 5px;
+        padding: 5px 5px;
     }
     li:hover {
-        background-color: white;
+        background-color: rgb(173, 173, 173);
     }
 
     a {
         text-decoration: none;
         font-weight: bold;
+        font-size: ;
         color: black;
         
     }
@@ -41,10 +42,12 @@ header {
 body {
     font-size: 62.5%;
     font-family: 'Open Sans';
+    overflow:auto;
 }
+
 .image-bg {
     background: lightgray radial-gradient(white, rgb(155, 155, 155));
-    padding: 4%;
+    padding: 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,18 +55,19 @@ body {
     & .nissangtr-text {
 
     & p {
-        max-width: 320px;
+        font-size: 1.2em;
+        max-width: 400px;
     } 
 
     & h2 {
         margin-bottom: 15px;
-        font-size: 2.2rem;
+        font-size: 2.4rem;
     }
     }
     & .img-nissangtr {
-        margin-right: -70px;
+        margin-right: -60px;
         & img {
-            max-width: 420px;
+            max-width: 460px;
             
         }
     }
@@ -72,4 +76,23 @@ body {
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Montserrat';
     font-weight: 900;
+}
+
+#intro {
+    max-width: 1200px;
+    margin: auto;
+
+    & h2 {
+        font-size: 1.6rem;
+        padding: 40px 0px 15px 0px;
+        text-align: center;
+        margin: auto;
+    }
+    & p {
+        padding: 5px 0px;
+        font-size: 1.3em;
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
+    }
 }
