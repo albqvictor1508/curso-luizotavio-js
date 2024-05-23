@@ -10,6 +10,10 @@
             padding: 0;
             box-sizing: border-box;
         }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
         main {
             display: grid;
             grid-template-columns: 200px 1fr;
@@ -19,16 +23,41 @@
         main div:nth-child(1) {
             background-color: darkblue;
             grid-area: cabecalho;
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            padding: 5px;
+
+            main div ul {
+                display: flex;
+                list-style: none;
+                margin-right: 10px;
+                gap: 10px;
+
+            }
+
+            
         }
         main div:nth-child(2) {
-            background-color: pink;
+            background-color: rgb(7, 2, 87);
             grid-area: nav;
-            grid-row: ;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+            }
+            
             
         }
         main div:nth-child(3) {
-            background-color: orange;
+            background-color: rgb(1, 8, 54);
             grid-area: body;
+
+            p {
+                margin: 10px;
+                
+            }
         }
         main div:nth-child(4) {
             background-color: black;
@@ -39,10 +68,64 @@
 </head>
 <body>
     <main>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+        <div>
+            <h1>Boa noite!</h1>
+            <nav>
+                <ul>
+                    <li>Sobre Mim</li>
+                    <li>Github</li>
+                    <li>Instagram</li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li>
+                        <p><a href="">Item</a></p>
+                        <p><a href="">Item</a></p>
+                        <p><a href="">Item</a></p>
+                        <p><a href="">Item</a></p>
+                        <p><a href="">Item</a></p>
+                        <p><a href="">Item</a></p>
+                        <p><a href="">Item</a></p>
+                        <p><a href="">Item</a></p>
+                        <p><a href="">Item</a></p>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <h2 style="text-align: center; padding-top: 10px;">Teste GridLayout</h2>
+
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste fuga vel ullam maxime adipisci mollitia, deserunt illum, sunt dicta laboriosam vero, optio delectus. Fugit natus sed amet hic iste omnis!
+            </p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur laudantium voluptatum saepe, enim sequi deleniti soluta explicabo esse autem unde repudiandae adipisci nihil nam. Totam iste consequatur quas ducimus dolorem.</p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga placeat autem culpa facilis voluptate deleniti hic distinctio tempore, sed quae molestiae nemo fugit mollitia numquam deserunt exercitationem unde aliquam suscipit!</p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga placeat autem culpa facilis voluptate deleniti hic distinctio tempore, sed quae molestiae nemo fugit mollitia numquam deserunt exercitationem unde aliquam suscipit!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga placeat autem culpa facilis voluptate deleniti hic distinctio tempore, sed quae molestiae nemo fugit mollitia numquam deserunt exercitationem unde aliquam suscipit!</p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga placeat autem culpa facilis voluptate deleniti hic distinctio tempore, sed quae molestiae nemo fugit mollitia numquam deserunt exercitationem unde aliquam suscipit!</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla rerum amet aliquid, porro ipsa temporibus itaque reiciendis rem qui sequi autem excepturi ut sint. Rerum vel incidunt id illum illo. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio temporibus minima possimus, maxime quidem repellat incidunt! Ut possimus eum, optio minus, illo odit rerum quis quas laboriosam, fuga autem! Sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam laboriosam neque deserunt consequatur, minus ipsum accusamus earum assumenda numquam error illo impedit hic non eligendi sed ratione? Tempore, alias fugiat?</p>
+        </div>
+        <div>
+            <div>
+                <ul>
+                    <li><p>teste de grid layout para construção do escopo de um site</p>
+                    </li>
+                    <li>
+                        <p>vou deixar assim mesmo fiquei com preguiça de fazer mais </p>
+                    </li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
     </main>
     
 </body>
