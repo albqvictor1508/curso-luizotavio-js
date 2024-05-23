@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridLayout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            min-height: 100%;
+            grid-template-areas: 'cabecalho cabecalho' 'nav body' 'footer footer';
+        }
+        main div:nth-child(1) {
+            background-color: darkblue;
+            grid-area: cabecalho;
+        }
+        main div:nth-child(2) {
+            background-color: pink;
+            grid-area: nav;
+            grid-row: ;
+            
+        }
+        main div:nth-child(3) {
+            background-color: orange;
+            grid-area: body;
+        }
+        main div:nth-child(4) {
+            background-color: black;
+            color: white;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </main>
+    
+</body>
+</html>
