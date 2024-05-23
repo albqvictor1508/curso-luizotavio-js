@@ -55,7 +55,25 @@ significa que o tanto de colunas vai ser automatico de acordo com o tamanho máx
 também seria facilmente implementado usando media-query, porém dessa maneira gasta menos linhas de código para desempenhar o mesmo papél, já que vai se adaptar aos demais tamanhos de tela 
 
 
+    div#pai {
+        display:grid;
+        grid-template-columns: [um] 1fr [dois] 1fr [tres] 1fr;  
+    }
+
+    pode nomear as colunas
+
+    grid-column(ou row): um / quatro
+
+    (indica que a coluna ou linha começará no um e terminará na quatro)
+
+*grid-area: um/ um/ quatro/ quatro*
+
+começa na linha "um" e termina na linha "quatro", inicia na coluna "um" e termina na coluna "quatro"
 
 ## Linhas
 
 tudo que foi utilizado nas colunas com o grid também pode ser implementado para as linhas, porém não é muito utilizado pois geralmente usamos o conteúdo para adaptar as linhas 
+
+## Gaps
+
+shorthand gap = row-gap + column-gap
