@@ -11,7 +11,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
 
     & h3 {
         font-size: 1.5em;
@@ -25,7 +24,7 @@ header {
     }
     li {
         font-size: 1.2em;
-        padding: 5px 5px;
+        padding: 8px 10px;
     }
     li:hover {
         background-color: rgb(173, 173, 173);
@@ -34,7 +33,7 @@ header {
     a {
         text-decoration: none;
         font-weight: bold;
-        font-size: ;
+        font-size: 1rem;
         color: black;
         
     }
@@ -60,14 +59,14 @@ body {
     } 
 
     & h2 {
-        margin-bottom: 15px;
-        font-size: 2.4rem;
+        margin-bottom: 20px;
+        font-size: 2.7rem;
     }
     }
     & .img-nissangtr {
         margin-right: -60px;
         & img {
-            max-width: 460px;
+            max-width: 480px;
             
         }
     }
@@ -89,10 +88,38 @@ h1,h2,h3,h4,h5,h6 {
         margin: auto;
     }
     & p {
-        padding: 5px 0px;
+        padding: 8px 0px;
         font-size: 1.3em;
         max-width: 900px;
         margin: auto;
         text-align: center;
     }
+}
+.section-top3-bg {
+    padding: 8vh;
+    gap: 15px;
+    background: lightgray url('images/backgrounds/wave_background.png') no-repeat;
+    background-size: cover;
+
+}
+.top3-title {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.section-top3 {
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    color: white;
+
+    & h2 {
+        margin-bottom: 10px;
+    }
+        
+
 }
