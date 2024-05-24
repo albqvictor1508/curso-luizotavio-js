@@ -103,8 +103,9 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 .section-top3-bg {
-    margin-top: 20px;
-    padding: 8vw;
+    margin-top: 200px;
+    height: 120vh;
+    padding: 6%;
     gap: 15px;
     background: lightgray url('images/backgrounds/wave_background.png') no-repeat;
     background-size: cover;
@@ -117,7 +118,7 @@ h1,h2,h3,h4,h5,h6 {
 
     & h2 {
         margin-bottom: 10px;
-        font-size: 3.2rem;
+        font-size: 2.7rem;
     }
 
     & legend {
@@ -147,15 +148,21 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     & p {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
+        
+        margin-top: 10px;
     }      
 
 }
-.section-top3 div {
-    background-color: rgba(169, 169, 169, 0.445);
-    
-    /*background-color: rgba(169, 169, 169, 0.29);*/
-    padding: 20px;
+.section-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1200px;
+
+    & div {
+        
+    }
 }
+
 
 
