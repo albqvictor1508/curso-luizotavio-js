@@ -19,7 +19,7 @@ header {
     justify-content: space-between;
 
     & h3 a {
-        font-size: 2em;
+        font-size: 1.8em;
         margin-left: 15px;
     }
     nav ul {
@@ -29,17 +29,27 @@ header {
         margin-right: 30px;
     }
     li {
-        
+        position: relative;
         padding: 10px 10px;
     }
-    li:hover {
-        background-color: rgb(173, 173, 173);
+    li::after {
+        content: '';
+        position: absolute;
+        background-color: darkslategray;
+        width: 0%;
+        bottom: .3rem;
+        left: 25%;
+        height: 0.15rem;
+        transition: 300ms ease;
+    }
+    li:hover::after {
+        width: 50%;
     }
 
     a {
         text-decoration: none;
         font-weight: bold;
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: black;
         
     }
@@ -113,7 +123,7 @@ h1,h2,h3,h4,h5,h6 {
     height: 120vh;
     padding: 6%;
     gap: 15px;
-    background: lightgray url('images/backgrounds/wave_background.png') no-repeat;
+    background: lightgray url('images/backgrounds/wave_background.svg') no-repeat;
     background-size: cover;
 
 }
@@ -286,13 +296,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 .sobre-mim h3 {
     text-align: center;
-    font-size: 2.1rem;
+    font-size: 2rem;
     margin: 20px;
 }
 .sobre-mim p {
     width: 400px;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 
 }
 
