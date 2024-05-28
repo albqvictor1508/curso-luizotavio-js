@@ -21,6 +21,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 1;
 
     & h3 a {
         font-size: 1.8em;
@@ -168,10 +169,10 @@ h1,h2,h3,h4,h5,h6 {
     & h2::before {
         counter-increment: top3;
         content: counter(top3);
-        font-size: 2.5rem;
+        font-size: 2.7rem;
         font-style: italic;
         position: absolute;
-        left: 7.7rem;
+        left: 7rem;
         bottom: 0;
         top: -8px;
         transform: rotate(5deg);
@@ -196,16 +197,22 @@ h1,h2,h3,h4,h5,h6 {
         }
 }
 .gallery-body {
+    place-content: center;
     max-width: 1200px;
     margin: auto;
     display: grid;
     padding: 10px;
-    gap: 70px 140px;    grid-template-columns: 300px 300px 300px;
+    gap: 20px 80px;    
+    grid-template-columns: 1fr 1fr 1fr;
 
     
 }
 .gallery-body div {
     display: block;
+}
+.gallery-body img {
+    width: 100%;
+    height: 90%;
 }
 .gallery-body div img:hover {
     transform: scale(350px);
@@ -229,7 +236,6 @@ h1,h2,h3,h4,h5,h6 {
     justify-content: space-around;
     gap: 200px;
     align-items: center;
-
     
 }
 .form-body {
@@ -278,7 +284,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #txtArea {
-    width: 300px;
+    width: 100%;
     height: 100px;
     padding: 10px;
     resize: none;
@@ -321,5 +327,81 @@ h1,h2,h3,h4,h5,h6 {
     text-align: center;
     font-size: 1.1rem;
 
+}
+@media (max-width:1200px) {
+    .gallery-body {
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+    }
+    .section-top3-bg {
+        padding-top: 120px;
+        height: 235vh;
+        display: block;
+    }
+    .section-top3 {
+        grid-template-columns: 1fr;
+        display: block;
+        width: 100%;
+        
+
+        & h2 {
+            text-align: start;
+            margin:15px 0px;
+            margin-left: 40px;
+        }
+        & h2::before {
+            left: -40px;
+        }
+        
+    }
+
+}
+
+@media (max-width:950px) {
+    .image-bg {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .img-nissangtr {
+        display: grid;
+        place-content: center;
+        & img {
+            width: 80vw;
+            margin: auto;
+        }
+        }
+    .nissangtr-text {
+        margin-top: 35px;
+        text-align: center;
+
+            & p {
+                font-size: 1.7em;
+            } 
+        
+            & h2 {
+                margin-bottom: 20px;
+        
+                font-size: 3.7rem;
+            }
+            }
+    .gallery-body {
+        grid-template-columns: 1fr;
+        place-content: center;
+            }
+    .contactme-body {
+        flex-direction: column-reverse;
+        background-color: #3E3E40;
+        gap: 50px;
+
+        & h2 {
+            color: white;
+        }
+    }
+    #textArea, #inputName, #inputSobrenome {
+        width: 100%;
+    }
+    .field-nome-sobrenome {
+        width: 400px;
+    }
 }
 
