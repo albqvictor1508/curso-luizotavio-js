@@ -7,11 +7,13 @@
     <title>Landing Page</title>
 </head>
 <body>
+    <input type="checkbox" id="closeMenu" role="button" aria-label="closeMenu" class="close-menu"/>
+    <label for="closeMenu" title="close menu" class="label-close-menu" id="labelCloseMenu"></label>
     <header>
         <h3><a href="#">LOGO</a></h3>
 
         <nav>
-            <ul>
+            <ul onclick="getElementById('closeMenu').checked = false">
                 <li><a href="#intro">intro</a></li>
                 <li><a href="#top3">top 3</a></li>
                 <li><a href="#gallery">gallery</a></li>
@@ -155,6 +157,5 @@
 
         </section>
     </main>
-    
 </body>
 </html>

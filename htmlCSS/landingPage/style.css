@@ -53,7 +53,6 @@ header {
 
     a {
         text-decoration: none;
-        font-weight: bold;
         font-size: 1rem;
         color: black;
         
@@ -124,7 +123,7 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 .section-top3-bg {
-    height: 120vh;
+    height: 100vh;
     padding: 6%;
     gap: 15px;
     background: lightgray url('images/backgrounds/wave_background.svg') no-repeat;
@@ -137,7 +136,7 @@ h1,h2,h3,h4,h5,h6 {
     color: white;
 
     & h2 {
-        margin-top: 30px;
+        margin-top: 110px;
         margin-bottom: 10px;
         font-size: 2.7rem;
     }
@@ -235,6 +234,7 @@ h1,h2,h3,h4,h5,h6 {
     display: flex;
     justify-content: space-around;
     gap: 200px;
+    min-height: 100vh;
     align-items: center;
     
 }
@@ -402,6 +402,44 @@ h1,h2,h3,h4,h5,h6 {
     }
     .field-nome-sobrenome {
         width: 400px;
+    }
+    header {
+        display: none;
+        bottom: 0;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        & h3{
+            margin-right: 45px;
+        }
+
+        & ul {
+            flex-direction: column;
+            margin: 0;
+        }
+    }
+    .close-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+    .label-close-menu::after {
+        content: "☰";
+        padding: 15px;
+        font-size: 2.5em;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 2;
+    }
+    .close-menu:checked~header {
+        display: flex;
+    }
+    .close-menu:checked~.label-close-menu::after {
+        content: "×";
     }
 }
 
