@@ -21,9 +21,20 @@
 
     alert(nome.replace('alexsa', 'macaco'))
 
+    alert(`a segunda letra do seu nome é: ${nome[1]}`)
+
+    alert(`o primeiro índice da letra A é: ${nome.search('a')}`)
+
+    alert(`O ultimo indice da letra A é: ${nome.lastIndexOf('a')}`)
+
+    alert(`as ultimas 3 letras do seu nome são: ${nome.slice(-3)}`)
+
     const p = document.createElement('p')
-    p.innerHTML = `${nome}, ${idade}, ${nomeCaracteres}, ${nome.charAt('x')}, ${nome.toUpperCase()}, ${nome.search('o')}`
+    p.innerHTML = `${nome}, ${idade}, ${nomeCaracteres}, ${nome.charAt('x')}, ${nome.toUpperCase()}, ${nome.search('o')}, a segunda letra do seu nome é: ${nome[1]}`
+
     document.body.appendChild(p)
+
+    confirm('exercicio realizado?')
     
      
   </script>
