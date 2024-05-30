@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercícios aula 13</title>
+</head>
+<body>
+  
+  <script>
+    const nome = prompt('Qual seu nome?')
+    const idade = prompt('Qual sua idade?')
+    const nomeCaracteres = nome.length
+
+    
+
+    alert(`${nome} tem ${nomeCaracteres} letras`)
+
+    alert(`a primeira letra do seu nome é: ${nome.charAt(0)}`)
+
+    alert(nome.replace('alexsa', 'macaco'))
+
+    const p = document.createElement('p')
+    p.innerHTML = `${nome}, ${idade}, ${nomeCaracteres}, ${nome.charAt('x')}, ${nome.toUpperCase()}, ${nome.search('o')}`
+    document.body.appendChild(p)
+    
+     
+  </script>
+</body>
+</html>
