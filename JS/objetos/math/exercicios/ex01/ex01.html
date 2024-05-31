@@ -15,25 +15,45 @@
     
     <script>
     let h1 = document.querySelector('h1')
-    const resPrompt = prompt('Digite um número:')
-    const number = Number(resPrompt)
+    const resPrompt = Number(prompt('Digite um número:'))
     h1.innerHTML = `Seu número é ${resPrompt}`
-    console.log(resPrompt)
 
 
     let div = document.createElement('div')
+    
+    div.innerHTML += `<p>Raiz quadrada: ${resPrompt ** 0.5}</p>`
+    //ou Math.sqrt(resPrompt)
 
-    div.innerHTML += `<p>Raiz quadrada: ${Math.sqrt(number)}</p>`
-    div.innerHTML += `<p>É inteiro? ${Number.isInteger(number)}</p>`
-    div.innerHTML += `<p>É um número?</p>`
-    div.innerHTML += `<p>Arredondando para baixo: 0</p>`
-    div.innerHTML += `<p>Arredondando para cima: 0</p>`
-    div.innerHTML += `<p>Com duas casas decimais: 0</p>`
+    let inteiro;
+    if (Number.isInteger(resPrompt) == true) {
+        inteiro = 'sim'
+    }
+    else {
+        inteiro = 'não'
+    }
+    div.innerHTML += `<p>É inteiro? ${inteiro}</p>`
+
+    let Numero;
+    if (Number.isNaN(resPrompt) === false) {
+        Numero = 'sim'
+    }
+    else {
+        Numero = 'não'
+    }
+
+
+    div.innerHTML += `<p>É um número? ${Numero}</p>`
+    div.innerHTML += `<p>Arredondando para baixo: ${Math.floor(resPrompt)}</p>`
+    div.innerHTML += `<p>Arredondando para cima: ${Math.ceil(resPrompt)}</p>`
+    div.innerHTML += `<p>Com duas casas decimais: ${resPrompt.toFixed(2)}</p>`
     
 
 
         
         document.body.appendChild(div)
+
+        console.log(resPrompt)
+        console.log(typeof resPrompt)
 
     </script>
 </body>
