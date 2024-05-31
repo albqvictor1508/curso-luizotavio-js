@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
+    <title>Ex 01- JS</title>
+</head>
+<body>
+    <h1></h1>
+    
+    <script>
+    let h1 = document.querySelector('h1')
+    const resPrompt = prompt('Digite um número:')
+    const number = Number(resPrompt)
+    h1.innerHTML = `Seu número é ${resPrompt}`
+    console.log(resPrompt)
+
+
+    let div = document.createElement('div')
+
+    div.innerHTML += `<p>Raiz quadrada: ${Math.sqrt(number)}</p>`
+    div.innerHTML += `<p>É inteiro? ${Number.isInteger(number)}</p>`
+    div.innerHTML += `<p>É um número?</p>`
+    div.innerHTML += `<p>Arredondando para baixo: 0</p>`
+    div.innerHTML += `<p>Arredondando para cima: 0</p>`
+    div.innerHTML += `<p>Com duas casas decimais: 0</p>`
+    
+
+
+        
+        document.body.appendChild(div)
+
+    </script>
+</body>
+</html>
