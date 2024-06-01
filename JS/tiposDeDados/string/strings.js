@@ -22,6 +22,7 @@ console.log(alexsa.toUpperCase());
 
 console.log(alexsa.toLowerCase());
 
+
 //lembrar de revisar os métodos nesse arquivo js 
 
 

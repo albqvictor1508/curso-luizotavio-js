@@ -22,7 +22,8 @@ arr.slice(0, 3) //cortará o array, pegando somente 3 elementos
 
 //o (0, 3) funcionará como uma subtração, se colocar do (1, 5) por exemplo, só será exibido 4 elementos, (2, 5) = 3 elementos, e assim por diante
 
-console.log(arr.slice(2, 5)) 
+
+console.log(arr)
 
 
 
