@@ -32,4 +32,4 @@ Diferentemente dos primitivos, essas variáveis terão conexão, ou seja, o valo
     let b = [...a];
     let c = b;
 
-Dessa forma, o *b* não terá mais conexão com *a*, apenas copiará seu valor 
+Dessa forma, o *b* não terá mais conexão com *a*, apenas copiará seu valor, mas o *c* terá conexão com o *b*
