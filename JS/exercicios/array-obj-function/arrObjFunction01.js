@@ -1,20 +1,40 @@
-const nome = document.getElementById('inputName');
-const sobrenome = document.getElementById('inputSobrenome');
-const peso = document.getElementById('inputPeso');
-const altura = document.getElementById('inputAltura')
-const btn = document.getElementById('btn')
+function escopo() {
+    const form = document.querySelector('form');
+    const arr = [];  // Array declarado fora da função de evento
+    const divRes = document.querySelector('#res')
 
-btn.addEventListener('click', 'converter')
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const nome = document.querySelector('.nome');
+        const sobrenome = document.querySelector('.sobrenome');
+        const peso = document.querySelector('.peso');
+        const altura = document.querySelector('.altura');
 
-const converter = (nome,sobrenome,peso,altura) => {
-    return {
-        nome,
-        sobrenome,
-        peso,
-        altura,
-    }
+
+        const criarObjeto = () => {
+            const obj = {
+                nome: nome.value,
+                sobrenome: sobrenome.value,
+                peso: peso.value,
+                altura: altura.value
+            };
+            arr.push(obj); 
+            atualizarLista(obj)
+        };
+        const atualizarLista = (obj) => {
+            divRes.innerHTML += `<p>${obj.nome}</p>`
+            divRes.innerHTML += `<p>${obj.peso}</p>`
+        }
+        criarObjeto();
+    });
 }
 
-const arr = [converter]
+escopo();
 
-console.log(arr)
+//revisar esse código quando voltar
+
+//método 'PreventDefault' previne oque é pra acontecer por padrão, nesse caso está evitando que o formulário seja enviado
+
+//Escopo global: oque é escrito fora de funções arrays ou objetos
+
+//Deixar o escopo global o mais limpo possível por questões de segurança e melhor utilização das variáveis

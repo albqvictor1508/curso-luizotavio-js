@@ -85,3 +85,24 @@ const potencia = (p, n=2) => p ** n
 
 n=2 significa que se o 'n' não receber parâmetros, vai se igualar à 2 
 
+### Formas de colocar uma escuta em uma variável dentro da function
+
+Duas formas conhecidas de colocar uma escuta em uma variável para se comportar de uma forma diferente em decorrência de um evento
+
+        
+    form.onsubmit = function (evento) {
+        evento.preventDefault();
+
+        alert('vito')
+        console.log('foi enviado');
+    };
+    
+form.onsubmit significa que esse bloco de código só será chamado quando o formulario for enviado
+
+Outra forma:
+
+    form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    });
+
+Forma mais padrão de criar uma escuta

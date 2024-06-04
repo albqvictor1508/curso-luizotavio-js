@@ -9,30 +9,32 @@
 <body>
     <main>
         <div>
-            <form method="post" autocomplete="off" action="index.html">
+            <form method="get" autocomplete="off" action="">
                 <fieldset>
                     <p>
                         <label for="inputName">Nome:</label>
-                        <input type="text" id="inputName" class="nome" required/>
+                        <input type="text" class="nome"  />
                     </p>
 
                     <p>
                         <label for="inputSobrenome">Sobrenome:</label>
-                        <input type="text" id="inputSobrenome/" required>
+                        <input type="text" class="sobrenome" >
                     </p>
 
                     <p>
                         <label for="inputPeso">Peso:</label>
-                        <input type="text" id="inputPeso" required/>
+                        <input type="text" class="peso" />
                     </p>
 
                     <p>
                         <label for="inputAltura">Altura:</label>
-                        <input type="text" id="inputAltura" required>
+                        <input type="text" class="altura" >
                     </p>
 
                     <div>
-                        <p><button id="btn">Enviar</button></p>
+                        <p><button>Enviar</button></p>
+                        
+                        <div id="res"></div>
                     </div>
                     
                 </fieldset>
