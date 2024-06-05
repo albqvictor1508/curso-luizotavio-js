@@ -31,16 +31,23 @@ console.log(null || undefined || NaN || 'victor ama alexsa' || NaN || true || 0)
 
 //ja que só precisa de um 'true', vai retornar o primeiro true 
 
-let corUsuário = null;
+let corUsuário = 'vermelho';
 const corPadrão = 'roxo';
-let cor;
 
-if (cor === 'preto' || cor ==='amarelo' || cor === 'azul') {
-    corUsuário = cor
+console.log(corUsuário || corPadrão)
+
+//um exemplo simples de validação de cor onde se a cor não for especificada, será usada a cor padrão, mas se for especificada, ela que será usada 
+
+corUsuário = 'vermelho'; // Usando 'corUsuario' consistentemente
+
+if (!corUsuário) { // Verifica se corUsuario é null, undefined, 0, false, '', etc.
+    corUsuário = corPadrao;
 }
-else if (cor === null) {
-    cor = corPadrão
-}
+
+console.log(corUsuario);
+
+//Uma forma mais extensa de fazer o mesmo exemplo 
+
 
 
 
