@@ -56,3 +56,23 @@ form button {
 form button:hover {
   background: var(--primary-color-darker);
 }
+fieldset {
+  border: 0;
+}
+ul {
+  list-style: none;
+  width: 100%;
+
+  & li {
+    margin-left: -35px;
+  }
+}
+.listas {
+  display: flex;
+  justify-content: space-between;
+}
+.listas div {
+  width: 100%;
+  margin: auto;
+
+}
