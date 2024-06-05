@@ -56,3 +56,41 @@ Com os dois sendo verdadeiros, também retornará true, mas se n houver nenhum v
 Pois as duas sequências são falsas.
 
 ### ! (não)
+
+Consiste em negar um valor.
+
+    console.log(true)
+    true
+    
+    console.log(!true)
+    false
+
+Pois com o NOT(!), você está negando o valor de true, que se tornará falso
+
+Geralmente é utilizado em condicionais, é algo mais simples de ser entendido na prática
+
+## Avaliações em Curto-Circuito
+
+false -> valor literal falso
+
+true -> valor literal verdadeiro 
+
+Outros Valores que avaliam em false.
+
+    0
+    '' / ""/ ``
+    null / undefined
+    NaN
+
+Em caso de strings que não são vazias ou numbers que não são contas/operações
+
+*Se não tiver um elemento que avalia em false, retornará o ultimo elemento que foi checado*
+
+    console.log('victor' && 'alexsa')
+    alexsa
+
+*Se tiver um elemento que avalia em false, retornará esse elemento*
+
+    console.log('victor' && NaN && 'alexsa')
+    NaN
+
