@@ -69,10 +69,15 @@ ul {
 }
 .listas {
   display: flex;
-  justify-content: space-between;
+
 }
 .listas div {
-  width: 100%;
+  justify-content: space-between;
   margin: auto;
 
+}
+#resetar {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.505);
+  
 }
