@@ -15,3 +15,9 @@ else {
 
 //algo óbvio mas que pode ser passado batido 
 
+if (!alexsa) {
+    console.log('macaco');
+    return;
+}
+
+//esse return foi posto com o objetivo de parar a execução a partir daquele ponto

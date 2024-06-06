@@ -3,19 +3,27 @@ function escopo() {
     const res = document.getElementById('res')
     
     form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const peso = Number(document.getElementById('peso'));
-    const altura = Number(document.getElementById('altura'));
-    const conta = (peso.value / altura.value) * peso.value
-    let alertaPeso;
-    //Seria ainda mais fácil se feito por um array, e só manipulasse os indices na condição
-
+        event.preventDefault();
+        const peso = Number(document.getElementById('peso'));
+        const altura = Number(document.getElementById('altura'));
+        const conta = peso.value / (altura.value * altura.value)
+        let alertaPeso;
+        //Seria ainda mais fácil se feito por um array, e só manipulasse os indices na condição
+        
+    if (!peso.value) {
+        atualizarDiv(`Peso inválido`, false);
+        return;
+    }
+    if (!altura.value) {
+        atualizarDiv(`Altura inválida`, false);
+        return;
+    }
     
     function condicao() {
-        if (conta > 18.5) {
+        if (conta < 18.5) {
             alertaPeso = '(Abaixo do peso)';
         }
-        else if (conta <= 18.5 && conta >= 24.9) {
+        else if (conta >= 18.5 && conta <= 24.9) {
             alertaPeso = '(Peso normal)';
         }
         else if (conta >= 25 && conta <= 29.9) {
@@ -31,19 +39,36 @@ function escopo() {
             alertaPeso = '(Obesidade grau 3)';
         }
         else {
-            alert('ERRO!')
+            alert('ERRO!');
         }
         //também poderia utilizar uma variável com OR para realizar essa condição
 
         //ou poderia fazer uma função composta e não utilizar o else if 
         
     }
-    function atualizarDiv() {
-        res.innerHTML = `Seu IMC é ${conta.toFixed(2)} ${alertaPeso}`
+
+
+    function atualizarDiv(msg, validacao) {
+        const p = document.createElement('p');
+        p.textContent = msg;
+        res.appendChild(p); 
+
+        if (!validacao) {
+            p.classList.add('resultado-positivo');
+            return;
+        }
+        p.classList.add('resultado-negativo');        console.log('testando...');
+
+        //na lógica, não é pra executar o console.log pois o return vai encerrar a execução, mas ainda n sei como isso funciona direito.
+
+        //testar esse código na faculdade.
+
     }
+
     condicao();
     atualizarDiv();
+
 });
 }
-escopo()
+escopo();
 

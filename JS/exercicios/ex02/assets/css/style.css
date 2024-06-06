@@ -81,3 +81,11 @@ ul {
   color: rgba(0, 0, 0, 0.505);
   
 }
+.resultado-positivo {
+  background-color: green;
+  color: white;
+}
+.resultado-negativo {
+  background-color: red;
+  color: white;
+}
