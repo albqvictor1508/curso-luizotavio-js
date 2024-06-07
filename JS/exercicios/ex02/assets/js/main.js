@@ -4,12 +4,13 @@ function escopo() {
     
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        const peso = Number(document.getElementById('peso'));
-        const altura = Number(document.getElementById('altura'));
+        const peso =document.getElementById('peso');
+        const altura = document.getElementById('altura');
         const conta = peso.value / (altura.value * altura.value)
         let alertaPeso;
+        atualizarDiv(`Seu IMC é ${conta.toFixed(2)}: ${alertaPeso}`, true);
         //Seria ainda mais fácil se feito por um array, e só manipulasse os indices na condição
-        
+   
     if (!peso.value) {
         atualizarDiv(`Peso inválido`, false);
         return;
@@ -23,10 +24,10 @@ function escopo() {
         if (conta < 18.5) {
             alertaPeso = '(Abaixo do peso)';
         }
-        else if (conta >= 18.5 && conta <= 24.9) {
+        else if (conta >= 18.5 && conta >= 24.9) {
             alertaPeso = '(Peso normal)';
         }
-        else if (conta >= 25 && conta <= 29.9) {
+        else if (conta >= 25 && conta >= 29.9) {
             alertaPeso = '(Sobrepeso)';
         }
         else if (conta >= 30 && conta <= 34.9) {
@@ -49,7 +50,9 @@ function escopo() {
 
 
     function atualizarDiv(msg, validacao) {
+
         const p = document.createElement('p');
+        p.textContent = ''
         p.textContent = msg;
         res.appendChild(p); 
 
@@ -57,7 +60,11 @@ function escopo() {
             p.classList.add('resultado-positivo');
             return;
         }
-        p.classList.add('resultado-negativo');        console.log('testando...');
+        else {
+            p.classList.add('resultado-negativo');        
+
+        }
+        
 
         //na lógica, não é pra executar o console.log pois o return vai encerrar a execução, mas ainda n sei como isso funciona direito.
 
