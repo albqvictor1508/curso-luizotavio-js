@@ -21,3 +21,11 @@ if (!alexsa) {
 }
 
 //esse return foi posto com o objetivo de parar a execução a partir daquele ponto
+
+let victor = 'victor'
+
+switch (victor) {
+    case victor:
+        console.log(`o valor é: ${victor} `)
+        break
+}
