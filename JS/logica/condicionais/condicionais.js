@@ -28,4 +28,7 @@ switch (victor) {
     case victor:
         console.log(`o valor é: ${victor} `)
         break
+
+        default:
+            console.log('erro!')
 }
