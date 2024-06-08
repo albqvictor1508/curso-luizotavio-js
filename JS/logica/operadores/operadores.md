@@ -94,3 +94,14 @@ Em caso de strings que não são vazias ou numbers que não são contas/operaç�
     console.log('victor' && NaN && 'alexsa')
     NaN
 
+## Operador ternário
+
+assim como o AND e o OR, pode ser usado em condições
+
+    const idade = 15
+    const verificar = idade <= 18? 'sim': 'não'
+
+    console.log(verificar)
+
+oque é posto depois da interrogação são duas condições, essa operação vai retornar um booleano e se ele for verdadeiro, vai retornar o 'sim', se não, vai retornar o não 
+
