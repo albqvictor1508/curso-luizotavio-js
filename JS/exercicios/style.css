@@ -12,16 +12,19 @@ body {
 }
 main {
     background-color: rgb(155, 2, 155);
-    width: 300px;
+    width: 500px;
     height: 300px;
     border-radius: 5px;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.204));
     
 }
 #relogio {
+    display: grid;
+    place-content: center;
     padding: 40px;
     background-color: white;
     width: 80%;
     margin: 40px auto 0px auto;
+    font-size: 1.4em;
 
 }
