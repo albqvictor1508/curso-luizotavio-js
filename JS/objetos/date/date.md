@@ -9,4 +9,10 @@ Possui inúmeros métodos, alguns deles como:
     getSeconds
     getMilliseconds
 
-Que extraem as horas, minutos, segundos e milisegundos da data 
+Que extraem as horas, minutos, segundos e milisegundos da data.
+
+![alt text](image.png)
+
+    Ano, mês, hora, minuto, segundo, milisegundo
+
+a data também pode ser definida dessa forma.
