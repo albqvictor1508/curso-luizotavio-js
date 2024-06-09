@@ -66,6 +66,8 @@ escopo();
 
 //prática sobre funções compostas;
 
+//praticando o escopo de função;
 
-//praticando o escopo de função; 
+//aprendendo a colocar um parâmetro de função no valor de uma variável;
 
+//REVISAR ESSE CÓDIGO!!!
