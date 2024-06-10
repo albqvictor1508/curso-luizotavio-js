@@ -1,5 +1,15 @@
 # Declarações de variável
 
+## Escopos
+
+O primeiro princípio a se entender para diferenciar cada forma de declarar é seu escopo.
+
+### De bloco
+
+### De função
+
+### Escopo Global
+
 ## Const
 
 a mais diferente das 3, pois é uma constante, ou seja, seu valor não pode ser modificado de forma alguma <strong>se estiver no mesmo escopo.</strong> (pois se não estiverem em diferentes escopos, conta como se a variável nunca tivesse sido declarada.)
@@ -7,8 +17,6 @@ a mais diferente das 3, pois é uma constante, ou seja, seu valor não pode ser 
 ## Let
 
 let possui escopo de bloco
-
-bloco = tudo que é posto em chaves.
 
 o let e o var são muito parecidos, porém o let é mais seguro, pois o let <strong>não pode ser redeclarado no mesmo escopo.</strong>
 
