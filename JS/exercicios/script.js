@@ -41,6 +41,22 @@ function escopo() {
             }
         }
         diaSemanaMostrar();
+        // Uma função que poderia muito bem ser resumida, pois o getDay() retorna um número de 0 a 6 (começando de domingo e terminando no sábado)
+
+        //Ou seja, se essa ordem for posta em um array, em vez de multiplas condições, só seria necessário utilizar o valor retornado do getDay() como índice para um array q contem os dias da semana em forma de string
+
+        /*
+        Por exemplo:
+
+            function diaSemanaMostrar(diaSemana) {
+                const dias = ['domingo','segunda', 'terça', 'o resto']
+                return dias[diaSemana]
+            }
+
+            assim o valor que é retornado dessa variável será utilizado como índice no array, simplificando muito o código.
+
+            o mesmo pode ser feito para qualquer caso de uma variável que retorna um número que possa ser manipulado dentro de uma condicional, sendo muito eficaz para ganhar tempo.
+        */ 
             
         function CriarRelogio(relogio) {
             return relogio.innerHTML = `${dia}/${mês}/${ano}, ${diaSemanaText}, ${hora}:${minuto}:${segundos}`
