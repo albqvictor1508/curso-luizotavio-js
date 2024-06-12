@@ -23,3 +23,25 @@ arr.slice(x, y) ->parte o array e retorna a parte que foi pedida.
  #### Para descobrir se é array ou não:
 
  (arr instanceof array)
+
+ ## Atribuição via desestruturação
+
+É simples de se fazer
+
+    const array = ['victor', alexsa, '55', 18];
+    const [primeiroNumero, segundoNumero] = array;
+
+    console.log(primeiroNumero, segundoNumero)
+
+As variáveis (primeiroNumero e segundoNumero) armazenarão os primeiros dados do array, se eu tivesse 3 ou mais variáveis ali, armazenarão 3 ou mais dados
+
+Há, também uma forma de pegar o resto do array, ou seja, o que ficou sobrando
+
+    const array = ['victor', alexsa, '55', 18];
+    const [primeiroNumero, segundoNumero, ...resto] = array;
+
+    console.log(primeiroNumero, segundoNumero);
+    console.log(resto);
+
+Com o atribuidor '...' o resto do array foi buscado, e logo em seguida ele será armazenado na variável resto
+
