@@ -6,9 +6,14 @@ O primeiro princípio a se entender para diferenciar cada forma de declarar é s
 
 ### De bloco
 
+É exclusiva de um bloco, ou seja, se for declarada dentro de um if, ou for
+
 ### De função
 
+O escopo de função significa que enquanto a variável estiver dentro de uma função, ela vai ser identificada em outros blocos, como um if, ou um for, que estiver dentro da função, mas não será identificada fora dela
+
 ### Escopo Global
+
 
 ## Const
 
