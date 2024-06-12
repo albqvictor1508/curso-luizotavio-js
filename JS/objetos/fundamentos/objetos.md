@@ -1,6 +1,8 @@
 # Objetos
 
-### Sobre objetos
+## Sobre objetos
+
+### Conceitos
 
 Os objetos não podem ser manipulados com 'push, pop, shift, unshift ou slice'
 
@@ -43,3 +45,38 @@ funções que são criadas sem a palavra function e são utilizadas como um mét
     obj.teste();
 
 Mesmo que tenha como ser feito em arrays e objetos, geralmente não tem porque utilizar isso 
+
+Nos objetos também podem ser criados outros objetos, assim como no array.
+
+Ex.:
+
+    const obj = {
+        nome: 'alexsa',
+        idade: 16,
+        sexo: '5 vezes no mês',
+        endereço: {
+            bairro: 'Mané Goiana',
+            rua: 'não sei'
+            numero da casa: 'também n sei',
+        }
+    }
+    dentro do objeto de nome 'obj', possui outro objeto de nome 'endereço'
+
+## Atribuição via desestruturação.
+
+A atribuição de um objeto é muito mais simples, pois podemos chamar a chave para buscar o valor 
+
+    const nome = obj.nome;
+
+    Dessa forma
+
+Mas existe outra forma de armazenar esses dados, dessa forma:
+
+![alt text](image-1.png)
+
+Essa forma também pode ser feitas no array, mas como o array não possui chaves, ele possui uma sintaxe diferente.
+
+Mas essa forma não serve somente para buscar as chaves e armazenar os dados, também serve para alterar os dados dentro das chaves.
+
+
+
