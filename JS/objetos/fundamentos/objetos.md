@@ -78,5 +78,46 @@ Essa forma também pode ser feitas no array, mas como o array não possui chaves
 
 Mas essa forma não serve somente para buscar as chaves e armazenar os dados, também serve para alterar os dados dentro das chaves.
 
+    const obj = {
+        nome: 'victor',
+        sobrenome:'arruda',
+    }
+
+    const {nome: a = 'alexsa', sobrenome: sn = 'martins'} = obj;
+
+Dessa forma, eu to pegando a chave, alterando o valor dado no objeto e armazenando nas variáveis (a e sn)
+
+Também é possivel criar um objeto dentro do outro dentro dessa atribuição
+
+Dessa forma:
+
+    const objeto = {
+        endereco: {
+            rua: r = 'exemplo',
+            numero,
+        }
+    }
+
+Dessa maneira, é criado um objeto dentro do outro.
+
+Assim como no array, também pode ser utilizado o operador (...) para pegar o resto
+
+    const obj = {
+        nome: 'alexsa',
+        sobrenome: 'martins',
+        idade: 16,
+        estadoCivil: 'namorando',
+    }
+
+    const {nome, ...resto} = obj;
+
+    console.log(resto)
+
+O operador indica que oq sobrou do objeto vai ser armazenado na variável 'resto'.
+
+
+
+
+
 
 

@@ -29,7 +29,8 @@ const {endereço: {numeroDaCasa}} = obj;
 //console.log(numeroDaCasa)
 
 //Pegando a chave do objeto e alterando o dado
-const {nome: n = 'alexsa martins', idade, sexo} = obj;
+
+const {nome: n = 'vito', idadee} = obj;
 
 
 
