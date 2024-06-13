@@ -47,10 +47,10 @@ O for in é utilizado para navegar em objetos e arrays, sendo bem mais simples d
     }
 
     for (let contador in objeto) {
-        console.log(objeto['contador'])
+        console.log(objeto[contador])
     }
 
-Dessa forma é feito em um objeto.
+Dessa forma é feito em um objeto, exibindo todos os valores que estão nos devidos índices navegados pela variável 'contador'
 
     const array = [1,2,3,4,5,6];
 
@@ -60,5 +60,15 @@ Dessa forma é feito em um objeto.
 
 Veja como ficou mais simples de navegar pelo elementos de um array utilizando esse for.
 
+## For of.
 
+### Recapitulando:
+
+o <strong>for clássico</strong> tinha que declarar a variável e passar os parâmetros do valor inicial, do total de dados em (string, array, objeto), e o incremento para que ele navegasse por um array.
+
+o <strong>for in</strong> tinha que declarar a variável, chamar a variável que armazena o dado iterável(string, array, objeto) e colocar a variável do loop dentro do indice da variável do (string, array, objeto)
+
+## Conceito for of.
+
+Já o for of resume isso ainda mais, só necessita de criar a variável do loop, chamar a variável que armazena o dado iterável(string, array) e pronto, mais resumido ainda
 
