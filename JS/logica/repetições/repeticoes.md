@@ -50,6 +50,21 @@ O for in é utilizado para navegar em objetos e arrays, sendo bem mais simples d
         console.log(objeto[contador])
     }
 
+A variável criada dentro do for in terá o valor dos indices do array ou das chaves do objeto, por exemplo:
+
+        const objeto = {
+        carro: 'gol',
+        moto: 'start',
+        casa: 'grande',
+    }
+
+    for (let contador in objeto) {
+        console.log(contador)
+    }
+
+Exibiria as chaves do objeto.
+
+
 Dessa forma é feito em um objeto, exibindo todos os valores que estão nos devidos índices navegados pela variável 'contador'
 
     const array = [1,2,3,4,5,6];
@@ -72,3 +87,31 @@ o <strong>for in</strong> tinha que declarar a variável, chamar a variável que
 
 Já o for of resume isso ainda mais, só necessita de criar a variável do loop, chamar a variável que armazena o dado iterável(string, array) e pronto, mais resumido ainda
 
+## Quando usar qual.
+
+É bastante simples 
+
+### Manipulando Arrays e Objetos.
+
+No array e no objeto possuímos dois feitos para facilitar nossa vida
+
+    For in e For of
+
+
+Dependem da circunstância para serem usados:
+
+    Se vai precisar do índice:
+
+    For in
+
+    Se não vai:
+
+    For of
+
+Além do for clássico que também pode ser usado tranquilamente para qualquer circunstância.
+
+Simples assim!
+
+## Exceção
+
+O for of não vai funcionar pro objeto pois ele não é iterável (não possui indices, e sim chaves)

@@ -27,11 +27,11 @@ const moto = {
     motor: 'de 160',
     garupa: 'minha namorada alexsa martins dos santos',
 }
-const arrayy = ['minha','mulher','é a melhor mulher do mundo', 'do mundooooooooo']
-
-for (let lexsaa of moto) {
-    console.log(lexsaa)
+for (let x in moto) {
+    console.log(moto[x])
 }
+
+
 //Exibindo o valor da variavel criada na repetição para exclarecer mais
 
 //Diferente do array, o contador percorre pelas chaves, e o comando 'carro[contador] exibe o dado que está armazenado naquela chave'
