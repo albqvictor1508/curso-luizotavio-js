@@ -115,6 +115,26 @@ Assim como no array, também pode ser utilizado o operador (...) para pegar o re
 
 O operador indica que oq sobrou do objeto vai ser armazenado na variável 'resto'.
 
+### OBS.:
+
+Existe outra forma de acessar o valor do objeto através da chave
+
+Ao invés de:
+
+    const pessoa = {
+        nome: 'victor',
+        sobrenome: 'de lexsa',
+        idade: 16,
+    }
+
+    console.log(pessoa.nome);
+
+Pode-se usar:
+
+    console.log(pessoa['nome'])
+
+Funciona da mesma forma, mas essa forma é mais util para utilizar no 'for in'
+
 
 
 
