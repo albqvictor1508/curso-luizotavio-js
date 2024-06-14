@@ -115,3 +115,6 @@ Simples assim!
 ## Exceção
 
 O for of não vai funcionar pro objeto pois ele não é iterável (não possui indices, e sim chaves)
+
+## While.
+
