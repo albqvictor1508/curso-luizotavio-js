@@ -120,4 +120,63 @@ O for of não vai funcionar pro objeto pois ele não é iterável (não possui i
 
 O while é uma estrutura de repetição que é ativada apartir de um booleano e geralmente é usada quando não se sabe o tanto de vezes que se repetirá e quando não se está manipulando um array ou objeto.
 
-Já que,enquanto no for o final do loop é declarado no começo, o while pode apresentar uma condição e não parar até ela ser verdadeira
+Já que,enquanto no for o final do loop é declarado no começo, o while pode apresentar uma condição e não parar até ela ser verdadeira.
+
+    let contador = 0;
+
+    while (contador < 5) {
+        console.log(contador);
+        contador++;
+    }
+
+<strong>Verificará se a condição é verdadeira, e enquanto for verdadeira</strong>, Acrescentará 1 e mostrará na tela, <strong>até que a condição passe a ser falsa</strong>.
+
+    let rand = 10;
+
+    while (rand !== 10) {
+        rand = random(min,max)
+        console.log(rand);
+        
+    }
+
+    Mesmo que o valor de rand foi alterado, o laço não será executado pois a condição foi checada no valor da variável e deu false
+
+Mas o <strong>Do while</strong> executaria, pois ele ia substituir o valor do rand para depois checar a condição.
+
+## Do while.
+
+O do while muda pouca coisa do while, <strong>pois o while primeiro checa a condição, para depois executar</strong> já o <strong>do while primeiro executa para depois checar a condição</strong>.
+
+Ex.:
+
+    contador = 10;
+
+    while (contador > 10) {
+        console.log(contador)
+        contador++;
+    }
+
+    Esse código não exibirá nada, pois a condição é falsa desde o início
+
+Porém no do while exibirá algo
+
+    do {
+        contador++;
+        console.log(contador);
+    } while (contador > 10);
+
+    Esse código exibirá 10
+
+Pois já que o do while executa para depois verificar, ele executa o console.log para depois verificar e sair do loop
+
+![alt text](image.png)
+
+## Quando usar.
+
+### For ou While?
+
+![alt text](image-2.png)
+
+### While ou Do while?
+
+![alt text](image-1.png)

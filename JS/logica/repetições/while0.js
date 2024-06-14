@@ -18,6 +18,8 @@ const min = 1;
 const max = 50;
 let numero = NumeroAleatorio(min,max);
 
+//variavel numero que chama a função colocando as variaveis min e max como parâmetros
+
 //o while indica que enquanto a condição que afirma que o número não pode ser igual 25 for falsa, os numeros aleatórios continuarão a ser gerados.
 
 while (numero !== 25) {
