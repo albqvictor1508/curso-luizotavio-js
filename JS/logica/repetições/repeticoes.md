@@ -118,3 +118,6 @@ O for of não vai funcionar pro objeto pois ele não é iterável (não possui i
 
 ## While.
 
+O while é uma estrutura de repetição que é ativada apartir de um booleano e geralmente é usada quando não se sabe o tanto de vezes que se repetirá e quando não se está manipulando um array ou objeto.
+
+Já que,enquanto no for o final do loop é declarado no começo, o while pode apresentar uma condição e não parar até ela ser verdadeira
