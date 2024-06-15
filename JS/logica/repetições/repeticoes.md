@@ -180,3 +180,4 @@ Pois já que o do while executa para depois verificar, ele executa o console.log
 ### While ou Do while?
 
 ![alt text](image-1.png)
+

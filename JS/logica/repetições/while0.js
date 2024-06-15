@@ -1,15 +1,4 @@
-let cont = 1;
-const array = [];
 
-/*
-const meuAmor = {
-    nome: 'Alexsa',
-    sobrenome: 'Martins',
-    idade: 16,
-    tamanho: '1.68m',
-    cabelo: 'preto liso',
-}
-*/
 function NumeroAleatorio(minimo, maximo) {
     const random = Math.random() * (maximo - minimo) + minimo;
     return Math.floor(random);
@@ -17,8 +6,18 @@ function NumeroAleatorio(minimo, maximo) {
 const min = 1;
 const max = 50;
 let numero = NumeroAleatorio(min,max);
+numero = 25;
+//Dessa forma, a condição do while será falsa e ele não exibirá nada, mas o do while exibe.
 
-//variavel numero que chama a função colocando as variaveis min e max como parâmetros
+do {
+    numero = NumeroAleatorio(min,max);
+    console.log(numero);
+
+} while (numero !== 25);
+
+//Como o do while primeiro executa para depois checar, ele vai substituir o valor da variável para o valor que está dentro dele e executar a condição.
+
+//variavel 'numero' que chama a função colocando as variaveis min e max como parâmetros
 
 //o while indica que enquanto a condição que afirma que o número não pode ser igual 25 for falsa, os numeros aleatórios continuarão a ser gerados.
 
