@@ -2,20 +2,10 @@ function escopo() {
     const relogio = document.querySelector('#relogio');
     const data = new Date();
 
-    function atualizarRelogio() {
-        relogio.innerHTML = data.toLocaleTimeString('pt-BR', {
-            timeStyle: 'medium',
-            hour12: false,
-        })
+    function AtualizarRelogio() {
+    relogio.innerHTML = `${data.getMinutes}:${data.getSeconds}:${data.getMilliseconds}`;
     }
-    atualizarRelogio();
+    AtualizarRelogio();
+
 }
 escopo();
-
-setInterval(escopo, 1000);
-
-try {
-    console.log(macaco);
-} catch (erro) {
-    relogio.innerHTML = `tratando um erro...`;
-}
