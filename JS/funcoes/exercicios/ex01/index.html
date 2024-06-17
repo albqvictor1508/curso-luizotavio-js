@@ -18,19 +18,30 @@
             border-radius: 15px;
             font-size: 1.6em;
             font-weight: bold;
-            display: flex;
             align-items: center;
             justify-content: center;
+        }
+        p {
+            text-align: center;
+        }
+        button {
+            border: 2px solid rgb(173, 2, 173);
+            background-color: white;
+            padding: 10px;
+            border-radius: 50%;
+
         }
     </style>
 </head>
 <body>
     <main>
-        <div id="relogio">
+        <div>
+            <p class="relogio">00:00:00</p>
         </div>
-        <p> <button>Start!</button>
-            <button>Pause!</button>
-            <button>Reset!</button>
+        <p> 
+            <button id="start">start</button>
+            <button id="pause">pause</button>
+            <button id="reset">reset</button>
         </p>
     </main>
     <script src="script.js"></script>
