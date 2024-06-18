@@ -6,10 +6,11 @@ function escopo() {
     let segundos = 0;
     let minutos = 0;
     let milisegundos = 0; 
+    let timer;
 
     btnStart.addEventListener('click',function() {
         ativarTimer();
-        setInterval(ativarTimer,20)
+        timer = setInterval(ativarTimer,20);
     });
     btnPause.addEventListener('click',pausarTimer);
     btnReset.addEventListener('click',zerarTimer);
@@ -31,27 +32,28 @@ function escopo() {
             segundos = 0;
         }
         
-        mostrarRelogio();
+        mostrarRelogio();//para executar essa função junto com a q foi chamada
 
     }
     
-    function pausarTimer(palse) {
-        palse = true
-        clearInterval(ativarTimer);
+    function pausarTimer() {
+        clearInterval(timer);
         relogio.style.color = `red`;
     }
     
     function zerarTimer() {
-        clearInterval(ativarTimer)
+        relogio.style.color = `black`
+        milisegundos = 0;
         minutos = 0;
         segundos = 0;
-        milisegundos = 0;
+        timer = null;
+        mostrarRelogio();
+        console.log(formatarTempo(minutos),formatarTempo(segundos),formatarTempo(milisegundos));
     }
     function mostrarRelogio() {
         
         relogio.innerHTML = `${formatarTempo(minutos)}:${formatarTempo(segundos)}:${formatarTempo(milisegundos)}`
     }
-    setInterval(mostrarRelogio,20)
     
 }
 escopo();
