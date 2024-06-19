@@ -9,8 +9,11 @@ function escopo() {
     let timer;
 
     btnStart.addEventListener('click',function() {
-        ativarTimer();
-        timer = setInterval(ativarTimer,20);
+        if (!timer) {
+            ativarTimer();
+            timer = setInterval(ativarTimer,20);
+            
+        }
     });
     btnPause.addEventListener('click',pausarTimer);
     btnReset.addEventListener('click',zerarTimer);
@@ -31,13 +34,14 @@ function escopo() {
             minutos++;
             segundos = 0;
         }
-        
+        relogio.style.color = `black`;
         mostrarRelogio();//para executar essa função junto com a q foi chamada
 
     }
     
     function pausarTimer() {
         clearInterval(timer);
+        timer = null;
         relogio.style.color = `red`;
     }
     
@@ -48,7 +52,6 @@ function escopo() {
         segundos = 0;
         timer = null;
         mostrarRelogio();
-        console.log(formatarTempo(minutos),formatarTempo(segundos),formatarTempo(milisegundos));
     }
     function mostrarRelogio() {
         
