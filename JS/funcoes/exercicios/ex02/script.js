@@ -7,19 +7,32 @@ function escopo() {
 
     
     btnEnviar.addEventListener('click',adicionarArray);
+    inputTarefas.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            adicionarArray();
+        //keyCode foi preterida por haver muitos problemas, essa forma é mais recomendada
+
+        //tem q ter a primeira letra maiúscula pra pegar
+        }
+    });
     
+    function LimparInput() {
+        inputTarefas.value = ''; //zerar o input quando enviar
+        inputTarefas.focus();
+    }
+
     function adicionarArray() {
         let tarefas = inputTarefas.value;
         
         if (tarefas) {
             array.push(tarefas);
-            inputTarefas.value = ''; //zerar o input quando enviar
             mostrarTarefas();
+            LimparInput();
         }
     }
     
-    function retirarArray(indice) {
     //com o parâmetro passado no addEventListener, o botão acionado vai apagar a exata tarefa em que foi apertado
+    function retirarArray(indice) {
         array.splice(indice, 1);
         mostrarTarefas();
 
@@ -30,7 +43,7 @@ function escopo() {
         
         //nesse caso é mais facil um forEach
         
-        array.forEach((tarefa, indice) => {
+        const iterar = array.forEach((tarefa, indice) => {
             //sequencia padrão do forEach: primeiro vem os valores, depois os indices, depois o array completo.
 
             //tarefa armazena os valores do array, indice armazena os indices.
@@ -45,9 +58,12 @@ function escopo() {
             
             item.appendChild(btnApagar);
             ul.appendChild(item);
-
+            return criaButão(iterar);
         });
         //sintaxe correta do forEach.
+    }
+    function criaButão(iterar) {
+        console.log(iterar)
     }
 
     
