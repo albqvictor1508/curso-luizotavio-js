@@ -37,12 +37,9 @@ function escopo() {
     function LimparInput() {
         inputTarefas.value = ``;
     }
-
-    function mostrarTarefas() {
+    function AtualizarTarefas() {
         ul.innerHTML = '';
-        array.forEach((tarefa,indice) => {
-            criaLi(tarefa,indice);
-        });
+        
     }
 
     function retirarArray(index) {
@@ -52,3 +49,13 @@ function escopo() {
     }
 }
 escopo();
+
+
+/*
+    function mostrarTarefas() {
+        AtualizarTarefas();
+        array.forEach((tarefa,indice) => {
+            criaLi(tarefa,indice);
+        });
+    }
+*/
