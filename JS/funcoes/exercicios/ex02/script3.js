@@ -34,6 +34,16 @@ function escopo() {
 
         }
     }
+/*
+    function criaCheckbox(li) {
+        const checkbox = document.createElement('input');
+        checkbox.setAttribute('type', 'checkbox');
+        checkbox.style.borderRadius = '50%';
+        li.appendChild(checkbox);
+    }
+*/
+
+// pegou mas ficou feio, tenho q aprender como colocar a checkbox no começo
 
     function salvarTarefas() {
         const liTarefas = ul.querySelectorAll('li');
