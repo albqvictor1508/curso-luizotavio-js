@@ -23,9 +23,9 @@ function escopo() {
         inputTarefas.focus();
     }
     
-    function criaTarefa(valor, li) {
+    function criaTarefa(valor) {
         if (valor) {
-            li = criaLi();
+            const li = criaLi();
             li.textContent = valor;
             ul.appendChild(li);
             LimparInput();
