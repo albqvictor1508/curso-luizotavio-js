@@ -36,9 +36,12 @@ function somar(a, b = 10) {
 
 somar(1 , undefined, 3, 4, 55, 22);
 
-function desestruturar({nome, idade}) {
-    console.log(nome, idade)
+function desestruturar([valor1,valor2,valor3,valor4]) {
+    console.log(valor1, valor2,valor3, valor4)
 }
+
+const array = [1508, 2024, 'são joão','victor', 18, 'macaco', 'amo alexsa', 1, 2 , 3, 20, 45];
+//É desestruturado pelo valor que estiver na sequência.
 
 let obegeto = {
     amor: 'alexsa martins',
@@ -47,5 +50,28 @@ let obegeto = {
     sobrenome: 'albuquerque',
     namorada: 'alexsa'
 }
+//É desestruturado pela chave
 
-desestruturar(obegeto);
+desestruturar(array);
+
+//USANDO O OPERADOR REST PARA PEGAR MAIS PARâMETROS.
+
+function rest(p1, p2, ...parametro) {
+    console.log(p1, p2, parametro);
+//p1 e p2 recebem dois argumentos e parametro vira um array com oq sobrou 
+}
+
+function calculadora(operador, acumulador, ...numeros) {
+    console.log(operador, acumulador, numeros);
+    for (let numero of numeros) {
+        if (operador === '+') acumulador += numero;
+        if (operador === '-') acumulador -= numero;
+        if (operador === '/') acumulador /= numero;
+        if (operador === '*') acumulador *= numero;
+    }
+    return acumulador;
+}
+rest(12,24,56,100,200,224,300,24);
+
+console.log(calculadora('+', 0, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10));
+
