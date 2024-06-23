@@ -16,7 +16,7 @@ function escopo() {
 
     function criaLi(tarefa, indice) {
         const item = document.createElement('li');
-        item.textContent = tarefa; 
+        item.innerHTML = `<p>${tarefa}</p>`; 
 
         const btnApagar = document.createElement('button');
         btnApagar.textContent = 'Apagar';
