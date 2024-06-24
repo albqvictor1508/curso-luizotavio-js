@@ -1,5 +1,6 @@
 const vito = function(amor,...nomes) {
     console.log(amor,nomes);
+    console.log(arguments)
     function vitoFilho() {
         console.log('vitoFilho(f): a função "vito" é meu closure');
         return function vitoNeto() {
@@ -13,10 +14,12 @@ const victor = vito();
 const vitofilho = victor();
 //console.log(vitofilho)
 
-//vito('funcao vito: ama muito a mulher dele alexsa', 'albuquerque', 'arruda', 'faz programas on-line', 'homem da casa');
 
-function recebervitoNeto() {
-     const vito = vitofilho();
+function recebervitoNeto(vito) {
+    vito = vitofilho();
     console.log(vito);
+    
 }
 recebervitoNeto();
+
+vito('FUNCAO VITO: ama muito a mulher dele alexsa', 'albuquerque', 'arruda', 'faz programas on-line', 'homem da casa');

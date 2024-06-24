@@ -1,5 +1,6 @@
 const pegarDepoimento = depoimento => console.log(`função pegarDepoimento: ${depoimento}`);//não é hoisting
 
+
 const obj = {
     nome: 'alexsa',
     sobrenome: 'martins',
@@ -10,7 +11,27 @@ const obj = {
         return console.log(valor);
     }
 }
-obj.depoimento('honda civic');//função hoisting
+
+testeHoisting();
+
+function testeHoisting() {
+    console.log('sou hoisting');
+}
+//testeHoisting2();
+
+const testeHoisting2 = () => {
+    console.log('arrow function: sou hoisting');
+//não é hoisting.
+}
+testeHoisting3();
+
+const testeHoisting3 = function() {
+    console.log('function express: eu sou um hoisting');
+//não é hoisting.
+}
+
+
+obj.depoimento('honda civic');//não é hoisting
 
 const soma = (n1,n2) => n1 + n2;//recebe dois parâmetros e soma eles 
 console.log('\n');
