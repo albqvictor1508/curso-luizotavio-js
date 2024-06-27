@@ -10,7 +10,7 @@ arr.pop() -> retira o ultimo elemento do array
 
 arr.unshit() -> adiciona um elemento no começo do array
 
-arr.shit() -> retira o primeiro elemento do array
+arr.shift() -> retira o primeiro elemento do array
 
 delete arr -> deleta o elemento, mas mantém o indice 
 
