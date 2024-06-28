@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            background-image: linear-gradient(45deg,black,#383838,black );
+            font-weight: bold;
+            font-size: 1.25em;
+            display: grid;
+            place-content: center;
+        }
+
+        main {
+            border: 3px solid white;
+            background-color: #202127;
+            padding: 10px;
+            
+            border-radius: 10px;
+
+            #inputCalculadora {
+                width: 100%;
+                height: 80px;
+                margin-bottom: 10px;
+                font-size: 2em;
+                font-weight: bold;
+                text-align: end;
+                background-color: #202120;
+                color: white;
+                box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.167);
+            }
+
+            fieldset {
+                border: 0;
+                max-width: 320px;
+            }
+
+            .buttons {
+                display: grid;
+                grid-template-columns: 80px 80px 80px 80px;
+
+                .numerico {
+                    background-color: #2e2e31; 
+                }
+
+                button {
+                    cursor: pointer;
+                    padding: 7px;   
+                    font-size: 1.1em;
+                    border-radius: 5px;
+                    margin: 3px;
+                    border: 0;
+                    background-color: #2b2d33;
+                    color: white;
+
+
+
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="calculadora-body">
+        <div class="tela-calculadora">
+            <fieldset>
+                <input type="number" id="inputCalculadora" disabled/>
+            
+            </fieldset>
+        </div>
+
+        <div class="buttons">
+            <button>C</button>
+            <button>(</button>
+            <button>)</button>
+            <button>/</button>
+            <button class="numerico">7</button>
+            <button class="numerico">8</button>
+            <button class="numerico">9</button>
+            <button>*</button>
+            <button class="numerico">4</button>
+            <button class="numerico">5</button>
+            <button class="numerico">6</button>
+            <button>+</button>
+            <button class="numerico">1</button>
+            <button class="numerico">2</button>
+            <button class="numerico">3</button>
+            <button>-</button>
+            <button>.</button>
+            <button class="numerico">0</button>
+            <button><<</button>
+            <button>=</button>
+        </div>
+        </div>
+    </main>
+    <script src="calculadora.js"></script>
+</body>
+</html>

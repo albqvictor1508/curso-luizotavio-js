@@ -34,11 +34,14 @@ const retornaObj = (nome, sobrenome, peso, altura) => {
 }
 const objeto1 = retornaObj('vito', 'arruda de lexsa', 75, 1.70);
 const objeto2 = retornaObj('lexsa', 'martins de vito', 56, 1.70);
+const objeto3 = retornaObj('lexsa', 'martins de vito', 75, 1.75);
 //o objeto retornado é salvo nessa variável    
 objeto1.nomeCompleto = `vito arruda`;
-objeto1.nomeCompleto = `luis inácio lula da silva`;
-objeto1.nomeCompleto = 'vito arruda come alexsa gostoso';
+objeto2.nomeCompleto = `luis inácio lula da silva`;
+objeto3.nomeCompleto = 'vito arruda come alexsa gostoso';
+
 console.log(objeto1.nomeCompleto);
 console.log(objeto2.nomeCompleto);
+console.log(objeto3.nomeCompleto);
 //e com essa variável que o objeto é acessado
 //console.log(objeto.retornaTudo);
