@@ -15,6 +15,7 @@
             background-image: linear-gradient(45deg,black,#383838,black );
             font-weight: bold;
             font-size: 1.25em;
+            font-family: Arial, Helvetica, sans-serif;
             display: grid;
             place-content: center;
         }
@@ -26,11 +27,15 @@
             
             border-radius: 10px;
 
-            #inputCalculadora {
+            .tela {
                 width: 100%;
                 height: 80px;
+                padding: 5px;
                 margin-bottom: 10px;
                 font-size: 2em;
+                display: flex;
+                align-items: end;
+                justify-content: end;
                 font-weight: bold;
                 text-align: end;
                 background-color: #202120;
@@ -73,7 +78,9 @@
         <div class="calculadora-body">
         <div class="tela-calculadora">
             <fieldset>
-                <input type="number" id="inputCalculadora" disabled/>
+                <div class="tela">
+                    <p id="telaNum">0</p>
+                </div>
             
             </fieldset>
         </div>
