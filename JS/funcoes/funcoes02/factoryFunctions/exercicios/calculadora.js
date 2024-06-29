@@ -1,42 +1,29 @@
 (function() {
-    const botões = document.querySelectorAll('button');
-    const tela = document.getElementById('telaNum')
-    botões.forEach(botao => {
-        document.addEventListener('click',function(e) {
-            calculadora(parseInt(botao.textContent))
-        })
-    })
-
-    function calculadora(operador = '+', acumulador = 0, ...numeros) {
+    function criarCalc() {
         return {
-            operador,
-            acumulador,
-            numeros,
-            calculo() {
-                for(numero of numeros) {
-                    switch (operador) {
-                        case '+':
-                            acumulador += numero;
-                            break
-                        case '-':
-                            acumulador -= numero;
-                            break
-                        case '/':
-                            acumulador /= numero;
-                            break
-                        case '*':
-                            acumulador *= numero;
-                            break
+            tela: document.querySelector('#telaNum');
 
-                        }
-                        executarCalc(calculadora);
-                }
+
+            criarBotões() {
+                const botões = document.querySelectorAll('.num');
+                document.addEventListener('click', function(e) {
+                    const clique = e.target;
+                    if (clique.classList.contains('num')) {
+                        this.calculo(clique.innerText);
+                    }
+                }.bind(this))//faz o this apontar pro objeto em vez de apontar pro HTML
+            }
+
+            calculo(texto) {
+                this.tela.value += texto;
+
+            }
+
+            iniciar() {
+            
             }
         }
     }
-
-    function executarCalc(obj) {
-    console.log(obj);
-    }
-
-})();
+    const objeto = criarCalc();
+    objeto.iniciar();
+})()
