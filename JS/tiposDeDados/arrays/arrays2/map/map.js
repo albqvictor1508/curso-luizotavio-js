@@ -49,3 +49,5 @@ function mapPessoas(p) {
 }
 
 //APRENDENDO A MANIPULAR OBJETO.
+
+//map altera o valor original, pois arrays, objetos e funções passam valores por referência
