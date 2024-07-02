@@ -29,6 +29,7 @@ const pessoas = [
     
 ]
     mapPessoas(pessoas);
+    return pessoas;
 }
 criaPessoas();
 
@@ -50,4 +51,15 @@ function mapPessoas(p) {
 
 //APRENDENDO A MANIPULAR OBJETO.
 
-//map altera o valor original, pois arrays, objetos e funções passam valores por referência
+//map altera o valor original, pois arrays, objetos e funções passam valores por referência, para acabar essa referência só utilizar o spread
+
+function copiarValores() {
+    const valores = [...criaPessoas()];//valores copiados.
+    console.log(valores)
+//nesse map, os valores podem ser alterados da forma que eu quiser que não vai afetar o array original.
+    const idades = valores.map(obj => obj.idade);
+    console.log(idades);
+//pra saber qual forma é melhor depende do contexto:
+// Se quiser alterar o original: forma anterior; Se não quiser: essa forma
+}
+copiarValores();
