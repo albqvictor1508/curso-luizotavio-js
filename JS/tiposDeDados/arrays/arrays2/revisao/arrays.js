@@ -1,7 +1,10 @@
 const lexsa = ['alexsa', 'martins', 'dos', 'santos'];
+
 console.log(lexsa);
 lexsa[1] = 'arruda';
+
 console.log('MODIFICADO: '+ lexsa);
+
 delete lexsa[3];//remover dado sem remover o índice.
 console.log(lexsa);
 
@@ -22,3 +25,15 @@ console.log(novaMoto);
 console.log('\n')
 console.log(moto);
 //AGORA CADA UM POSSUI O SEU VALOR, MESMO QUE O VALOR DE 'NOVAMOTO' TINHA SIDO PEGO DE 'MOTO';
+
+const pessoas = ['victor', 'alexsa', 'joseana', 'maria livia', 'testando'];
+
+const casal = pessoas.slice(0,3);
+console.log('\n');
+console.log(casal);
+
+const pessoas2 = ['major sidnei', 'michael jackson', 'xand avião', 'kendrick lamar'];
+
+const slice = pessoas2.slice(0,-1);
+
+console.log(slice);
