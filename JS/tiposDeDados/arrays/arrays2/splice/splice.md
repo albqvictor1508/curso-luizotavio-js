@@ -37,3 +37,7 @@ Dessa forma vai adicionar no array, em vez de passar esse valor para a própria 
 ### Obs.:
 
 Number.MAX_VALUE => o maior número possível no JS.
+
+### Pop, Shift, Unshift e Push usando Splice
+
+![alt text](image.png)
