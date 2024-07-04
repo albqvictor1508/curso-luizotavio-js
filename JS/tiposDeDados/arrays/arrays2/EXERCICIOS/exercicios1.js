@@ -40,6 +40,7 @@ function filtrarArray() {
     const filtragem = array.filter(valor => valor > 20);
     console.log(filtragem)
     mapArray(filtragem);
+    return filtragem
 // enviando para a função map juntar os dois parâmetros e chamar a função que concatena
 }
 filtrarArray();
@@ -60,6 +61,26 @@ function concatenarAtributos(filt, map) {
     return concat;
 }
 
+function reduzirFiltro() {
+    const atributos = filtrarArray();
+    console.log(atributos);
+    const total = atributos.reduce((soma, valor) => soma += valor);
+    console.log(total);
+    return atributos
+}
+reduzirFiltro();
+
+function exibirPares() {
+    const array = criaArray();
+    const checar = array.reduce((ac, value) => {
+        if (value % 2 === 0) ac.push(value);
+        return ac;
+    }, [])
+    console.log('PARES CHECADOS ', checar)
+}
+exibirPares();
+
+// Dessa maneira, todos os números pares serão armazenados em um array (prefiro usar o filter pra isso)
 
 //FALTA SÓ O REDUCE
 
