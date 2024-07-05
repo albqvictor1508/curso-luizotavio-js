@@ -53,9 +53,11 @@ E se mudá-lo para 'true', o valor poderá ser alterado.
 
 Configurable -> pode configurar a chave
 
-caso for 'true', essa chave pode ser modificada, adicionada em outra função com outro valor, etc
+caso for 'true', esse objeto pode ser reconfigurado, ou seja, as configurações postas nele poderão ser alteradas em outras funções, ou em outro lugar do código
 
-caso for 'false', esse objeto não pode ser modificada, mesmo que adicionada a outra função, não vai exercer outro valor, etc
+caso for 'false', esse objeto não pode ser reconfigurado, ou seja, as configurações postas nele só poderão ser feitas manualmente dentro do objeto
+
+(AINDA É POSSIVEL ALTERAR VALOR DA CHAVE)
 
 também não permite apagar a chave
 
