@@ -31,4 +31,5 @@ function DesestruturarEntries2() {
         //MOSTRARÁ IGUAL AO EXEMPLO DE CIMA
     }
 }
-DesestruturarEntries2()
+DesestruturarEntries2();
+
