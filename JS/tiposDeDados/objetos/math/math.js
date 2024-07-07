@@ -3,14 +3,14 @@ let maior = array[0];
 let metade = array.length / 2
 let menor = array[0];
 
-for (let comida = 0; comida < array; comida++) {
+for (let comida = 0; comida < array.length; comida++) {
 
-    if (menor > array[comida]) {
-        menor = array[comida]
+    if (maior > array[comida]) {
+        maior = array[comida]
 
     }
 }
-//console.log(menor, 'eu amo alexsa')
+console.log(maior, 'eu amo alexsa')
 
 //console.log(Math.max(1, 2, 3, 4, 10, 20, 21, 30, 32, 45, 56, 2508))
 
