@@ -19,6 +19,4 @@ function criaObjetos() {
     console.dir(obj1);
     console.dir(obj2);
     console.dir(obj3);
-
 }
-criaObjetos();
