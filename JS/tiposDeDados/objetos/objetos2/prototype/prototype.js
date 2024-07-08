@@ -14,26 +14,35 @@ Pessoa.prototype.fala = function() {
 Pessoa.prototype.nomeCompleto = function(nome, sobrenome) {
     return `Seu nome completo é: ${nome} ${sobrenome}`;
 }
-Pessoa.prototype.darCarro = function(...nomes) {
-    const min = 1;
-    const max = nomes.length;
-    const carros = ['fiat toro', 'jeep renegade', 'jeep compass', 'up', 'spin'];
-    const rand = Math.floor(Math.random() * carros.length);
+Pessoa.prototype.valorAleatorio = function(...nomes) {
+    const rand = Math.floor(Math.random() * nomes.length);
 
-    carros.forEach(() => {
-        return carros[rand];
+    nomes.forEach(() => {
+        return nomes[rand];
     })
-    const carro = carros[rand];
-    return `você ganhou um ${carro}!`;
+    const valor = nomes[rand];
+    return `você ganhou um ${valor}!`;
 }
-Pessoa.prototype.LinguagemDeProgramação = 
+
+Pessoa.prototype.ProgramLang = function(...linguagens) {
+    const aleatorio = Math.floor(Math.random() * linguagens.length);
+    linguagens.forEach(() => {
+        return linguagens[aleatorio];
+    });
+    const ling = linguagens[aleatorio];
+    return `Sua linguagem: ${ling}`;
+}
+
 
 function criaObjeto() {
     const pessoa1 = new Pessoa('vito', 'albuquerque',80);
     const pessoa2 = new Pessoa('vito', 'albuquerque',80);
-    console.log(pessoa1.darCarro());
+    console.log(pessoa1.valorAleatorio('gloss', 'batom', 'blush'));
+
+    console.log(pessoa2.ProgramLang('javaScripto', 'PHP', 'Java'));
     pessoa2.cavalo()
 }
 criaObjeto();
+
 
 
