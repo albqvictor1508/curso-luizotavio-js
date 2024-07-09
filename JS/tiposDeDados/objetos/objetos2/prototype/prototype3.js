@@ -44,9 +44,62 @@ function criaObjeto() {
 }
 
 const criaObjeto2 = () => {
-    const obj = criaObjeto();
-    const obj4 = Object.create(obj, Pato.prototype);
+//prototype q o obj vai receber , o objeto criado
+
+//a propriedades do obj tem que ser criadas
+    const obj4 = Object.create(Pato.prototype, {
+        zuada: {
+            value: 'quen quen',
+            configurable: false,
+            writable: true,
+            enumerable: true,
+        },
+        marida: {
+            value: 'a pata',
+            configurable: false,
+            writable: false,
+            enumerable: true,
+        },
+
+    });
+    obj4.marida = 'vito';
+    
+    Object.defineProperty(obj4, 'zuada', {
+        value: 'quen quen quen',
+        writable: true,
+    })
     console.log(obj4);
+    return obj4;
 }
 criaObjeto2();
 
+const criaObjetos3 = () => {
+    const obj = criaObjeto2();
+    const Obigeto = Object.create(obj, {
+        obigetão: {
+            value: 'um obigeto',
+            writable: true,
+            enumerable: true,
+        }
+
+    })
+    console.log(Obigeto);
+
+    const MEGAOBJETO = new Object();
+    MEGAOBJETO.nome = 'MEGA',
+    MEGAOBJETO.sobrenome = 'OBJETO',
+    MEGAOBJETO.cor = 'MEGA';
+
+    Object.setPrototypeOf(MEGAOBJETO, obj);
+    console.log(MEGAOBJETO);
+
+}   
+
+const obbejeto = Object.create(Abelha.prototype, {
+    NovoObjeto: {
+        value: 'Sou um novo obegeto',
+        enumerable: true,
+        writable: true,
+    }
+})
+criaObjetos3();
