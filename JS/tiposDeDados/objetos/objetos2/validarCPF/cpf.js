@@ -1,55 +1,49 @@
-function criarNumeroAleatorio() {
-    let cpf = '25081511207';
-    criaArray(cpf);
+function ValidaCPF(cpf) {
+    Object.defineProperty(this,'limparCPF', {
+//não pode colocar 'writable' quando se tem um getter
+        get: function() {
+            return cpf.replace(/\D+/g, '');
+        },
+    });
 }
-criarNumeroAleatorio();
 
-function criaArray(cpf) {
-    const arrayCPF = Array.from(cpf);
-    MultiplicaPrimeiroDigito(arrayCPF);
+ValidaCPF.prototype.valida = function() {
+    if(typeof this.limparCPF === 'undefined') return false;
+    if(this.limparCPF.length !== 11) return false;
+
+    const Cpf9digitos = this.limparCPF.slice(0,-2);
+    const parteCPF = Array.from(Cpf9digitos);
+    this.calculaCPF(parteCPF);
+    return true;
 }
-function MultiplicaPrimeiroDigito(arrayCPF) {
-    let total = 0;
-    let mult = 10;
-    for(let i = 0; i < arrayCPF.length; i++) {
-        if(mult === 2) break;
-        total += (arrayCPF[i] * mult);
-        mult--
+
+ValidaCPF.prototype.calculaCPF = function(cpfParcial) {
+    console.log(String(cpfParcial));
+    function calculoDigitos() {
+        let total = 0;
+        let mult = cpfParcial.length + 1;
+        const calculo = cpfParcial.reduce((ac,valor) => {
+            ac += (valor * mult);
+            mult--;
+        })
+        console.log(calculo);
+        return total;
     }
-    let primeiroDigito = 11 - (total % 11);
-    if(primeiroDigito > 9) primeiroDigito = 0;
-    console.log(`primeiro dígito: ${primeiroDigito}`);
-    MultiplicaSegundoDigito(arrayCPF, primeiroDigito);
-    return primeiroDigito;
-}
 
-function MultiplicaSegundoDigito(arr, primeiro) {
-    let total = 0;
-    let mult = 11;
-    const array = [...arr, String(primeiro)];
-    for(let i = 0; i < array.length; i++) {
-        if(mult === 2) break;
-        total += (arr[i] * mult);
-        mult--
+    function verificarDigitos(digitos) {
+        const total = calculoDigitos(digitos);
+        let digito = 11 - (total % 11);
+        return digito > 9? 0 : digito;
+    //lembrar de usar ternária 
     }
-    let segundoDigito = 11 - (total % 11);
-    if(segundoDigito > 9) segundoDigito = 0;
-    console.log(`segundo dígito: ${segundoDigito}`);
-    SepararArray(arr, primeiro, segundoDigito);
-}
-
-function SepararArray(array, primeiro, segundo) {
-    let digitos = {}
-    for(let i = 0; i > array.length; i++) {
-        digitos[`dígito${i + 1}`] = array[i];
-    }
-    console.log(digitos);
-}
-
-function concatenarCPF(arr, primeiroDigito, segundoDigito) {
+    const digito1 = verificarDigitos(10);
+    const digito2 = verificarDigitos(11);
+    console.log(digito1,digito2);
 
 }
 
-
-
-
+const criaCPF = () => {
+    const cpf = new ValidaCPF('007.945.324-46');
+    cpf.valida();
+}
+criaCPF();
