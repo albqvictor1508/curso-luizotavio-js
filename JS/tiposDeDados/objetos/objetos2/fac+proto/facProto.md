@@ -75,3 +75,11 @@ Também poderia desustruturar em objetos para facilitar o uso.
             console.log('O carro ta bebendo toda a gasolina')
         }
     }
+
+    const carroPrototype = {...correr, ...freiando, ...bebendo};
+
+Uma forma mais simples da forma anterior.
+
+## OBS
+
+Essas formas de fazer vão do gosto de cada pessoa 
