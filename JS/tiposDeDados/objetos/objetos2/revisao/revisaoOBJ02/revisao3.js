@@ -1,24 +1,25 @@
-function Carro(nome, preco, ano) {
-    this.nome = nome;
-    this.preco = preco;
+function Moto(ano, cor, cilin) {
+    this.cor = cor;
     this.ano = ano;
+    this.cilin = cilin;
 
-    Object.defineProperty(this, 'ano', {
-        get: function() {
-                return ano;
-        },
-        set: function(ano) {
-            if(ano < 2015) return `IDOSOOOOOOOO BOMBA ${ano}`;
-            return valor
-        },
-        enumerable: true,
+    Object.defineProperties(this, {
+        cor: {
+            get: function() {
+                return cor;
+            },
+            set: function(novaCor) {
+                if(novaCor === 'amarela') console.log('mto feio pqp');
+                cor = novaCor;
+            },
+            enumerable: true
+        }
     })
 }
 
-function criarCarro() {
-    const carro = new Carro('corolla', 120000, 2018);
-    carro.ano = 2012;
-    
-    console.log(carro.ano);
+const criaMoto = () => {
+    const moto = new Moto(2021, 'amarela', 250);
+    moto.cor = 'amarela';
+    console.log(moto.cor);
 }
-criarCarro();
+criaMoto();

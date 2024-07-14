@@ -1,7 +1,7 @@
 # Position
 
 ## Position Relative e Absolute
-utiliza os comandos (top.left, right, bottom) para alternar as posições das divs
+utiliza os comandos (top, left, right, bottom) para alternar as posições das divs
 
 position:relative -> empurra o elemento em relação à sua posição antiga. (sua antiga posição ainda toma espaço da tela)
 
