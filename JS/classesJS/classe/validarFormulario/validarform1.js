@@ -1,18 +1,31 @@
+function criarDOM() {
+    const form = document.querySelector('.formulario');
+    
+    form.addEventListener('submit', function(e) {
+        const el = e.target;
+        if(el.classList.contains('validar')) {
+            criaClasse(el.value);
+        }
+    })
+}
+
+
+
 /* 
 Nenhum campo vazio
 Letras ou numeros
 Senha entre 6 a 12 caracteres
 */
 
-function criaClasse() {
+function criaClasse(nome,sobrenome,cpf,usuario,senha, repetirSenha) {
     class Formulario {
-        constructor(nome, sobrenome, cpf, usuário, senha, repetirSenha) {
-            this.nome = nome;
-            this.sobrenome = sobrenome;
-            this.cpf = cpf;
-            this.usuario = usuário;
-            this.senha = senha;
-            this.repetirSenha = repetirSenha;
+        constructor(name, sn, cpff, user, password, repetirPassword) {
+            this.nome = name;
+            this.sobrenome = sn;
+            this.cpf = cpff;
+            this.usuario = user;
+            this.senha = password;
+            this.repetirSenha = repetirPassword;
         }
 
         validaForm() {
@@ -23,15 +36,18 @@ function criaClasse() {
         }
     }
 
-
-
-
-    class CPF extends Formulario {
+    
+    
+    class CPF {
         constructor(cpf) {
-            super(cpf);
-            this.cpfLimpo = cpf.replace(/\D+/g, '');
+            this.cpf = cpf;
+            this.cpfLimpo = this.cpf.replace(/\D+/g, '');
         }
 
+        exibir() {
+            console.log(this.cpf);
+        }
+        
         geraCPF() {
             const CPF9digitos = this.cpfLimpo.slice(0, -2);
             const digito1 = this.geraDigitos(CPF9digitos)
@@ -40,7 +56,7 @@ function criaClasse() {
             this.novoCpf = CPF9digitos + digito1 + digito2;
             return this.novoCpf === this.cpfLimpo;
         }
-
+        
         geraDigitos(cpf) {
             let mult = cpf.length + 1;
             const arrayCPF = Array.from(cpf);
@@ -49,23 +65,29 @@ function criaClasse() {
                 mult--
                 return ac;
             }, 0)
-
+            
             const calculo = 11 - (digito % 11);
             return calculo > 9? '0': String(calculo);
         }
-
+        
         get validaCPF() {
             if(!this.cpfLimpo) return false;
             if(this.cpfLimpo.length !== 11) return false;
             if(typeof this.cpfLimpo !== 'string') return false;
-
+            
             if(this.geraCPF()) return `CPF válido`;
-
+            
             return `CPF inválido`
         }
     }
-    
-    const cpf = new CPF('136.063.084-85');
-    console.log(cpf.validaCPF)
+    const formulario = new Formulario(nome, sobrenome, usuario, senha, repetirSenha);
+    const cpfFormulario = new CPF('136.063.084-85');
+
+    console.log(cpfFormulario, formulario);
+
 }
 criaClasse();
+
+/* 
+Preciso de lógica para juntar o cpf do formulario, e de lógica para pegar todos os valores quando o formulário der submit.
+*/
