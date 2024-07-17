@@ -35,9 +35,11 @@ class ValidaForm {
 
         handleSubmit(e) {
             e.preventDefault();
-            this.validaCampos();
+            const campos = this.validaCampos();
+            const senhas = this.validaSenha();
 
-            if(this.validaCampos && this.validaSenha) {
+            if(campos && senhas) {
+                alert('form enviado!')
                 this.form.submit();
             }
         }
@@ -60,16 +62,14 @@ class ValidaForm {
                 //selecionando o campo que tem a classe cpf
                 if(campo.classList.contains('cpf')) {
                 //enviando o vampo como parâmetro pra pegar o valor dele dentro da validaCPF
-                    if(!this.validaCPF(campo)) return valida = false;
+                    if(!this.validaCPF(campo)) valida = false;
                 }
 
                 if(campo.classList.contains('usuario')) {
-                    if(!this.ValidaUsuario(campo))return valida = false;
-                }
-
-                
+                    if(!this.ValidaUsuario(campo)) valida = false;
+                }                
             }
-
+            return valida;
         }
 
         validaCPF(campo) {
@@ -90,22 +90,30 @@ class ValidaForm {
                 return false
             }
 
+            if(!valor.match(/^[a-zA-Z0-9]+$/g)) {
+                this.msgDeErro(campo, `Usuário só pode haver letras e/ou números`)
+            }
+
             return true
         }
 
-        validaSenha(campo) {
+        validaSenha() {
+            let valida = true
+
             const valorSenha = this.form.querySelector('.senha');
             const valorRepetirSenha = this.form.querySelector('.repetir-senha');
 
-            if(valorSenha.length > 6||valorSenha.length < 12) {
-                this.msgDeErro(campo, `Senha deve conter entre 6 a 12 caracteres`);
-                return false;
+            if(valorSenha.value.length < 6 || valorSenha.value.length > 12) {
+                this.msgDeErro(valorSenha, `Senha deve conter entre 6 a 12 caracteres`);
+                valida = false;
             }
-            if(valorSenha !== valorRepetirSenha) {
-                this.msgDeErro(campo, `Senha e Repetir Senha devem ser iguais`);
-                return false
+            if(valorSenha.value !== valorRepetirSenha.value) {
+                this.msgDeErro(valorRepetirSenha, `Senha e Repetir Senha devem ser iguais`);
+                this.msgDeErro(valorSenha, `Senha e Repetir Senha devem ser iguais`);
+                valida = false;
             }
-            return true;
+
+            return valida;
         }
 
         msgDeErro(campo, msg) {
