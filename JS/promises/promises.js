@@ -33,15 +33,19 @@ DESSA FORMA, O CÓDIGO FICA HORROROSO DE FEIO E DESORGANIZADO
 FuncoesASerExecutadas('levei alexsa na escola', NumAleatorio(1,3))
 .then(tarefa => {
     console.log(tarefa);
+
     return FuncoesASerExecutadas('to codando', NumAleatorio(1,3));
 }).then(tarefa2 => {
     console.log(tarefa2);
+
     return FuncoesASerExecutadas('vou trabalhar jajá', NumAleatorio(1,3));
 }).then(tarefa3 => {
     console.log(tarefa3);
+
     return FuncoesASerExecutadas('e vou lavar a moto hoje', NumAleatorio(1,3));
 }).then(tarefa4 => {
     console.log(tarefa4);
+    
     return FuncoesASerExecutadas('1231312', NumAleatorio(1,3))
 }).then(() => {
     console.log();
