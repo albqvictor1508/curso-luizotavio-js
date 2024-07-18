@@ -8,7 +8,7 @@ Os 3 conceitos dependem um do outro.
 
 para a função assíncrona funcionar, é necessário uma promise, para a promisse funcionar, é preciso de uma callback function dentro do setTimeout
 
-## Sintaxe 
+### Sintaxe 
 
 Para a função assíncrona funcionar, é obrigatório ter a palavra *async* antes da função.
 
@@ -18,4 +18,29 @@ Para a função assíncrona funcionar, é obrigatório ter a palavra *async* ant
 
     Dessa forma
 
-E dentro da função assíncrona
+E dentro da função assíncrona, tudo que vai ser executado em sequencia precisa estar em uma variável e receber a palavra *await* antes do valor
+
+async function() {
+    const tarefa1 = await setTimeOut('TAREFA', 2000);
+}
+
+Dessa maneira, tudo que estiver com a palavra await, vai obedecer a sequência de execução
+
+### Problema
+
+A função assincrona não capta nem trata erros, porém, da pra fazer uma gambiarra com o try catch que vai funcionar perfeitamente
+
+    async function() {
+        try {
+            const tarefa1 = await sfkfgdfg
+
+        } catch(erro) {
+            console.log(erro);
+        }
+    }
+
+Fazendo com que fique mais simples de fazer e de ler doque uma cadeia de promisses ou uma cadeia de callback functions
+
+## OBS
+
+Não indica que a função assíncrona vai ser a que vai caber melhor pra todos os casos, é bom ir de situação e situação pra usar ou somente a promisse, ou a async function
