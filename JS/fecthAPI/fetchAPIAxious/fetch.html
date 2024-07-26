@@ -4,8 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fetch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+        
+        main {
+            max-width: 1218px;
+            margin: auto;
+        }
+
+        table {
+            max-width: 400px;
+        }
+
+        td {
+            padding: 5px 0px;
+            border: 1px solid rgba(192, 192, 192, 0.548);
+            border-collapse: collapse;
+        }
+
+        .num {
+            text-align: left;
+        }
+
+        .nome {
+            width:400px;
+        }
+    </style>
 </head>
 <body>
-    <script src="fetch.js"></script>
+    <main>
+    <div id="resultado"></div>
+</main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="fetch2.js"></script>
 </body>
 </html>
