@@ -1,4 +1,9 @@
-// 1
-// 2
-// 3
-console.log('EIIIIIIIIIIIIIIIIIIIIIII');
+const exibir  = () => {
+    return `
+    <div>
+        LEU ME DEU!!!
+    </div>
+    `
+}
+
+document.body.innerHTML = exibir();
