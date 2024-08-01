@@ -1,6 +1,9 @@
 import validaCPF from "../modules/validarCPF2";
 
-class geraCPF {
+export class geraCPF {
+    constructor() {
+        this.cpfAleatorio();
+    }
 
     aleatorio(min=100000000, max=999999999) {
         return String(Math.floor(Math.random() * (max - min) + min));
@@ -13,21 +16,24 @@ class geraCPF {
             const checagem = cpf[0].repeat(9) === cpf;
 
             if(checagem) return false;
+
             return true;
         }
 
         if(Sequencia()) {
             return cpf;
         }
+
+        return false;
     }
 
     formatar(cpf) {
+        return (
         cpf.slice(0,3) + '.' +
         cpf.slice(3,6) + '.' + 
         cpf.slice(6,9) + '-' +
-        cpf.slice(9,11);
-
-        return cpf;
+        cpf.slice(9,11)
+        )
     }
 
     cpfAleatorio() {
@@ -36,12 +42,8 @@ class geraCPF {
         const digito2 = validaCPF.gerarDigitos(cpf + digito1);
 
         const novoCpf = cpf + digito1 + digito2;
-
-
         return this.formatar(novoCpf);
     }
 
 
 }
-
-export {geraCPF}
