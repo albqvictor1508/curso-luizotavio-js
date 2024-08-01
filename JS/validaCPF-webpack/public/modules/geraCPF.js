@@ -6,27 +6,38 @@ class geraCPF {
         return String(Math.floor(Math.random() * (max - min) + min));
     }
 
+    verificar() {
+        const cpf = this.aleatorio();
+
+        function Sequencia() {
+            const checagem = cpf[0].repeat(9) === cpf;
+
+            if(checagem) return false;
+            return true;
+        }
+
+        if(Sequencia()) {
+            return cpf;
+        }
+    }
+
     formatar(cpf) {
         cpf.slice(0,3) + '.' +
         cpf.slice(3,6) + '.' + 
         cpf.slice(6,9) + '-' +
         cpf.slice(9,11);
-    }
 
-    Sequencia() {
-        const cpf = this.aleatorio();
-        return cpf[0].repeat(cpf.length) === cpf
+        return cpf;
     }
 
     cpfAleatorio() {
-        const cpf = this.aleatorio();
+        const cpf = this.verificar();
         const digito1 = validaCPF.gerarDigitos(cpf);
         const digito2 = validaCPF.gerarDigitos(cpf + digito1);
 
         const novoCpf = cpf + digito1 + digito2;
 
-        if(this.Sequencia()) return false;
-        
+
         return this.formatar(novoCpf);
     }
 

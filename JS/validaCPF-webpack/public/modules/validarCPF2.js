@@ -10,8 +10,8 @@ export default class CPF {
 
     gerarCPF() {
         const CPF9Digitos = this.cpfLimpo.slice(0,-2);
-        const digito1 = this.gerarDigitos(CPF9Digitos);
-        const digito2 = this.gerarDigitos(CPF9Digitos + digito1);
+        const digito1 = CPF.gerarDigitos(CPF9Digitos);
+        const digito2 = CPF.gerarDigitos(CPF9Digitos + digito1);
         this.novoCpf = CPF9Digitos + digito1 + digito2;
         return this.novoCpf === this.cpfLimpo;
     }
@@ -44,7 +44,6 @@ export default class CPF {
 
 let cpf = new CPF('007.945.324-46');
 //cpf = new CPF('222.222.222-22')
-console.log(cpf.validar)
 
 /*
 validação de CPF: 

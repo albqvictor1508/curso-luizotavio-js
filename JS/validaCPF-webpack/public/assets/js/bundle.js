@@ -32,24 +32,31 @@ var geraCPF = /*#__PURE__*/function () {
       return String(Math.floor(Math.random() * (max - min) + min));
     }
   }, {
+    key: "verificar",
+    value: function verificar() {
+      var cpf = this.aleatorio();
+      function Sequencia() {
+        var checagem = cpf[0].repeat(9) === cpf;
+        if (checagem) return false;
+        return true;
+      }
+      if (Sequencia()) {
+        return cpf;
+      }
+    }
+  }, {
     key: "formatar",
     value: function formatar(cpf) {
       cpf.slice(0, 3) + '.' + cpf.slice(3, 6) + '.' + cpf.slice(6, 9) + '-' + cpf.slice(9, 11);
-    }
-  }, {
-    key: "Sequencia",
-    value: function Sequencia() {
-      var cpf = this.aleatorio();
-      return cpf[0].repeat(cpf.length) === cpf;
+      return cpf;
     }
   }, {
     key: "cpfAleatorio",
     value: function cpfAleatorio() {
-      var cpf = this.aleatorio();
+      var cpf = this.verificar();
       var digito1 = _modules_validarCPF2__WEBPACK_IMPORTED_MODULE_0__["default"].gerarDigitos(cpf);
       var digito2 = _modules_validarCPF2__WEBPACK_IMPORTED_MODULE_0__["default"].gerarDigitos(cpf + digito1);
       var novoCpf = cpf + digito1 + digito2;
-      if (this.Sequencia()) return false;
       return this.formatar(novoCpf);
     }
   }]);
@@ -92,8 +99,8 @@ var CPF = /*#__PURE__*/function () {
     key: "gerarCPF",
     value: function gerarCPF() {
       var CPF9Digitos = this.cpfLimpo.slice(0, -2);
-      var digito1 = this.gerarDigitos(CPF9Digitos);
-      var digito2 = this.gerarDigitos(CPF9Digitos + digito1);
+      var digito1 = CPF.gerarDigitos(CPF9Digitos);
+      var digito2 = CPF.gerarDigitos(CPF9Digitos + digito1);
       this.novoCpf = CPF9Digitos + digito1 + digito2;
       return this.novoCpf === this.cpfLimpo;
     }
@@ -136,7 +143,6 @@ var CPF = /*#__PURE__*/function () {
 
 var cpf = new CPF('007.945.324-46');
 //cpf = new CPF('222.222.222-22')
-console.log(cpf.validar);
 
 /*
 validação de CPF: 
@@ -759,8 +765,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (function () {
-  var cpfGerado = new _public_modules_geraCPF__WEBPACK_IMPORTED_MODULE_1__.geraCPF();
-});
+  var cpf = new _public_modules_geraCPF__WEBPACK_IMPORTED_MODULE_1__.geraCPF();
+  cpf.verificar();
+  var div = "<div class=\"resultado\">".concat(cpf.cpfAleatorio(), "</div>");
+  var section = document.querySelector('section');
+  section.innerHTML += div;
+})();
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
