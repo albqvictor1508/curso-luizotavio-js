@@ -1,6 +1,4 @@
-const aleatorio = (min,max) => {
-    return Math.floor(Math.random() * (max - min) + min);
-}
+const aleatorio = (min,max) => Math.floor(Math.random() * (max - min) + min);
 
 const LetrasMaiusculas = () => {
     const maiusculaAleatoria = aleatorio(65, 91);
@@ -21,13 +19,13 @@ const Numeros = () => {
 
 
 const Simbolos = () => {
-    const  totalSimbolos = ',.;~[]{}!@#$%¨&*()_+=-';
-    
+    const  totalSimbolos = ',.;~[]{}!@#$%¨&*()_+=-';    
     return totalSimbolos[aleatorio(0, totalSimbolos.length)];
+    //logica importante para retornar um caracter dessa string, importante guardar
 }
 
 
-function gerarSenha(qtd, maiusculas, minusculas, numeross, simboloss) {
+export default function geraSenha(qtd, maiusculas, minusculas, numeross, simboloss) {
     const senhaArray = [];
     qtd = Number(qtd);
 
@@ -37,12 +35,10 @@ function gerarSenha(qtd, maiusculas, minusculas, numeross, simboloss) {
         numeross && senhaArray.push(Numeros())
         simboloss && senhaArray.push(Simbolos())
     }
-    console.log(senhaArray);
+    return senhaArray.join('').slice(0, qtd);
 }
 
-gerarSenha(10, true, true)
 
-export {gerarSenha};
 
 /*
 Usa "String.fromCharCode()" para pegar um caracter na tabela ASCII, pegando dentro da tabela de onde começa até onde termina e colocando em uma função que retorna um valor aleatorio para escolher aleatoriamente qual caracter será retornado

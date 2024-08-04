@@ -11,29 +11,36 @@
 <body>
 
   <section class="container">
-    <h1>Lorem ipsum dolor sit amet</h1>
+    <h1>Gerador de Senha</h1>
+
+
     <form class="section__form">
       <label for="form__inputNumber">
         Quantidade de Caracteres:
       </label>
+      <div>
+        <input type="number" id="form__inputNumber" />
+      </div>
 
-      <input type="number" id="form__inputNumber" />
-      
+      <div class="resultado">
+        <div class="resultado-text"></div>
+      </div>
+
       <div class="form__input-checkbox">
 
         <label>
           Adicionar Numeros?
-          <input type="checkbox" id="form__AdicionarNumeros"/>
+          <input type="checkbox" id="form__AdicionarNumeros" />
         </label>
 
         <label>
           Letras Maiúsculas?
-          <input type="checkbox" id="form_LetrasMaiusculas"/>
+          <input type="checkbox" id="form_LetrasMaiusculas" />
         </label>
 
         <label>
           Letras Minúsculas?
-          <input type="checkbox" id="form__LetrasMinusculas"/>
+          <input type="checkbox" id="form__LetrasMinusculas" />
         </label>
 
         <label>
@@ -41,6 +48,8 @@
           <input type="checkbox" id="form__LetrasSimbolos">
         </label>
       </div>
+
+      <button type="submit">Enviar!</button>
 
     </form>
   </section>

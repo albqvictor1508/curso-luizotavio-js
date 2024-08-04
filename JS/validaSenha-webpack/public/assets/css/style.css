@@ -60,4 +60,27 @@ form button:hover {
 .form__input-checkbox {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
+
+  label {
+    font-size: 1rem;
+  }
 }
+.resultado {
+  max-width: calc(100% - 2rem);
+  text-align: center;
+  padding: 1rem;
+  margin: auto;
+  color: var(--primary-color);
+  height: 5rem;
+  
+  display: grid;
+  place-items: center;
+}
+
+.resultado-text {
+  max-width: 100%;
+  letter-spacing: 5px;
+  font-size: 2.2rem;
+  font-weight: bolder;
+}   
