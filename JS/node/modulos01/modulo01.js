@@ -13,13 +13,12 @@ exports.soma = function(x,y) {
 //this também pode ser usado
 this.detalhe = 'eu também vou ser exportado';
 
-class Pipou {
-    constructor(nome,sobrenome, idade) {
-        this.nome = nome;
-        this.nome = nome;
-        this.nome = nome;
-    }
+const macaco = () => {
+    console.log(macaco);
 }
 
+//OU
 
+exports.macaco = macaco;
 
+//exports = {} não é possível
