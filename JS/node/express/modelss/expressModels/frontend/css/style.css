@@ -1,0 +1,6 @@
+body {
+    min-height: 100vh;
+    font-size: 1.2rem;
+    color: white;
+    background: linear-gradient(45deg, white, red);
+}
