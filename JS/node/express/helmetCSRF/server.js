@@ -6,7 +6,7 @@ const routes = require('./routes');
 const { MeuMiddleware, checarErroCSRF, csrfMiddleware} = require('./src/middlewares/middlewares');
 const mongoose = require('mongoose');
 const helmet = require('helmet');
-const CSRF = require('csurf');
+const csrf = require('csurf');
 
 mongoose.connect(process.env.CONNECTIONSTRING)
     .then(() => {
@@ -38,10 +38,11 @@ app.use(helmet());
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(express.urlencoded({extended: true}));
-app.use(CSRF());
+app.use(csrf());
+
 app.use(MeuMiddleware);
-app.use(checarErroCSRF);
 app.use(csrfMiddleware);
+app.use(checarErroCSRF);    
 
 app.use(routes);
 

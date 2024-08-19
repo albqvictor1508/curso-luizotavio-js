@@ -6,9 +6,13 @@ exports.MeuMiddleware = (req,res,next) => {
 }
 
 exports.checarErroCSRF = (err, req, res, next) => {
-//erro que será exibido caso o usuário que envie o formulário n tiver token
-    if(err && err.code === 'EBADCSRFTOKEN') return res.send('<h1>ERRO PAIZÃO</h1>');
-
+    console.log(err);
+    if(err && err.code === 'EBADCSRFTOKEN') {
+        console.log('dentro do if: ' + err);
+        return res.send('<h1>ERRO PAIZÃO</h1>');
+    }
+    //erro que será exibido caso o usuário que envie o formulário n tiver token
+    next();
 }
 
 exports.csrfMiddleware = (req, res, next) => {
