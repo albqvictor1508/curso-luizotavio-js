@@ -1,0 +1,80 @@
+<%- include('includes/head') %>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark --bs-body-color ">
+            <div class="container-fluid">
+              <a class="navbar-brand text-white" href="#">Agenda</a>
+              </button>
+              <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="http://localhost:3000">Home</a>
+              </div>
+            </div>
+          </nav>
+    </header>
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+
+            </div>
+
+            <div class="col-lg-8 my-4">
+                <h1 class="text-center mb-5">Faça seu login ou crie sua conta abaixo.</h1>
+
+                <div class="row">
+                    <div class="col-lg">
+                        <h4>Cadastro.</h4>
+
+                        <p class="form-text">Se ainda não tem login, preencha o formulário abaixo</p>
+                        <form action="/" method="post">
+
+                            <input type="hidden" name="_csrf" value="<%- csrfToken %>">
+                            <div class="mb-3">
+                              <label class="form-label">Endereço de e-mail</label>
+                              <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label">Senha</label>
+                              <input type="password" class="form-control" name="senha">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Criar conta</button>
+                          </form>   
+                    </div>
+                
+
+                    <div class="col-lg">
+                        <h4>Login</h4>  
+
+                        <p class="form-text">Se já possui uma conta, faça o login</p>
+                        <form action="/" method="post">
+                            <input type="hidden" name="_csrf" value="<%- csrfToken %>">
+                        <div class="mb-3">
+                            <label class="form-label">Endereço de Email</label>
+                            <input type="text" name="email" class="form-control"/>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Senha</label>
+                            <input type="password" name="senha" class="form-control">
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" name="lembrarDepois"/>
+                            <label class="form-check-label" for="exampleCheck1">Lembrar depois</label>
+                          </div>
+
+                          <button class="btn btn-primary">Iniciar sessão</button>
+                        </form>
+                    </div>
+
+            </div>
+
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+    </div>
+
+<%- include('includes/footer') %>
