@@ -3,7 +3,7 @@ require('dotenv').config();
 const path = require('path');
 const express = require('express');
 const app = express();
-const {middlewareGlobal, checarErroCsrf, csrfMiddleware} = require('./src/middlewares/middlewares');
+const {errosFormulario ,checarErroCsrf, csrfMiddleware} = require('./src/middlewares/middlewares');
 const session = require('express-session');
 const routes = require('./routes');
 const helmet = require('helmet');
@@ -44,7 +44,7 @@ app.use(express.json());
 
 app.use(csrf());
 
-app.use(middlewareGlobal);
+app.use(errosFormulario);
 app.use(csrfMiddleware);
 app.use(checarErroCsrf);
 

@@ -1,10 +1,10 @@
-exports.middlewareGlobal = (req,res,next) => {
-    console.log('sou o middleware global');
+exports.errosFormulario = (req,res, next) => {
+    res.locals.errors = req.flash('errors');
     next();
 }
 
 exports.checarErroCsrf = (erro,req,res,next) => {
-    if(erro) return res.render('erro404');
+    if(erro && erro.code == 'EBADCSRFTOKEN') return res.render('erro404');
 }
 
 exports.csrfMiddleware = (req,res,next) => {

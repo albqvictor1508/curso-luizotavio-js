@@ -13,6 +13,8 @@
             </div>
           </nav>
     </header>
+
+
         <div class="container">
         <div class="row">
             <div class="col-lg-2">
@@ -27,12 +29,12 @@
                         <h4>Cadastro.</h4>
 
                         <p class="form-text">Se ainda não tem login, preencha o formulário abaixo</p>
-                        <form action="/" method="post">
+                        <form action="/" method="post" id="formRegister">
 
                             <input type="hidden" name="_csrf" value="<%- csrfToken %>">
                             <div class="mb-3">
                               <label class="form-label">Endereço de e-mail</label>
-                              <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+                              <input type="email" class="form-control" name="email" aria-describedby="emailHelp"/>
                             </div>
                             <div class="mb-3">
                               <label class="form-label">Senha</label>
@@ -48,7 +50,9 @@
                         <h4>Login</h4>  
 
                         <p class="form-text">Se já possui uma conta, faça o login</p>
-                        <form action="/" method="post">
+
+                        
+                        <form action="/" method="post" id="formLogin">
                             <input type="hidden" name="_csrf" value="<%- csrfToken %>">
                         <div class="mb-3">
                             <label class="form-label">Endereço de Email</label>
@@ -76,5 +80,6 @@
             </div>
         </div>
     </div>
+
 
 <%- include('includes/footer') %>
