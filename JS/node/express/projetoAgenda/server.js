@@ -3,10 +3,9 @@ require('dotenv').config();
 const path = require('path');
 const express = require('express');
 const app = express();
-const {errosFormulario ,checarErroCsrf, csrfMiddleware} = require('./src/middlewares/middlewares');
+const {checarFormulario ,checarErroCsrf, csrfMiddleware} = require('./src/middlewares/middlewares');
 const session = require('express-session');
 const routes = require('./routes');
-const helmet = require('helmet');
 const csrf = require('csurf');
 const flash = require('connect-flash');
 const MongoStore = require('connect-mongo');
@@ -20,8 +19,6 @@ mongoose.connect(process.env.CONNECTIONSTRING)
 
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
-
-app.use(helmet());
 
 const sessionOptions = session({
     secret: 'minha bilola',
@@ -44,7 +41,7 @@ app.use(express.json());
 
 app.use(csrf());
 
-app.use(errosFormulario);
+app.use(checarFormulario);
 app.use(csrfMiddleware);
 app.use(checarErroCsrf);
 

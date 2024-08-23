@@ -31,18 +31,19 @@ class Login {
         if(!validator.isEmail(this.body.email)) this.errors.push('E-mail inválido');
 
         if(this.body.senha.length < 3 || this.body.senha.length > 50) {
-            this.errors.push('A senha precisa estar entre 3 e 50 caracteres')
+            this.errors.push('A senha precisa estar entre 3 e 50 caracteres');
         }
     }
 
     cleanUp() {
+        //for para iterar dentro de objeto
+        for(const chave in this.body) {
+            if(typeof this.body[chave] !== 'string') this.body[chave] = '';
+        }
+        
         this.body = {
             email: this.body.email,
             senha: this.body.senha,
-        }
-
-        for(const chave in this.body) {
-            if(typeof this.body[chave] !== String) this.body[chave] = '';
         }
     }
 }
