@@ -4,7 +4,7 @@ const bcryptjs = require('bcryptjs');
 
 const loginSchema = new mongoose.Schema({
     email: {type: String, required: true},
-    senha: {type: String, required: true}
+    senha: {type: String, required: true},
 })
 
 const loginModel = mongoose.model('login', loginSchema);
@@ -16,18 +16,48 @@ class Login {
         this.user = null;
     }
 
+    async usuarioExiste() {
+        this.user = await loginModel.findOne({email: this.body.email});
+        
+        if(this.user) this.errors.push('Usuário já existe');
+    }
+
+    async login() {
+        this.valida();
+        if(this.errors.length > 0) return;
+
+        this.user = await loginModel.findOne({email: this.body.email});
+        
+        if(!this.user) {
+            this.errors.push('O usuário não existe');
+            return;
+        }
+
+        //compara o hash da senha que foi enviada com o hash que foi salvo na base de dados
+        if(!bcryptjs.compareSync(this.body.senha, this.user.senha)) {
+            this.errors.push('Senha inválida');
+            this.user = null;
+            return;
+        }
+
+        if(this.errors.length > 0) return;
+
+    }
+
     async register() {
         this.valida();
         if(this.errors.length > 0) return;
 
-        try {
-            const salt = bcryptjs.genSaltSync();
-            this.body.senha = bcryptjs.hashSync(this.body.senha, salt);
+        await this.usuarioExiste();
 
-            this.user = await loginModel.create(this.body);
-        } catch(e) {
-            console.log(this.errors, e);
-        }
+        if(this.errors.length > 0) return;
+
+        //hash de senha 
+        const salt = bcryptjs.genSaltSync();
+        this.body.senha = bcryptjs.hashSync(this.body.senha, salt);
+
+        //mudando o valor pra o objeto com os dados validados e enviando pro mongo
+        this.user = await loginModel.create(this.body);
     }
 
     valida() {
@@ -40,7 +70,7 @@ class Login {
     }
 
     cleanUp() {
-        //for para iterar dentro de objeto
+        //for para iterar dentro de objeto (nesse caso pode usar for in e for normal, mas o for of nao)
         for(const chave in this.body) {
             if(typeof this.body[chave] !== 'string') this.body[chave] = '';
         }
@@ -51,5 +81,7 @@ class Login {
         }
     }
 }
+
+//TUDO Q MEXE COM O BANCO DE DADOS DIRETAMENTE RETORNA UMA PROMISSE, OU SEJA, É ASSINCRONO
 
 module.exports = Login;
