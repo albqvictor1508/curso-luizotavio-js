@@ -1,6 +1,7 @@
 const Login = require("../models/loginModel");
 
 exports.index = (req,res) => {
+    if(req.session.user) return res.render('logado')
     res.render('login');
 }
 
@@ -45,7 +46,7 @@ exports.login = async function(req,res) {
     };
 
     req.flash('success', 'Seu login foi realizado com sucesso');
-    
+
     //salva a sessão do navegador do usuário
     req.session.user = login.user;
 
@@ -60,10 +61,7 @@ exports.login = async function(req,res) {
   }
 }
 
-/*
-CHECAR EMAIL
-CHECAR SENHA
-EXIBIR MENSAGEM DE ERRO NO CAMPO QUE ESTIVER INVÁLIDO
-MANDAR PRO BANCO DE DADOS QUANDO TODOS ESTIVEREM VÁLIDOS
-RETORNAR O USUÁRIO À HOME
-*/ 
+exports.logout = (req,res) => {
+  req.session.destroy();
+  res.redirect('/');
+}
