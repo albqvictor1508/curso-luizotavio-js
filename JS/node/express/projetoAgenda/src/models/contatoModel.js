@@ -43,6 +43,8 @@ Contato.prototype.cleanUp = function() {
     //for para iterar dentro de objeto (nesse caso pode usar for in e for normal, mas o for of nao)
     for(const chave in this.body) {
         if(typeof this.body[chave] !== 'string') this.body[chave] = '';
+
+        //se o valor n for string, vira um campo vazio
     }
     
     this.body = {
@@ -51,6 +53,14 @@ Contato.prototype.cleanUp = function() {
         telefone: this.body.telefone,
         email: this.body.email,
     }
+}
+
+Contato.prototype.edit = async function(id) {
+    if(typeof id !== 'string');
+    this.valida();
+    if(this.errors.length > 0) return;
+
+    this.contato = await ContatoModel.findByIdAndDelete(id, this.body, {new: true});
 }
 
 module.exports = Contato;
