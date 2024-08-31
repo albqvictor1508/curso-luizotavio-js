@@ -14,27 +14,25 @@ exports.register = async function(req,res) {
 
         if(contato.errors.length > 0) {
             req.flash('errors', contato.errors);
-            return req.session.save(() => {
-            res.redirect('/contato/');
-            })
+            req.session.save(() => res.redirect(`/contato/`))
+            return;
         }
 
         req.flash('success', 'Seu contato foi registrado com sucesso!');
-        return req.session.save(() => {
-            res.redirect(`/contato/index/${contato.contato._id}`);
-        })
+        req.session.save(() => res.redirect(`/contato/index/${contato.contato._id}`));
+        return;
+
     } catch(e) {
         console.log(e);
-        res.render('404');
+        return res.render('404');
     }
 }
 
 exports.editIndex = async function(req,res) {
     if(!req.params.id) return res.render('404');
-
     const contato = await Contato.buscaID(req.params.id);
 
-    res.render('contato', {contato});
+    res.render('contato', {contato: contato});
 }
 
 exports.edit = async function(req,res) {
@@ -46,18 +44,17 @@ exports.edit = async function(req,res) {
 
         if(contato.errors.length > 0) {
             req.flash('errors', contato.errors);
-            return req.session.save(() => {
-            res.redirect('/contato/');
+            req.session.save(() => {
+            res.redirect(`/contato/index/${req.params.id}`);
+            return;
             })
         }
 
-        req.flash('success', 'Seu contato foi registrado com sucesso!');
-        return req.session.save(() => {
-            res.redirect(`/contato/index/${contato.contato._id}`);
-        })
+        req.flash('success', 'Contato editado com sucesso.');
     } catch(e) {
         console.log(e);
-        res.render('erro404');
+        return res.render('erro404');
     }
 
+    req.session.save(()=> res.redirect(`/contato/index/${req.params.id}`));
 }
