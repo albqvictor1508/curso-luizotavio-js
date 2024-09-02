@@ -18,7 +18,7 @@
                   <h4>Cadastro.</h4>
 
                   <p class="form-text">Se ainda não tem login, preencha o formulário abaixo</p>
-                  <form action="/" method="post" id="formRegister">
+                  <form action="/" method="post" class="formRegister">
 
                     <input type="hidden" name="_csrf" value="<%- csrfToken %>">
                     <div class="mb-3">
@@ -41,7 +41,7 @@
                   <p class="form-text">Se já possui uma conta, faça o login</p>
 
 
-                  <form action="/login" method="post" id="formLogin">
+                  <form action="/login" method="post" class="formLogin">
                     <input type="hidden" name="_csrf" value="<%- csrfToken %>">
                     <div class="mb-3">
                       <label class="form-label">Endereço de Email</label>
