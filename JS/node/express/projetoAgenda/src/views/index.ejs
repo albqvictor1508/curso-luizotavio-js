@@ -13,45 +13,23 @@
                 <p class="text-muted text-center">Seus contatos estão abaixo</p>
 
                 <%- include('includes/messages') %>
-
+                <% if(contatos.length > 0) { %>
             <div class="responsive-table">
                 <table class="table ms-auto">
+                    <% contatos.forEach(contato => { %>
                     <tr>
-                        <td>big love</td>
-                        <td>celular</td>
-                        <td> (83) 99130-3948</td>
-                        <td>alexsamartins@icloud.com</td>
-                        <td><button class="text-danger bg-transparent border border-0">X</button></td>
+                        <td><%= contato.nome %></td>
+                        <td><%= contato.sobrenome %></td>
+                        <td><%= contato.telefone %></td>
+                        <td><%= contato.email %></td>
+                        <td><a class="text-decoration-none" href="/contato/index/<%= contato._id %>">Editar</a></td>
+                        <td><button class="bg-transparent border border-0"><a class="text-danger text-decoration-none" href="/contato/delete/<%= contato._id %>">X</a></button></td>
                     </tr>
-                    <tr>
-                        <td>big love</td>
-                        <td>celular</td>
-                        <td> (83) 99130-3948</td>
-                        <td>alexsamartins@icloud.com</td>
-                        <td><button class="text-danger bg-transparent border border-0">X</button></td>
-                    </tr>
-                    <tr>
-                        <td>big love</td>
-                        <td>celular</td>
-                        <td> (83) 99130-3948</td>
-                        <td>alexsamartins@icloud.com</td>
-                        <td><button class="text-danger bg-transparent border border-0">X</button></td>
-                    </tr>
-                    <tr>
-                        <td>big love</td>
-                        <td>celular</td>
-                        <td> (83) 99130-3948</td>
-                        <td>alexsamartins@icloud.com</td>
-                        <td><button class="text-danger bg-transparent border border-0">X</button></td>
-                    </tr>
-                    <tr>
-                        <td>big love</td>
-                        <td>celular</td>
-                        <td> (83) 99130-3948</td>
-                        <td>alexsamartins@icloud.com</td>
-                        <td><button class="text-danger bg-transparent border border-0">X</button></td>
-                    </tr>
+                    <% }) %>
                 </table>
+                <% } else {%>
+                    <p class="text-center lead">Não possuem contatos na agenda.</p>
+                <% } %>
             </div>
         </div>
 

@@ -11,12 +11,14 @@ const loginModel = mongoose.model('login', loginSchema);
 
 class Login {
     constructor(body) {
+    //esse body é o req.body, que armazena os dados que foram enviados pro POST com o nome q é posto no name do input
         this.body = body;
         this.errors = [];
         this.user = null;
     }
 
     async usuarioExiste() {
+        //this.body.email = email mandado pelo usuário
         this.user = await loginModel.findOne({email: this.body.email});
         
         if(this.user) this.errors.push('Usuário já existe');
@@ -56,7 +58,7 @@ class Login {
         const salt = bcryptjs.genSaltSync();
         this.body.senha = bcryptjs.hashSync(this.body.senha, salt);
 
-        //mudando o valor pra o objeto com os dados validados e enviando pro mongo
+        //mudando o valor de user pro objeto com os dados validados e enviando pro mongo
         this.user = await loginModel.create(this.body);
     }
 
