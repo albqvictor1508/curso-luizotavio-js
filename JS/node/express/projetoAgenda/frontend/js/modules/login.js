@@ -6,10 +6,15 @@ export default class Login {
     }
 
     init() {
+        console.log("ta pegando");
         this.events();
     }
 
     events() {
+        if(!this.form) {
+            console.log("não tem evento");
+            return;
+        }
         this.form.addEventListener('submit', e => {
             e.preventDefault();
             this.captarElementos(e);
@@ -44,5 +49,3 @@ export default class Login {
         return errors;
     }
 }
-
-const teste = new Login('testando');

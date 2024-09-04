@@ -1,10 +1,93 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./frontend/js/modules/modules.js":
+/***/ "./frontend/js/modules/contato.js":
 /*!****************************************!*\
-  !*** ./frontend/js/modules/modules.js ***!
+  !*** ./frontend/js/modules/contato.js ***!
   \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Contato)
+/* harmony export */ });
+/* harmony import */ var validator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! validator */ "./node_modules/validator/index.js");
+/* harmony import */ var validator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(validator__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+
+var Contato = /*#__PURE__*/function () {
+  function Contato(classeForm) {
+    _classCallCheck(this, Contato);
+    this.form = document.querySelector(classeForm);
+  }
+  return _createClass(Contato, [{
+    key: "init",
+    value: function init() {
+      console.log("ta sendo executado");
+      this.events();
+    }
+  }, {
+    key: "events",
+    value: function events() {
+      var _this = this;
+      if (!this.form) {
+        console.log("nao tem evento");
+        return;
+      }
+      this.form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        _this.declaraCampos(e);
+      });
+    }
+  }, {
+    key: "declaraCampos",
+    value: function declaraCampos(e) {
+      var el = e.target;
+      var nomeInput = el.querySelector('input[name="nome"]');
+      var sobrenomeInput = el.querySelector('input[name="sobrenome"]');
+      var telefoneInput = el.querySelector('input[name="telefone"]');
+      var emailInput = el.querySelector('input[name="email"]');
+      if (!this.valida({
+        nome: nomeInput.value,
+        sobrenome: sobrenomeInput.value,
+        tel: telefoneInput.value,
+        email: emailInput.value
+      })) el.submit();
+    }
+  }, {
+    key: "valida",
+    value: function valida(campos) {
+      var errors = false;
+      if (!campos.nome) {
+        alert("O nome é obrigatório");
+        errors = true;
+      }
+      if (!campos.tel && !campos.email) {
+        alert("É preciso dois meios de contato: telefone ou email");
+        errors = true;
+      }
+      if (campos.email && !validator__WEBPACK_IMPORTED_MODULE_0___default().isEmail(campos.email)) {
+        alert("Email inválido");
+        errors = true;
+      }
+      return errors;
+    }
+  }]);
+}();
+
+
+/***/ }),
+
+/***/ "./frontend/js/modules/login.js":
+/*!**************************************!*\
+  !*** ./frontend/js/modules/login.js ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -29,12 +112,17 @@ var Login = /*#__PURE__*/function () {
   return _createClass(Login, [{
     key: "init",
     value: function init() {
+      console.log("ta pegando");
       this.events();
     }
   }, {
     key: "events",
     value: function events() {
       var _this = this;
+      if (!this.form) {
+        console.log("não tem evento");
+        return;
+      }
       this.form.addEventListener('submit', function (e) {
         e.preventDefault();
         _this.captarElementos(e);
@@ -72,7 +160,6 @@ var Login = /*#__PURE__*/function () {
   }]);
 }();
 
-var teste = new Login('testando');
 
 /***/ }),
 
@@ -30408,15 +30495,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_stable__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_stable__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_modules__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modules */ "./frontend/js/modules/modules.js");
+/* harmony import */ var _modules_login__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/login */ "./frontend/js/modules/login.js");
+/* harmony import */ var _modules_contato__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/contato */ "./frontend/js/modules/contato.js");
+
 
 
 
 (function validarCamposLogin() {
-  var login = new _modules_modules__WEBPACK_IMPORTED_MODULE_2__["default"](".formLogin");
-  var register = new _modules_modules__WEBPACK_IMPORTED_MODULE_2__["default"](".formRegister");
+  var login = new _modules_login__WEBPACK_IMPORTED_MODULE_2__["default"](".formLogin");
+  var register = new _modules_login__WEBPACK_IMPORTED_MODULE_2__["default"](".formRegister");
   login.init();
   register.init();
+})();
+(function validaContato() {
+  var contato = new _modules_contato__WEBPACK_IMPORTED_MODULE_3__["default"](".form-contato");
+  contato.init();
 })();
 })();
 
