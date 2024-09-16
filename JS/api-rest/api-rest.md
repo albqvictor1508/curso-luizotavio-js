@@ -1,6 +1,16 @@
 (lembrando que na pasta de deploy e na pasta baixada do curso tem as chaves SSH e os
 comandos do GIT)
 
+# Comandos acessar VM
+
+eval $(ssh-agent)
+
+ssh-add ~/.ssh/id_ed25519
+
+start ~/.ssh
+
+ssh (IP do google cloud) --> quando ja tiver colocado esses comandos
+
 ## API rest
 
 Sequelize --> ORM que vai ser utilizada para conectar com o banco de dados
