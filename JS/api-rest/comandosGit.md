@@ -31,3 +31,4 @@ git checkout -b --> cria uma nova branch
 git checkout <commit> --> dentro desses maior e menor que você pode colocar o hash do seu commit, voltando para uma versão anterior do seu código.
 
 <strong>*E entrando no estado de "detached HEAD" ou seja, fora do seu repositório, então é necessário que execute o "git checkout main" para voltar pro repositório main ou pro repositório desejado*</strong>
+
