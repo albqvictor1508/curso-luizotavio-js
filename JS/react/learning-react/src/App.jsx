@@ -2,6 +2,7 @@ import Tasks from "./components/Tasks";
 import AddTasks from "./components/AddTasks";
 import { useEffect, useState } from "react";
 import { v4 } from "uuid";
+import Title from "./components/Title";
 
 export default function App() {
 	const [tasks, setTasks] = useState(
@@ -12,13 +13,16 @@ export default function App() {
 		localStorage.setItem("tasks", JSON.stringify(tasks));
 	}, [tasks]); //só vai executar a função quando oque tiver dentro do array for alterado
 
-	useEffect(async () => {
-		const response = await fetch(
-			"https://jsonplaceholder.typicode.com/todos?_limit=10",
-		);
-		const data = response.json();
-		console.log(data);
-	});
+	useEffect(() => {
+		async function fetchData() {
+			const response = await fetch(
+				"https://jsonplaceholder.typicode.com/todos/1",
+			);
+			const data = response.json();
+			setTasks(data);
+		}
+		//POSSO CHAMAR ESSA FUNÇÃO CASO QUEIRA RECEBER DADOS DE UMA FAKE API
+	}, []);
 
 	function onTaskClick(taskId) {
 		const newTasks = tasks.map((task) => {
@@ -67,9 +71,7 @@ export default function App() {
 	return (
 		<div className="w-screen h-screen flex justify-center bg-slate-600 p-6">
 			<div className="w-[500px] space-y-4">
-				<h1 className="text-slate-100 text-3xl font-bold text-center p-2">
-					Task Manager
-				</h1>
+				<Title>Task Manager</Title>
 				<AddTasks
 					addTaskOnSubmit={addTaskOnSubmit}
 					validateTask={validateTask}

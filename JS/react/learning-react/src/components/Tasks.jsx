@@ -1,5 +1,6 @@
-import { ChevronRight, Trash2 } from "lucide-react";
+import { Check, ChevronRight, Trash2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import Button from "./Button";
 
 //poderia usar o props mas ja fiz destructuring no parâmetro pra facilitar
 export default function Tasks({ tasks, onTaskClick, removeTask }) {
@@ -23,25 +24,18 @@ export default function Tasks({ tasks, onTaskClick, removeTask }) {
 						>
 							<button
 								type="button"
-								className={`w-full bg-slate-400 p-2 rounded-md text-lg text-left ${task.isCompleted && "line-through"}`}
+								className={`flex items-center gap-2 w-full bg-slate-400 p-2 rounded-md text-lg text-left ${task.isCompleted && "line-through"}`}
 								onClick={() => onTaskClick(task.id)}
 							>
+								{task.isCompleted && <Check />}
 								{task.title}
 							</button>
-							<button
-								onClick={() => onSeeDetailsClick(task)}
-								type="button"
-								className="bg-slate-400 p-2 rounded-md"
-							>
+							<Button onClick={() => onSeeDetailsClick(task)}>
 								<ChevronRight />
-							</button>
-							<button
-								type="button"
-								className="bg-slate-400 p-2 rounded-md"
-								onClick={() => removeTask(task.id)}
-							>
+							</Button>
+							<Button onClick={() => removeTask(task.id)}>
 								<Trash2 />
-							</button>
+							</Button>
 						</li>
 					);
 				})}
