@@ -10,12 +10,27 @@ export default function App() {
 			title: "amar alexsa!",
 		},
 	]);
+
+  function addTaskOnSubmit(title) {
+    const newItem = {
+      id:v4(),
+      title,
+    }
+    setTasks([...tasks, newItem]);
+  }
+
+  function removeTask(taskId) {
+    const newItem = tasks.filter(task => task.id !== taskId);
+
+    setTasks(newItem);
+  }
+
 	return (
 		<div className="w-screen h-screen">
-			<div className="w-[400px] mx-auto my-4">
-				<h1 className="text-3xl text-gray-900 p-6 font-bold">Todo List</h1>
-				<AddItem />
-				<Items tasks={tasks} />
+			<div className="w-[450px] mx-auto space-y-4 my-4">
+				<h1 className="text-3xl text-gray-900 p-3 font-bold text-center">Todo List</h1>
+				<AddItem addTaskOnSubmit={addTaskOnSubmit} />
+				<Items tasks={tasks} removeTask={removeTask} />
 			</div>
 		</div>
 	);
