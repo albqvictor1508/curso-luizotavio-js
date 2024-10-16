@@ -1,15 +1,16 @@
 import AddItem from "./components/AddItem";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { v4 } from "uuid";
 import Items from "./components/Items";
 
 export default function App() {
-	const [tasks, setTasks] = useState([
-		{
-			id: v4(),
-			title: "amar alexsa!",
-		},
-	]);
+	const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks")) || []
+  );
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks))
+  }, [tasks])
 
   function addTaskOnSubmit(title) {
     const newItem = {

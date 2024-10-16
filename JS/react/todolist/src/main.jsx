@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Lexa from './pages/Lexa.jsx';
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/alexsa",
-    element: <h1>Eu te amo!</h1>
+    element: <Lexa />
   }
 ]);
 
