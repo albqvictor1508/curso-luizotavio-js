@@ -3,37 +3,45 @@ var _bcryptjs = require('bcryptjs'); var _bcryptjs2 = _interopRequireDefault(_bc
 var _jsonwebtoken = require('jsonwebtoken'); var _jsonwebtoken2 = _interopRequireDefault(_jsonwebtoken);
 
 class TokenController {
-    async store(req,res) { //porque vamos criar ent é store e vai ser um método post
-        const {email = '', password = ''} = req.body;
+	async store(req, res) {
+		//porque vamos criar ent é store e vai ser um método post
+		const { email = "", password = "" } = req.body;
 
-        if(!email || !password) return res.status(401).json({
-            errors: [
-                "Invalid credentials",
-            ]
-        })
+		if (!email || !password)
+			return res.status(401).json({
+				errors: ["Invalid credentials"],
+			});
 
-        const user = await _UserModel.User.findOne({where:{email} })
+		const user = await _UserModel.User.findOne({ where: { email } });
 
-        if(!user) return res.status(401).json({
-            errors: [
-                "User not finded",
-            ]
-        })
+		if (!user)
+			return res.status(401).json({
+				errors: ["User not finded"],
+			});
 
-        const passwordValidate = await _bcryptjs2.default.compare(password, user.password_hash);
+		const passwordValidate = await _bcryptjs2.default.compare(
+			password,
+			user.password_hash,
+		);
 
-        if(!passwordValidate) return res.status(401).json({
-            errors: [
-                "Invalid password.",
-            ]
-        })
-        const { id } = user; //destructuring do id do usuário que passar da validação para mandar pro jwt
-        const token = _jsonwebtoken2.default.sign({id, email}, process.env.TOKEN_SECRET, {expiresIn: process.env.TOKEN_EXPIRATION});
+		if (!passwordValidate)
+			return res.status(401).json({
+				errors: ["Invalid password."],
+			});
+		const { id } = user; //destructuring do id do usuário que passar da validação para mandar pro jwt
+		const token = _jsonwebtoken2.default.sign({ id, email }, process.env.TOKEN_SECRET, {
+			expiresIn: process.env.TOKEN_EXPIRATION,
+		});
 
-        return res.json({
-            token,  
-        });
-    }
+		return res.json({
+			token,
+			user: {
+				id,
+				name: user.name,
+				email,
+			},
+		});
+	}
 }
 
 exports. default = new TokenController();

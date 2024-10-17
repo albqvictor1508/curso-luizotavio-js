@@ -25,6 +25,12 @@ class UserController {
 	async index(req, res) {
 		try {
 			const users = await User.findAll({ attributes: ["id", "nome", "email"] });
+
+			if (!users) {
+				return res.status(404).json({
+					errors: ["User not finded"],
+				});
+			}
 			return res.status(200).json(users);
 		} catch (e) {
 			return res.status(400).json(null);
