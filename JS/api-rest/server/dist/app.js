@@ -10,15 +10,20 @@ var _HomeRoutes = require('./routes/HomeRoutes'); var _HomeRoutes2 = _interopReq
 var _AlunoRoutes = require('./routes/AlunoRoutes'); var _AlunoRoutes2 = _interopRequireDefault(_AlunoRoutes);
 var _PhotoRoutes = require('./routes/PhotoRoutes'); var _PhotoRoutes2 = _interopRequireDefault(_PhotoRoutes);
 
-const whitelist = ["http://34.95.217.255:81/", "http://localhost:5173/"];
+const whitelist = [
+	"http://localhost:5173/",
+	"http://127.0.0.1:5173",
+	"http://34.95.217.255:81/",
+];
 
 const corsOptions = {
 	origin(origin, callback) {
 		if (whitelist.indexOf(origin) !== -1 || !origin) {
+			console.log(`ORIGIN: ${origin}`);
 			return callback(null, true);
 		}
 
-		return new Error("not allowed by CORS");
+		return callback(new Error("not aloweb by CORS"));
 	},
 };
 
