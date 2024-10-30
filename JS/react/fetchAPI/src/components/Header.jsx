@@ -1,4 +1,4 @@
-import { Home, User, DoorOpen } from "lucide-react";
+import { Home, User, DoorOpen, NotebookIcon } from "lucide-react";
 
 export default function Header() {
 	return (
@@ -8,10 +8,14 @@ export default function Header() {
 					<Home className="text-white" />
 				</a>
 				<a href="/login" className="p-2 rounded-md">
-					<User className="text-white" />
+					<User className="text-white" size={24} />
 				</a>
 				<a href="/register">
-					<DoorOpen className="text-white" />
+					<DoorOpen className="text-white" size={24} />
+				</a>
+
+				<a href="/test">
+					<NotebookIcon className="text-white" size={24} />
 				</a>
 			</div>
 		</header>

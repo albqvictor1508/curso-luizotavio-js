@@ -9,8 +9,10 @@ var _UserRoutes = require('./routes/UserRoutes'); var _UserRoutes2 = _interopReq
 var _HomeRoutes = require('./routes/HomeRoutes'); var _HomeRoutes2 = _interopRequireDefault(_HomeRoutes);
 var _AlunoRoutes = require('./routes/AlunoRoutes'); var _AlunoRoutes2 = _interopRequireDefault(_AlunoRoutes);
 var _PhotoRoutes = require('./routes/PhotoRoutes'); var _PhotoRoutes2 = _interopRequireDefault(_PhotoRoutes);
+var _TestRoute = require('./routes/TestRoute'); var _TestRoute2 = _interopRequireDefault(_TestRoute);
 
 const whitelist = [
+	"http://localhost:3303",
 	"http://localhost:5173/",
 	"http://127.0.0.1:5173",
 	"http://34.95.217.255:81/",
@@ -18,12 +20,12 @@ const whitelist = [
 
 const corsOptions = {
 	origin(origin, callback) {
+		console.log(`ORIGIN: ${origin}`);
 		if (whitelist.indexOf(origin) !== -1 || !origin) {
-			console.log(`ORIGIN: ${origin}`);
 			return callback(null, true);
 		}
 
-		return callback(new Error("not aloweb by CORS"));
+		return callback(new Error("not allowed by CORS"));
 	},
 };
 
@@ -35,13 +37,18 @@ class App {
 	}
 
 	middlewares() {
-		this.app.use(_cors2.default.call(void 0, corsOptions));
+		this.app.use(_cors2.default.call(void 0, ));
 		this.app.use(_helmet2.default.call(void 0, ));
 		this.app.use(_express2.default.json());
 		this.app.use(_express2.default.urlencoded({ extended: true }));
+
+		console.log(
+			"Caminho absoluto para imagens:",
+			_nodepath.resolve.call(void 0, __dirname, "..", "uploads", "images"),
+		);
 		this.app.use(
-			"images/",
-			_express2.default.static(_nodepath.resolve.call(void 0, __dirname, "uploads", "images")),
+			"/images/",
+			_express2.default.static(_nodepath.resolve.call(void 0, __dirname, "..", "uploads", "images")),
 		);
 	}
 
@@ -51,6 +58,7 @@ class App {
 		this.app.use("/user", _UserRoutes2.default);
 		this.app.use("/student", _AlunoRoutes2.default);
 		this.app.use("/photos/", _PhotoRoutes2.default);
+		this.app.use("/test-image", _TestRoute2.default);
 	}
 }
 

@@ -11,6 +11,7 @@ export default {
 				"warning-color": "#F2AF29",
 				"error-color": "#F2AF29",
 				"container-color": "#fff",
+				"active-primary-color": "#a80a39",
 			},
 		},
 	},

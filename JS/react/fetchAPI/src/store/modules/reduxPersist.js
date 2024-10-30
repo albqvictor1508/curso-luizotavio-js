@@ -2,9 +2,9 @@ import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist";
 
 const persistConfig = {
-	key: "REACT_SCHOOL",
+	key: "AUTHENTICATION",
 	storage,
-	whitelist: ["reducers"],
+	whitelist: ["auth"],
 };
 
 export default (reducers) => persistReducer(persistConfig, reducers);

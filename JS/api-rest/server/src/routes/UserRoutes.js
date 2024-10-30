@@ -9,6 +9,6 @@ router.post("/create", userController.store);
 
 router.get("/show/:id", userController.show);
 router.put("/update/", loginRequired, userController.update);
-router.delete("/delete/", loginRequired, userController.delete);
+router.delete("/delete/:id", loginRequired, userController.delete);
 
 export default router;
