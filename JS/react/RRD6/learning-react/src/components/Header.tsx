@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import {Angry, House} from "lucide-react";
+import {Angry, Book, House} from "lucide-react";
 
 export default function Header() {
   return (
@@ -7,6 +7,7 @@ export default function Header() {
       <nav className="flex gap-5">
         <Link to={"/"}><House size={32} color={"white"} /></Link>
         <Link to={"/about"}><Angry size={32} color ={"white"} /></Link>
+        <Link to={"/students"}><Book size={32} color ={"white"} /></Link>
       </nav>
     </header>
   )
