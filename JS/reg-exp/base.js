@@ -34,11 +34,20 @@ IP'S:
 192.168.0.35
 10.0.0.1
 `
+const html2 = `
+<p>
+  data-teste="teste"
+  class="text-2xl"
+  id="teste"
+</p>
+<p>Hello 'World'!</p> <b>eu amo minha mulher!</b> <img src="" alt="" />
+`
 
 module.exports = {
   text,
   archives,
   html,
   cpfs,
-  ips
+  ips,
+  html2,
 }
