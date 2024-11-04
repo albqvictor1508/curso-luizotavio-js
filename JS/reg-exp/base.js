@@ -43,6 +43,15 @@ const html2 = `
 <p>Hello 'World'!</p> <b>eu amo minha mulher!</b> <img src="" alt="" />
 `
 
+const lookahead = `
+  ONLINE 192.168.0.1 ABCDEF inactive
+  OFFLINE 192.168.0.2 ABDEF active
+  ONLINE 192.168.0.3 ABDEF active
+  ONLINE 192.168.0.4 ABDEF active
+  OFFLINE 192.168.0.5 ABDEF active
+  ONLINE 192.168.0.6 ABDEF inactive
+`
+
 module.exports = {
   text,
   archives,
@@ -50,4 +59,5 @@ module.exports = {
   cpfs,
   ips,
   html2,
+  lookahead
 }

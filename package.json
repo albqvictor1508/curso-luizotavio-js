@@ -1,0 +1,12 @@
+{
+  "name": "cursoluizotaviojs",
+  "version": "1.0.0",
+  "description": "Curso de JS/TS/REACT/ETC do Luiz Otavio Miranda na Udemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
