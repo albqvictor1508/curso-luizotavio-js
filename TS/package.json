@@ -3,7 +3,9 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"dev": "tsx watch src/types/part2.ts"
+		"dev": "tsx watch src/types/structural-types.ts",
+    "build:frontend": "webpack -w",
+    "build:backend": "tsc"
 	},
 	"keywords": [],
 	"author": "",
@@ -13,7 +15,10 @@
 		"@biomejs/biome": "^1.9.4",
 		"@types/node": "^22.8.7",
 		"globals": "^15.12.0",
+		"ts-loader": "^9.5.1",
 		"tsx": "^4.19.2",
-		"typescript": "^5.6.3"
+		"typescript": "^5.6.3",
+		"webpack": "^5.96.1",
+		"webpack-cli": "^5.1.4"
 	}
 }

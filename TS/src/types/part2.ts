@@ -18,3 +18,22 @@ function completeName(
 		lastName,
 	};
 }
+
+//EXISTEM OUTROS TIPOS PADRÃO COMO NULL, UNDEFINED E NEVER
+
+enum Colors {
+	blue = "azul",
+	green = "verde",
+	yellow = "amarelo",
+}
+
+//O TIPO UNKNOW FUNCIONA IGUAL O ANY, SÓ MAIS SEGURO, ENTAO SE O TIPO DO VALOR ATUAL DA VARIÁVEL COM O TIPO UNKNOW NÃO FOR CHECADO, ELE NAO VAI DEIXAR REALIZAR OPERAÇÕES.
+
+let idk: unknown;
+idk = 10;
+idk = 30;
+idk = "vito";
+idk = "lexsa";
+idk = ["vito", "e", "lexsa"];
+
+//console.log(idk + 2); //saida: 'idk' is of type 'unknown'
