@@ -1,84 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
 
 * {
-  padding: 0;
-  margin: 0;
-  outline: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: "Parkinsans", monospace;
+	font-family: "Parkinsans", monospace;
 }
 
 main {
-  min-height: 100vh;
-  min-width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #43C6AC;
-  background: -webkit-linear-gradient(to right, #191654, #43C6AC);
-  background: linear-gradient(to right, #191654, #43C6AC);
+	min-height: 100vh;
+	min-width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #43c6ac;
+	background: -webkit-linear-gradient(to right, #191654, #43c6ac);
+	background: linear-gradient(to right, #191654, #43c6ac);
 }
 
 .register-body {
-  border-radius: 10px;
-  padding: 20px;
-  width: 350px;
-  background-color: white;
-  backdrop-filter: 10;
+	border-radius: 10px;
+	padding: 20px;
+	width: 350px;
+	background-color: white;
+	backdrop-filter: 10;
 }
 
 .form {
-  width: 100%;
-
+	width: 100%;
 }
 
 h2 {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 15px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 15px;
 }
 
 .form-fields {
-  margin-top: 12px;
-  width: 100%;
+	margin-top: 12px;
+	width: 100%;
 
-  label {
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
+	label {
+		display: block;
+		font-size: 14px;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
 
-  input {
-    border: 2px solid rgb(233, 232, 232);
-    width: 100%;
-    padding: 7px;
-    border-radius: 10px;
-  }
+	input {
+		border: 2px solid #e9e8e8;
+		width: 100%;
+		padding: 7px;
+		border-radius: 10px;
+	}
 }
 
 button {
-  cursor: pointer;
-  color: white;
-  border-radius: 5px;
-  border: 0;
-  font-family: "Parkinsans", monospace;
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  width: 100%;
-  padding: 10px 12px;
-  background: #43C6AC;
-  background: -webkit-linear-gradient(to right, #191654, #43C6AC);
-  background: linear-gradient(to right, #191654, #43C6AC);
+	cursor: pointer;
+	color: white;
+	border-radius: 5px;
+	border: 0;
+	font-family: "Parkinsans", monospace;
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	width: 100%;
+	padding: 10px 12px;
+	background: #43c6ac;
+	background: -webkit-linear-gradient(to right, #191654, #43c6ac);
+	background: linear-gradient(to right, #191654, #43c6ac);
 }
 
 .error-message {
-  color: red;
-  font-weight: 400;
-  font-size: 12px;
-
+	color: red;
+	font-weight: 400;
+	font-size: 12px;
 }

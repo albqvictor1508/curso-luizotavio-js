@@ -4,8 +4,8 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "tsx watch src/types/structural-types.ts",
-    "build:frontend": "webpack -w",
-    "build:backend": "tsc"
+		"build:frontend": "webpack -w",
+		"build:backend": "tsc"
 	},
 	"keywords": [],
 	"author": "",
@@ -20,5 +20,8 @@
 		"typescript": "^5.6.3",
 		"webpack": "^5.96.1",
 		"webpack-cli": "^5.1.4"
+	},
+	"dependencies": {
+		"@types/validator": "^13.12.2"
 	}
 }

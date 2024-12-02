@@ -1,39 +1,25 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/webpack/index.ts":
 /*!******************************!*\
   !*** ./src/webpack/index.ts ***!
   \******************************/
+/***/ (() => {
 
-(() => {
-    const form = document.querySelector("#form");
-    const formFields = form === null || form === void 0 ? void 0 : form.querySelectorAll("input");
-    form === null || form === void 0 ? void 0 : form.addEventListener("submit", e => {
-        e.preventDefault();
-        if (handleSubmit()) {
-            form.submit();
-        }
-        function handleSubmit() {
-            let valid = true;
-            const errorMessagesArray = document.querySelectorAll(".error-message");
-            if (errorMessagesArray) {
-                errorMessagesArray.forEach(msg => {
-                    for (const input of formFields) {
-                        if (!input.value) {
-                            msg.textContent = "All the field must to be filled";
-                            input.style.borderColor = "red";
-                            valid = false;
-                        }
-                    }
-                });
-            }
-            if (!valid) {
-                alert(`form not sended`);
-            }
-            return valid;
-        }
-    });
-})();
+throw new Error("Module build failed (from ./node_modules/ts-loader/index.js):\nError: TypeScript emitted no output for /home/victor/Documentos/vscode/cursoLuizOtavioJS/TS/src/webpack/index.ts.\n    at makeSourceMapAndFinish (/home/victor/Documentos/vscode/cursoLuizOtavioJS/TS/node_modules/ts-loader/dist/index.js:55:18)\n    at successLoader (/home/victor/Documentos/vscode/cursoLuizOtavioJS/TS/node_modules/ts-loader/dist/index.js:42:5)\n    at Object.loader (/home/victor/Documentos/vscode/cursoLuizOtavioJS/TS/node_modules/ts-loader/dist/index.js:23:5)");
 
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/webpack/index.ts"]();
+/******/ 	
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
