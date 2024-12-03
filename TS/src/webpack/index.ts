@@ -2,7 +2,8 @@
 	const form: HTMLFormElement | null = document.querySelector("#form");
 	if (!form) return;
 
-	const usernameInput = form.querySelector("#usernameInput");
+	const usernameInput: HTMLInputElement | null =
+		form.querySelector("#usernameInput");
 	const emailInput: HTMLInputElement | null = form.querySelector("#emailInput");
 	const passwordInput: HTMLInputElement | null =
 		form.querySelector("#passwordInput");
@@ -92,11 +93,9 @@
 		}
 
 		function refreshErrorMessage() {
-			// biome-ignore lint/complexity/noForEach: <explanation>
 			document.querySelectorAll(".error-message").forEach((msg) => {
 				msg.remove();
 			});
-			// biome-ignore lint/complexity/noForEach: <explanation>
 			document.querySelectorAll("input").forEach((input) => {
 				input.style.borderColor = "#e9e8e8";
 			});

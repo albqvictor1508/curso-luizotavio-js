@@ -74,9 +74,23 @@ button {
 	background: -webkit-linear-gradient(to right, #191654, #43c6ac);
 	background: linear-gradient(to right, #191654, #43c6ac);
 }
-
+/* 
+manipulação do style pelo CSS, onde eu coloco uma classe no elemento pai que altera style no elemento filho, em vez de ficar trocando display no JS
+mais seguro também
+*/
 .error-message {
 	color: red;
 	font-weight: 400;
-	font-size: 12px;
+	font-size: 10px;
+	display: none;
+}
+
+.show-error-message {
+	input {
+		border: 1px solid red;
+	}
+
+	span {
+		display: block;
+	}
 }
