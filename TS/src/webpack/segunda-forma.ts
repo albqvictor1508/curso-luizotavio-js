@@ -78,7 +78,7 @@ import validator from "validator";
 			});
 		}
 
-		function sendForm() {
+		function sendForm(): boolean {
 			let valid = true;
 
 			form
