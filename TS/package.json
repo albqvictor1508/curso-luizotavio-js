@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"dev": "tsx watch src/types/structural-types.ts",
+		"dev": "tsx watch src/**/*.ts",
 		"build:frontend": "webpack -w",
 		"build:backend": "tsc"
 	},
