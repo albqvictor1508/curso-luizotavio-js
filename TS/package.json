@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"dev:generics": "tsx watch src/generics/constraints.ts",
+		"dev": "nodemon --watch src/**/*.ts",
 		"build:frontend": "webpack -w",
 		"build:backend": "tsc"
 	},
@@ -15,6 +15,7 @@
 		"@biomejs/biome": "^1.9.4",
 		"@types/node": "^22.8.7",
 		"globals": "^15.12.0",
+		"nodemon": "^3.1.9",
 		"ts-loader": "^9.5.1",
 		"tsx": "^4.19.2",
 		"typescript": "^5.6.3",
