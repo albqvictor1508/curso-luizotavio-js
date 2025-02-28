@@ -15,5 +15,5 @@ export function decorator<T extends new (...args: any[]) => any>(target: T): T {
 		}
 	};
 }
-const carDecorated = decorator<typeof Car>(Car);
-const car = new carDecorated("yellow");
+const car = new Car("azul");
+console.log(car); // mesmo instânciado pela própria classe ao invés do decorator, com o @ lá em cima a própria classe executa o decorator quando é instanciada

@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"dev:generics": "tsx watch src/generics/exercises/votacao.ts",
+		"dev": "tsx watch src/generics/predicate.ts",
 		"build:frontend": "webpack -w",
 		"build:backend": "tsc"
 	},
