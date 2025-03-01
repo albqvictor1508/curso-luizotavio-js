@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"dev": "tsx watch src/generics/predicate.ts",
+		"dev": "tsx watch src/decorators/decorator-method.ts",
 		"build:frontend": "webpack -w",
 		"build:backend": "tsc"
 	},
