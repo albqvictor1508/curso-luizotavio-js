@@ -1,9 +1,21 @@
+type Constructor = {
+	new (...args: any[]): any;
+};
+
+@anotherDecoration("mezera")
 @decorator("victor", "arruda") //uso de factory function e retornando um decorator
 export class Car {
 	constructor(public cor: string) {}
 }
+
+export function anotherDecoration(msr: string) {
+	return (target: Constructor): Constructor => {
+		return target;
+	};
+}
+
 export function decorator(param1: string, param2: string) {
-	return function <T extends new (...args: any[]) => any>(target: T): T {
+	return function <T extends Constructor>(target: T): T {
 		return class extends target {
 			cor: string;
 			name: string;
