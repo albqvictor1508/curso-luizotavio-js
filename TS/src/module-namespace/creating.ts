@@ -7,3 +7,4 @@ namespace helloWorld {
 }
 const monki = new helloWorld.namePerson("monki");
 const monki2 = helloWorld.monki;
+
