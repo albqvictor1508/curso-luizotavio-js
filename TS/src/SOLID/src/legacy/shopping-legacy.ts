@@ -1,7 +1,6 @@
-type CartItem = {name: string, price: number};
-type OrderStatus = "open" | "closed";
+import type { CartItem, OrderStatus } from "../types";
 
-class ShoppingCart {
+export class Legacy {
   private _items: CartItem[] = [];
   private _orderStatus: OrderStatus = "open";
 
@@ -58,7 +57,7 @@ showCart(): CartItem[] {
   }
 }
 
-const cart = new ShoppingCart();
+const cart = new Legacy();
 cart.addItem({name: "lavalux", price: 120});
 cart.addItem({name: "teste", price: 20});
 cart.addItem({name: "moto honda", price: 1000});
