@@ -1,6 +1,6 @@
 import type { OrderStatus } from "../types";
 import type { Messaging } from "./messaging";
-import type { ShoppingCart } from "./shopping-principle";
+import type { ShoppingCart } from "../shopping-principle";
 
 export class Order {
   private _orderStatus: OrderStatus = "open"

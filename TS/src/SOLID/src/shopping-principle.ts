@@ -1,4 +1,4 @@
-import type { CartItem } from "../types";
+import type { CartItem } from "./types";
 
 export class ShoppingCart {
   private _items: CartItem[] = [];
@@ -11,9 +11,9 @@ export class ShoppingCart {
     this._items.push(item);
   }
 
-showCart(): CartItem[] {
-  return this._items;
-}
+  showCart(): CartItem[] {
+    return this._items;
+  }
 
   removeItem(index: number): void {
     this._items.splice(index, 1);
@@ -25,11 +25,6 @@ showCart(): CartItem[] {
 
   isEmpty(): boolean {
     return this._items.length === 0;
-  }
-
-  //
-  saveOrder(): void {
-    console.log("pedido salvo");
   }
 
   clear(): void {
