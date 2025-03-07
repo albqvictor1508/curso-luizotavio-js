@@ -1,8 +1,11 @@
+import type { Discount } from "./ocp/discount";
 import type { CartItem } from "./types";
 
 export class ShoppingCart {
   private _items: CartItem[] = [];
   //não preciso de order, ja que tudo que é relacionado a order é resolvido na classe Order
+  constructor(private readonly discount: Discount) {}
+
   get items(): Readonly<CartItem[]> {
     return this._items;
   }

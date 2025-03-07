@@ -4,7 +4,7 @@ import type { ShoppingCart } from "../shopping-principle";
 
 export class Order {
   private _orderStatus: OrderStatus = "open"
-  constructor(public cart: ShoppingCart, public messaging: Messaging) {}
+  constructor(private readonly cart: ShoppingCart, private readonly messaging: Messaging) {}
 
   get orderStatus() :OrderStatus {
     return this._orderStatus;
