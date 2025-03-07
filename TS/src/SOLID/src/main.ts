@@ -2,8 +2,10 @@ import { Messaging } from "./srp/messaging";
 import { Order } from "./srp/order";
 import { ShoppingCart } from "./shopping-principle";
 import { Persistency } from "./srp/persistency";
+import { NoDiscount } from "./ocp/discount";
 
-const cart = new ShoppingCart();
+const discount = new NoDiscount();
+const cart = new ShoppingCart(discount);
 const persistency = new Persistency();
 const messaging = new Messaging();
 const order = new Order(cart, messaging);
