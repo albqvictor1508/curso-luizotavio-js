@@ -5,6 +5,7 @@ Vantagens:
 - Código modular
 - Código reutilizado
 - De acordo com o DRY (Don't Repeat Yourself)
+- Código testável, baixo acoplamento
 
 Desvantagens: 
 
