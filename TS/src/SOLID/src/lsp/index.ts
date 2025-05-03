@@ -1,6 +1,6 @@
 
 /*
-Liskov Substitution Principle (Princípio da Substituição de Liskov) de forma mais simples ==> Se meu programa, espera o tipo "Animal" que vem da classe Animal, A minha classe "Cachorro" que herda de animal também deve servir
+Liskov Substitution Principle (Princípio da Substituição de Liskov) de forma mais simples ==> Se meu programa, espera o tipo "Animal" que vem da classe Animal, A minha classe "Cachorro" que herda de animal também deve servir (subtipos podem ser trocados por seus tipos primitivos)
 
 class teste {
   private name = "macaco";
