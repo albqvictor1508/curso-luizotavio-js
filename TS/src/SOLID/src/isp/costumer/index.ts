@@ -10,6 +10,12 @@ export class IndividualCostumer implements IndividualCostumerProtocol {
         this.lastName = lastName;
         this.cpf = cpf;
     }
+    getName(): string {
+        return this.firstName + " " + this.lastName;
+    }
+    getIDN(): string {
+        return this.cpf;
+    }
 
 }
 
@@ -22,6 +28,12 @@ export class EnterpriseCostumer implements EnterpriseCostumerProtocol {
         this.fantasyName = fantasyName;
         this.name = costumerName;
         this.cnpj = cnpj;
+    }
+    getName(): string {
+        return this.name;
+    }
+    getIDN(): string {
+        return this.cnpj;
     }
 
 }

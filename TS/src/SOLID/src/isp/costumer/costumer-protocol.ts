@@ -5,14 +5,19 @@ export interface CostumerProtocol {
     cnpj: string;
 }
 
-export interface EnterpriseCostumerProtocol {
+export interface CostumerOrder {
+    getName(): string;
+    getIDN(): string;
+}
+
+export interface EnterpriseCostumerProtocol extends CostumerOrder {
     cnpj: string;
     name: string;
     fantasyName: string;    
 }
 
 
-export interface IndividualCostumerProtocol {
+export interface IndividualCostumerProtocol extends CostumerOrder {
     firstName: string;
     lastName: string;
     cpf: string;
