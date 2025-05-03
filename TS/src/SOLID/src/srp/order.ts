@@ -1,11 +1,17 @@
 import type { OrderStatus } from "../types";
-import type { Messaging } from "./messaging";
-import type { ShoppingCart } from "../shopping-principle";
 import type { CostumerOrder } from "../isp/costumer/costumer-protocol";
+import type { ShoppingCartProtocol } from "../protocol/shopping-cart";
+import type { MessagingProtocol } from "../protocol/messaging";
+import type { PersistencyProtocol } from "../protocol/persistency";
 
 export class Order {
   private _orderStatus: OrderStatus = "open"
-  constructor(private readonly cart: ShoppingCart, private readonly messaging: Messaging, private readonly costumer: CostumerOrder) {}
+  constructor(
+    private readonly cart: ShoppingCartProtocol, 
+    private readonly messaging: MessagingProtocol, 
+    private readonly costumer: CostumerOrder, 
+    private readonly persistency: PersistencyProtocol
+  ) {}
 
   get orderStatus() :OrderStatus {
     return this._orderStatus;
