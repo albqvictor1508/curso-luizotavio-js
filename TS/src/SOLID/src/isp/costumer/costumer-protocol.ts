@@ -10,3 +10,11 @@ export interface EnterpriseCostumerProtocol {
     name: string;
     fantasyName: string;    
 }
+
+
+export interface IndividualCostumer {
+    firstName: string;
+    lastName: string;
+    cpf: string;
+
+}

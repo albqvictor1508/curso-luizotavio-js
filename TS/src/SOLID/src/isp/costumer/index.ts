@@ -1,9 +1,9 @@
 import type { CostumerProtocol,EnterpriseCostumerProtocol } from "./costumer-protocol";
 
 export class IndividualCostumer implements CostumerProtocol {
-    private firstName: string;
-    private lastName: string;
-    private cpf: string;
+     firstName: string;
+     lastName: string;
+     cpf: string;
 
     constructor(firstName: string, lastName: string, cpf: string) {
         this.firstName = firstName;
@@ -14,13 +14,14 @@ export class IndividualCostumer implements CostumerProtocol {
 }
 
 export class EnterpriseCostumer implements EnterpriseCostumerProtocol {
-    private name: string;
-    private fantasyName: string;
-    private cnpj: string
+     name: string;
+     fantasyName: string;
+     cnpj: string;
     
     constructor(fantasyName: string, costumerName: string, cnpj: string) {
         this.fantasyName = fantasyName;
         this.name = costumerName;
+        this.cnpj = cnpj;
     }
 
 }
