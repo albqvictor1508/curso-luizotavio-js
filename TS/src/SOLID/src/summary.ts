@@ -12,6 +12,7 @@ Vantagens:
 Desvantagens: 
 - Complexidade aumenta bastante
 - Quantidade de código aumenta
+- Gasta tempo pra krl 
 - YAGNI (You aren't gonna need this) = tipo os cara que coloca microserviço em software pequeno com pouco dev
 - KISS (Keep it simple, Stupid)
 */
