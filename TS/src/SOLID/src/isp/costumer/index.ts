@@ -1,6 +1,6 @@
-import type { CostumerProtocol,EnterpriseCostumerProtocol } from "./costumer-protocol";
+import type { CostumerProtocol,EnterpriseCostumerProtocol, IndividualCostumerProtocol } from "./costumer-protocol";
 
-export class IndividualCostumer implements CostumerProtocol {
+export class IndividualCostumer implements IndividualCostumerProtocol {
      firstName: string;
      lastName: string;
      cpf: string;
