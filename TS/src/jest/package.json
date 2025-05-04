@@ -4,6 +4,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "jest",
+		"test:silent": "jest --watchAll --silent --noStackTrace",
 		"dev": "tsx --watch src/index.ts"
 	},
 	"keywords": [],
