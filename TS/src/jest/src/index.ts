@@ -34,6 +34,8 @@ const removeUser = (userId: number) => {
 	const user = users.filter((u) => u.id === userId).shift() || "";
 	if (!user) return;
 	const userIndex = users.indexOf(user, 0);
+	users.splice(userIndex, 1);
+	console.log(users);
 };
 
 removeUser(3);
