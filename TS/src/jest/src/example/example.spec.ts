@@ -26,5 +26,8 @@ describe("primitive values", () => {
 		expect(number).toBeGreaterThanOrEqual(10);
 		expect(number).toBeGreaterThan(9);
 		expect(number).toBeLessThan(11);
+		expect(number).toBeCloseTo(10.002); //número próximo
+		expect(number).toBeNull();
+		expect(number).toHaveProperty("toString"); //propriedade de objeto
 	});
 });
