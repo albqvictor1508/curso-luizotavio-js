@@ -9,4 +9,4 @@ module.exports = {
 	},
 };
 
-//tava dando erro porque uma dessas configs tava faltando e dando conflito quando eu executava, mas n sei qual opção
+//tava dando erro pela ausência do tsconfig e por ausência de opções aqui no jest config
