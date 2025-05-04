@@ -33,5 +33,12 @@ describe("primitive values", () => {
 });
 
 describe("more about objects", () => {
-	it("should test objects assertion");
+	it("should test objects assertion", () => {
+		const person = { name: "victor", age: 18 };
+		const person2 = { name: "victor", age: 18 };
+
+		expect(person).toHaveProperty("email");
+		expect(person).toHaveProperty("age", 18); //checa se tem a propriedade, e se o valor dela é igual a 18
+		expect(person2).toEqual(person);
+	});
 });
