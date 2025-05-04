@@ -41,6 +41,9 @@ describe("update route", () => {
 		});
 
 		expect(sut).toHaveProperty("id", 1);
+		expect(sut).toHaveProperty("name", "salve");
+		expect(sut).toHaveProperty("email", "salve@salve.com");
+		expect(sut).toHaveProperty("password", "salve pass");
 	});
 });
 
