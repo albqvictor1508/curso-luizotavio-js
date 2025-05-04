@@ -2,7 +2,7 @@ import { addUser, removeUser, updateUser } from "../index";
 
 //SUT = System under test (oque tá sendo testado)
 
-//aprendi sobre a sintaxe, mas preciso aprender a criar testes
+//aprendi sobre a sintaxe, mas preciso aprender a criar testesg
 
 describe("add user route", () => {
 	it("should return null", () => {});
@@ -10,7 +10,7 @@ describe("add user route", () => {
 
 describe("update route", () => {
 	it("should return a new user data", () => {
-		const newUser = updateUser({
+		const sut = updateUser({
 			userId: 1,
 			newUserData: {
 				name: "salve",
@@ -18,7 +18,12 @@ describe("update route", () => {
 				password: "salve pass",
 			},
 		});
-		expect(newUser).not.toBeNull();
+
+		expect(sut).toHaveProperty("userId", 1);
+		expect(sut).toHaveProperty("id", 1);
+		expect(sut).toHaveProperty("name", "salve");
+		expect(sut).toHaveProperty("email", "salve@salve.com");
+		expect(sut).toHaveProperty("password", "salve pass");
 	});
 });
 
