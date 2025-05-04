@@ -42,3 +42,16 @@ describe("more about objects", () => {
 		expect(person2).toEqual(person);
 	});
 });
+
+describe("testing spyOn", () => {
+	afterEach(() => jest.clearAllMocks()); //depois que cada teste, os mocks são limpos
+	it("should spy something", () => {
+		//salve é um mock
+		const salve = () => {
+			console.log("salve");
+		};
+		salve(); //console.log 1 vez
+		const salveSpy = jest.spyOn(console, "log"); // espiando o console.log() para ver se ele foi chamado
+		expect(salveSpy).toHaveBeenCalledTimes(1); // é experado que ele seja chamado apenas 1 vez
+	});
+});
