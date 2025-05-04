@@ -3,7 +3,9 @@ describe("user tests", () => {
 		const number = 1;
 		expect(number).toBe(1);
 	});
+});
 
+describe("user tests 2", () => {
 	it("should return my name", () => {
 		const myName = "my name";
 		expect(myName).toBe("my name");
