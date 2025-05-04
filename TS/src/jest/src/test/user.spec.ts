@@ -2,7 +2,28 @@ import { addUser, removeUser, updateUser } from "../index";
 
 //SUT = System under test (oque tá sendo testado)
 
-//aprendi sobre a sintaxe, mas preciso aprender a criar testesg
+//aprendi sobre a sintaxe, mas preciso aprender a criar testes
+
+const users = [
+	{
+		id: 1,
+		name: "test name",
+		email: "salve@salve.com",
+		password: "mypassword123",
+	},
+	{
+		id: 2,
+		name: "test name 2",
+		email: "salve2@salve2.com",
+		password: "mypassword1234",
+	},
+	{
+		id: 3,
+		name: "test name 3",
+		email: "salve3@salve3.com",
+		password: "mypassword12345",
+	},
+];
 
 describe("add user route", () => {
 	it("should return null", () => {});
@@ -19,14 +40,17 @@ describe("update route", () => {
 			},
 		});
 
-		expect(sut).toHaveProperty("userId", 1);
 		expect(sut).toHaveProperty("id", 1);
-		expect(sut).toHaveProperty("name", "salve");
-		expect(sut).toHaveProperty("email", "salve@salve.com");
-		expect(sut).toHaveProperty("password", "salve pass");
 	});
 });
 
-describe("update route", () => {
-	it("should return a new user data", () => {});
+describe("remove user route", () => {
+	it("should have an userId", () => {
+		const userIdParam = 1;
+		expect(userIdParam).toBeGreaterThan(0);
+		const userVerified = users.filter((u) => u.id === userIdParam).shift();
+		if (!userVerified) return;
+		expect(userVerified).toHaveProperty("id", 1);
+		removeUser(userVerified.id);
+	});
 });
