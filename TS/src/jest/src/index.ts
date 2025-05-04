@@ -45,6 +45,7 @@ export const updateUser = ({ userId, newUserData }: UpdateUserSchema) => {
 	newUser = { id: newUser.id, ...newUserData };
 	users.push(newUser);
 	console.log(users.sort((a, b) => a.id - b.id));
+	return newUser;
 };
 
 removeUser(3);
