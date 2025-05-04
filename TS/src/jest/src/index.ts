@@ -35,18 +35,21 @@ const removeUser = (userId: number) => {
 	users.splice(userIndex, 1);
 };
 
-const updateUser = ({ userId, user }: UpdateUserSchema) => {
-	const userExists = users.filter((u) => u.id === userId).shift() || "";
-	if (!userExists) return;
-	const userIndex = users.indexOf(userExists, 0);
-	const newUser = users.splice(userIndex, 1).shift();
-	console.log(newUser);
+const updateUser = ({ userId, newUserData }: UpdateUserSchema) => {
+	const user = users.filter((u) => u.id === userId).shift() || "";
+	if (!user) return;
+	const userIndex = users.indexOf(user, 0);
+	let newUser = users.splice(userIndex, 1).shift();
+	if (!newUser) return;
+	newUser = Object.assign(newUserData, { id: newUser.id });
+	users.push(newUser);
+	console.log(users.sort((a, b) => a.id - b.id));
 };
 
 removeUser(3);
 updateUser({
 	userId: 1,
-	user: {
+	newUserData: {
 		name: "new name",
 		email: "new@email.com",
 		password: "newpass",

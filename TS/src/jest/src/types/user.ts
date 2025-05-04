@@ -7,5 +7,5 @@ export type UserData = {
 
 export type UpdateUserSchema = {
 	userId: number;
-	user: UserData;
+	newUserData: UserData;
 };
