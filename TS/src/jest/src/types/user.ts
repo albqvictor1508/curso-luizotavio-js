@@ -1,10 +1,11 @@
 export type UserData = {
-	id: number;
+	id?: number;
 	name: string;
 	email: string;
 	password: string;
 };
 
-export type UpdateUserRoute = {
+export type UpdateUserSchema = {
 	userId: number;
+	user: UserData;
 };

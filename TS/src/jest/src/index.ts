@@ -1,5 +1,7 @@
 //let's go testing!!
 
+import type { UpdateUserSchema, UserData } from "./types/user";
+
 const users = [
 	{
 		id: 1,
@@ -21,12 +23,8 @@ const users = [
 	},
 ];
 
-const addUser = (user: {
-	id: number;
-	name: string;
-	email: string;
-	password: string;
-}) => {
+const addUser = (user: UserData & { id: number }) => {
+	user.id = users.length;
 	users.push(user);
 };
 
@@ -37,13 +35,20 @@ const removeUser = (userId: number) => {
 	users.splice(userIndex, 1);
 };
 
-const updateUser = (userId: number, userData) => {
-	const user = users.filter((u) => u.id === userId).shift() || "";
-	if (!user) return;
-	const userIndex = users.indexOf(user, 0);
-	const newUser = users.splice(userIndex, 1).shift() || "";
+const updateUser = ({ userId, user }: UpdateUserSchema) => {
+	const userExists = users.filter((u) => u.id === userId).shift() || "";
+	if (!userExists) return;
+	const userIndex = users.indexOf(userExists, 0);
+	const newUser = users.splice(userIndex, 1).shift();
 	console.log(newUser);
 };
 
 removeUser(3);
-updateUser(1);
+updateUser({
+	userId: 1,
+	user: {
+		name: "new name",
+		email: "new@email.com",
+		password: "newpass",
+	},
+});
