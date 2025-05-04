@@ -38,4 +38,11 @@ const removeUser = (userId: number) => {
 	console.log(users);
 };
 
+const updateUser = (userId: number) => {
+  const user = users.filter((u) => u.id === userId).shift() || "";
+	if (!user) return;
+	const userIndex = users.indexOf(user, 0);
+	const newUser = users.splice(userIndex, 1).;
+}
+
 removeUser(3);
