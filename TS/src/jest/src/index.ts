@@ -35,14 +35,15 @@ const removeUser = (userId: number) => {
 	if (!user) return;
 	const userIndex = users.indexOf(user, 0);
 	users.splice(userIndex, 1);
-	console.log(users);
 };
 
-const updateUser = (userId: number) => {
-  const user = users.filter((u) => u.id === userId).shift() || "";
+const updateUser = (userId: number, userData) => {
+	const user = users.filter((u) => u.id === userId).shift() || "";
 	if (!user) return;
 	const userIndex = users.indexOf(user, 0);
-	const newUser = users.splice(userIndex, 1).;
-}
+	const newUser = users.splice(userIndex, 1).shift() || "";
+	console.log(newUser);
+};
 
 removeUser(3);
+updateUser(1);
