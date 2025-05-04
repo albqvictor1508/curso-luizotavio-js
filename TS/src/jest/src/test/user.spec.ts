@@ -19,7 +19,12 @@ describe("primitive values", () => {
 		const number = 10;
 		const salve = "";
 		const salve2 = "salve";
+
 		expect(number).toEqual(10); //dá pra ser usado com objetos
+		expect(salve).toBeFalsy();
 		expect(salve2).toBeTruthy();
+		expect(number).toBeGreaterThanOrEqual(10);
+		expect(number).toBeGreaterThan(9);
+		expect(number).toBeLessThan(11);
 	});
 });
