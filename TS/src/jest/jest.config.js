@@ -8,3 +8,5 @@ module.exports = {
 		"^.+\\.tsx?$": "ts-jest",
 	},
 };
+
+//tava dando erro porque uma dessas configs tava faltando e dando conflito quando eu executava, mas n sei qual opção
