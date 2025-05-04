@@ -17,6 +17,9 @@ describe("user tests 2", () => {
 describe("primitive values", () => {
 	it("should test jest assertions", () => {
 		const number = 10;
+		const salve = "";
+		const salve2 = "salve";
 		expect(number).toEqual(10); //dá pra ser usado com objetos
+		expect(salve2).toBeTruthy();
 	});
 });
