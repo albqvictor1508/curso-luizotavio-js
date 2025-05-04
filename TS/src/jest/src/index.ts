@@ -23,19 +23,19 @@ const users = [
 	},
 ];
 
-const addUser = (user: UserData & { id: number }) => {
+export const addUser = (user: UserData & { id: number }) => {
 	user.id = users.length;
 	users.push(user);
 };
 
-const removeUser = (userId: number) => {
+export const removeUser = (userId: number) => {
 	const user = users.filter((u) => u.id === userId).shift() || "";
 	if (!user) return;
 	const userIndex = users.indexOf(user, 0);
 	users.splice(userIndex, 1);
 };
 
-const updateUser = ({ userId, newUserData }: UpdateUserSchema) => {
+export const updateUser = ({ userId, newUserData }: UpdateUserSchema) => {
 	const user = users.filter((u) => u.id === userId).shift() || "";
 	if (!user) return;
 	const userIndex = users.indexOf(user, 0);
