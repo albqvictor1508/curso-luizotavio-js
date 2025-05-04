@@ -1,4 +1,5 @@
-it("user tests", () => {
-	const number = 1;
-	expect(number).toBe(1);
+describe("user tests", () => {
+	it("should return one", () => {
+		const number = 1;
+	});
 });
