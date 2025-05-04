@@ -31,3 +31,7 @@ describe("primitive values", () => {
 		expect(number).toHaveProperty("toString"); //propriedade de objeto
 	});
 });
+
+describe("more about objects", () => {
+	it("should test objects assertion");
+});

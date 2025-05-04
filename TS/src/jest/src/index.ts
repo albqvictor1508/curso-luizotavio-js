@@ -41,7 +41,8 @@ const updateUser = ({ userId, newUserData }: UpdateUserSchema) => {
 	const userIndex = users.indexOf(user, 0);
 	let newUser = users.splice(userIndex, 1).shift();
 	if (!newUser) return;
-	newUser = Object.assign(newUserData, { id: newUser.id });
+	//newUser = Object.assign(newUserData, { id: newUser.id }); dava certo tb
+	newUser = { id: newUser.id, ...newUserData };
 	users.push(newUser);
 	console.log(users.sort((a, b) => a.id - b.id));
 };
