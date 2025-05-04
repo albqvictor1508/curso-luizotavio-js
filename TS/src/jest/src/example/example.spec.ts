@@ -53,5 +53,6 @@ describe("testing spyOn", () => {
 		salve(); //console.log 1 vez
 		const salveSpy = jest.spyOn(console, "log"); // espiando o console.log() para ver se ele foi chamado
 		expect(salveSpy).toHaveBeenCalledTimes(1); // é experado que ele seja chamado apenas 1 vez
+		expect(salveSpy).toHaveBeenCalledWith("salve"); //conteúdo que será printado no console.log
 	});
 });
