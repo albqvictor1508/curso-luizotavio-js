@@ -27,4 +27,9 @@ describe("10% discount", () => {
 	});
 });
 
-describe("50% discount", () => {});
+describe("50% discount", () => {
+	it("should return a half value", () => {
+		const sut = createSut(FiftyPercentDiscount);
+		expect(sut.calculate(100)).toBeCloseTo(100 / 2);
+	});
+});
