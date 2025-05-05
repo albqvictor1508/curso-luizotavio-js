@@ -51,6 +51,10 @@ describe("remove user route", () => {
 	it("should have an userId", () => {
 		const userIdParam = 1;
 		expect(userIdParam).toBeGreaterThan(0);
+	});
+
+	it("should ensure that feature is working", () => {
+		const userIdParam = 1;
 		const userVerified = users.filter((u) => u.id === userIdParam).shift();
 		if (!userVerified) return;
 		expect(userVerified).toHaveProperty("id", 1);
