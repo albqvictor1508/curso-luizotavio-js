@@ -96,5 +96,6 @@ describe("example test with mocks", () => {
 	it("should using mocks", () => {
 		const { sut, discountMock, cartItems } = createSut();
 		expect(sut.isEmpty()).toBeTruthy();
+		expect(sut.getProducts()).toHaveLength(3);
 	});
 });

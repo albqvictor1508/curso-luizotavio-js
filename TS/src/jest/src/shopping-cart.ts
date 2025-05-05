@@ -12,7 +12,11 @@ export class ShoppingCartMock {
 		}
 	}
 
-	isEmpty(): boolean {
+	public isEmpty(): boolean {
 		return true;
+	}
+
+	public getProducts(): CartItemMock[] {
+		return this.products;
 	}
 }
