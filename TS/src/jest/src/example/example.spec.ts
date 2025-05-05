@@ -64,15 +64,7 @@ describe("example test with mocks", () => {
 		return new DiscountMock();
 	};
 
-	const createCartItemMock = () => {
-		class CartItemMock {
-			constructor(
-				private name: string,
-				private price: number,
-				private qtd: number,
-			) {}
-		}
-	};
+	const createCartItemMock = () => {};
 
 	const createSut = () => {
 		const discountMock = createDiscountMock();
