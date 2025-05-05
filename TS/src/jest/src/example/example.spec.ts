@@ -36,12 +36,12 @@ describe("primitive values", () => {
 });
 
 describe("more about objects", () => {
-	const person = { name: "victor", age: 18 };
 	it("should test objects assertion", () => {
-		const person2 = { name: "victor", age: 18 }; // // 		expect(person).toHaveProperty("email");
+		const person = { name: "victor", age: 18 };
+		const person2 = { name: "victor", age: 18 }; // expect(person).toHaveProperty("email");
 		expect(person).toHaveProperty("age", 18); //checa se tem a propriedade, e se o valor dela é igual a 18
+		expect(person2).toEqual(person);
 	});
-	expect(person2).toEqual(person);
 });
 describe("testing spyOn", () => {
 	afterEach(() => jest.clearAllMocks()); //depois que cada teste, os mocks são limpos
@@ -59,9 +59,23 @@ describe("testing spyOn", () => {
 });
 
 describe("example test with mocks", () => {
-	const createSut = () => {
+	const createDiscountMock = () => {
 		class DiscountMock extends Discount {}
-		const discountMock = new DiscountMock();
+		return new DiscountMock();
+	};
+
+	const createCartItemMock = () => {
+		class CartItemMock {
+			constructor(
+				private name: string,
+				private price: number,
+				private qtd: number,
+			) {}
+		}
+	};
+
+	const createSut = () => {
+		const discountMock = createDiscountMock();
 		const sut = new ShoppingCart(discountMock);
 		return { sut, discountMock };
 	};
