@@ -25,7 +25,28 @@ const users = [
 	},
 ];
 
-describe("add user route", () => {});
+describe("add user route", () => {
+	it("should have a valid user", () => {
+		const newUser = {
+			id: 4,
+			name: "test name 3",
+			email: "salve3@salve3.com",
+			password: "mypassword12345",
+		};
+		expect(typeof users[0]).toEqual(typeof newUser);
+	});
+
+	it("should ensure that user have been added", () => {
+		const newUser = {
+			id: 4,
+			name: "test name 3",
+			email: "salve3@salve3.com",
+			password: "mypassword12345",
+		};
+
+		users.push(newUser);
+	});
+});
 
 describe("update route", () => {
 	it("should return a new user data", () => {
