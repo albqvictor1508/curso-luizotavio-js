@@ -18,6 +18,13 @@ describe("no discount", () => {
 	});
 });
 
-describe("10% discount", () => {});
+describe("10% discount", () => {
+	it("should return a value with 10% descount", () => {
+		const sut = createSut(TenPercentDiscount);
+		const tenPercent = 10 / 100;
+
+		expect(sut.calculate(100)).toBeCloseTo(100 * tenPercent);
+	});
+});
 
 describe("50% discount", () => {});
