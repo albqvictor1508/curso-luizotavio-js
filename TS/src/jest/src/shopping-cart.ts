@@ -19,4 +19,12 @@ export class ShoppingCartMock {
 	public getProducts(): CartItemMock[] {
 		return this.products;
 	}
+
+	getTotal(): number {
+		const totalPrice = this.products.reduce(
+			(count, p) => p.getPrice() + count,
+			0,
+		);
+		return totalPrice;
+	}
 }

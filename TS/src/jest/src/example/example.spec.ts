@@ -2,7 +2,7 @@
 
 import { CartItemMock } from "../cart-item";
 import { Discount } from "../discount";
-import { ShoppingCart } from "../shopping-cart";
+import { ShoppingCartMock } from "../shopping-cart";
 
 describe("user tests", () => {
 	it("should return one", () => {
@@ -80,7 +80,7 @@ describe("example test with mocks", () => {
 		const cartItemMock2 = createCartItemMock("salve 2", 1, 10);
 		const cartItemMock3 = createCartItemMock("salve 3", 1, 25.5);
 
-		const sut = new ShoppingCart(
+		const sut = new ShoppingCartMock(
 			discountMock,
 			cartItemMock1,
 			cartItemMock2,
@@ -97,5 +97,11 @@ describe("example test with mocks", () => {
 		const { sut, discountMock, cartItems } = createSut();
 		expect(sut.isEmpty()).toBeTruthy();
 		expect(sut.getProducts()).toHaveLength(3);
+	});
+
+	it("should return total value", () => {
+		const numbers = [1, 2, 3, 4, 5, 6];
+		const test = numbers.reduce((count, value) => count + value);
+		expect(test).toBeGreaterThanOrEqual(21);
 	});
 });
