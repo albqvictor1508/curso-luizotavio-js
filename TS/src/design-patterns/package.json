@@ -12,7 +12,7 @@
   "dependencies": {
     "@biomejs/biome": "^1.9.4",
     "@types/node": "^22.15.3",
-    "tsx": "^4.19.4",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
 }
