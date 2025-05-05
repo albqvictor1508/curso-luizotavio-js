@@ -76,13 +76,25 @@ describe("example test with mocks", () => {
 
 	const createSut = () => {
 		const discountMock = createDiscountMock();
-		const cartItemMock = createCartItemMock("salve", 1, 2);
-		const sut = new ShoppingCart(discountMock, cartItemMock);
-		return { sut, discountMock, cartItemMock };
+		const cartItemMock1 = createCartItemMock("salve", 1, 2);
+		const cartItemMock2 = createCartItemMock("salve 2", 1, 10);
+		const cartItemMock3 = createCartItemMock("salve 3", 1, 25.5);
+
+		const sut = new ShoppingCart(
+			discountMock,
+			cartItemMock1,
+			cartItemMock2,
+			cartItemMock3,
+		);
+		return {
+			sut,
+			discountMock,
+			cartItems: [cartItemMock1, cartItemMock2, cartItemMock3],
+		};
 	};
 
 	it("should using mocks", () => {
-		const { sut, discountMock, cartItemMock } = createSut();
+		const { sut, discountMock, cartItems } = createSut();
 		expect(sut.isEmpty()).toBeTruthy();
 	});
 });
