@@ -3,6 +3,7 @@ import type { Discount } from "./discount";
 
 export class ShoppingCartMock {
 	private products: CartItemMock[] = [];
+	private totalPrice = 0;
 	constructor(
 		private discount: Discount,
 		...product: CartItemMock[]
@@ -21,10 +22,16 @@ export class ShoppingCartMock {
 	}
 
 	getTotal(): number {
-		const totalPrice = this.products.reduce(
+		this.totalPrice = this.products.reduce(
 			(count, p) => p.getPrice() + count,
 			0,
 		);
-		return totalPrice;
+		return this.totalPrice;
+	}
+
+	getTotalWithDiscount(): number | null {
+		if (!this.totalPrice) return null;
+
+		return this.discount.calculate(this.totalPrice);
 	}
 }
