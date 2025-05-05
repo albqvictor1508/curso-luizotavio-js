@@ -76,9 +76,9 @@ describe("example test with mocks", () => {
 
 	const createSut = () => {
 		const discountMock = createDiscountMock();
-		const cartItemMock1 = createCartItemMock("salve", 1, 2);
-		const cartItemMock2 = createCartItemMock("salve 2", 1, 10);
-		const cartItemMock3 = createCartItemMock("salve 3", 1, 25.5);
+		const cartItemMock1 = createCartItemMock("salve", 100, 2);
+		const cartItemMock2 = createCartItemMock("salve 2", 150, 10);
+		const cartItemMock3 = createCartItemMock("salve 3", 520, 25.5);
 
 		const sut = new ShoppingCartMock(
 			discountMock,
@@ -108,5 +108,12 @@ describe("example test with mocks", () => {
 	it("should return total value with discount", () => {
 		const { sut, cartItems, discountMock } = createSut();
 		expect(sut.getTotalWithDiscount()).toBeGreaterThanOrEqual(3);
+	});
+
+	it("should call discount.calculate(price) when totalWithDiscount is called", () => {
+		const { sut, cartItems, discountMock } = createSut();
+		const calculateDiscountSpy = jest.spyOn(discountMock, "calculate");
+		sut.getTotalWithDiscount();
+		expect(calculateDiscountSpy).toHaveBeenCalledTimes(1);
 	});
 });

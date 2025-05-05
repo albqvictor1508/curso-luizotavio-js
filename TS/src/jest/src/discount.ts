@@ -1,6 +1,7 @@
 export abstract class Discount {
+	private discount: number = 0;
 	calculate(value: number): number {
-		return 0;
+		return value * this.discount;
 	}
 }
 
