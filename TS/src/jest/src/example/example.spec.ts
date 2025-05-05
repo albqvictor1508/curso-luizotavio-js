@@ -63,5 +63,6 @@ describe("example test with mocks", () => {
 		class DiscountMock extends Discount {}
 
 		const sut = new ShoppingCart(new DiscountMock());
+		expect(sut.isEmpty()).toBeTruthy();
 	});
 });
