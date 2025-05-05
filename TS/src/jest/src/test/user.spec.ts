@@ -25,9 +25,7 @@ const users = [
 	},
 ];
 
-describe("add user route", () => {
-	it("should return null", () => {});
-});
+describe("add user route", () => {});
 
 describe("update route", () => {
 	it("should return a new user data", () => {
