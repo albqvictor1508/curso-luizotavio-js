@@ -104,4 +104,9 @@ describe("example test with mocks", () => {
 		const test = numbers.reduce((count, value) => count + value);
 		expect(test).toBeGreaterThanOrEqual(21);
 	});
+
+	it("should return total value with discount", () => {
+		const { sut, cartItems, discountMock } = createSut();
+		expect(sut.getTotalWithDiscount()).toBeGreaterThanOrEqual(3);
+	});
 });
