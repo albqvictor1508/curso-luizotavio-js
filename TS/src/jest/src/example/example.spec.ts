@@ -1,5 +1,6 @@
 // user.spec.ts => geralmente se usa spec para teste unitário e test para teste de integração
 
+import { CartItemMock } from "../cart-item";
 import { Discount } from "../discount";
 import { ShoppingCart } from "../shopping-cart";
 
@@ -59,21 +60,29 @@ describe("testing spyOn", () => {
 });
 
 describe("example test with mocks", () => {
-	const createDiscountMock = () => {
+	const createDiscountMock = (): Discount => {
 		class DiscountMock extends Discount {}
 		return new DiscountMock();
 	};
 
-	const createCartItemMock = () => {};
+	const createCartItemMock = (
+		name: string,
+		price: number,
+		qtd: number,
+	): CartItemMock => {
+		const cartItemMock = new CartItemMock(name, price, qtd);
+		return cartItemMock;
+	};
 
 	const createSut = () => {
 		const discountMock = createDiscountMock();
-		const sut = new ShoppingCart(discountMock);
-		return { sut, discountMock };
+		const cartItemMock = createCartItemMock("salve", 1, 2);
+		const sut = new ShoppingCart(discountMock, cartItemMock);
+		return { sut, discountMock, cartItemMock };
 	};
 
 	it("should using mocks", () => {
-		const { sut, discountMock } = createSut();
+		const { sut, discountMock, cartItemMock } = createSut();
 		expect(sut.isEmpty()).toBeTruthy();
 	});
 });
