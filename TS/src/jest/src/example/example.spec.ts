@@ -59,10 +59,15 @@ describe("testing spyOn", () => {
 });
 
 describe("example test with mocks", () => {
-	it("should using mocks", () => {
+	const createSut = () => {
 		class DiscountMock extends Discount {}
+		const discountMock = new DiscountMock();
+		const sut = new ShoppingCart(discountMock);
+		return { sut, discountMock };
+	};
 
-		const sut = new ShoppingCart(new DiscountMock());
+	it("should using mocks", () => {
+		const { sut, discountMock } = createSut();
 		expect(sut.isEmpty()).toBeTruthy();
 	});
 });
