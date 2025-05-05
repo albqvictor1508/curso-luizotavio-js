@@ -1,4 +1,4 @@
-class Car {
+abstract class Car {
 	constructor(
 		private name: string,
 		private age: number,
