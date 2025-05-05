@@ -3,7 +3,7 @@ import {
 	FiftyPercentDiscount,
 	NoDiscount,
 	TenPercentDiscount,
-} from "../descount";
+} from "../discount";
 
 const createSut = (discount: new () => Discount): Discount => {
 	return new discount();

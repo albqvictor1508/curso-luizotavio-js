@@ -1,5 +1,7 @@
 export abstract class Discount {
-	abstract calculate(value: number): number;
+	calculate(value: number): number {
+		return 0;
+	}
 }
 
 export class NoDiscount extends Discount {
