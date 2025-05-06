@@ -19,14 +19,18 @@ class Practice2 {
 		return Practice2.instance;
 	}
 
-	public addUser(user: User) {
+	public addUser(user: User): void {
 		this.users.push(user);
 	}
 
-	public removeUserById(userId: number) {
+	public removeUserById(userId: number): void {
 		const user = this.users.filter((u) => u.id === userId).shift();
 		if (!user) return;
 		const userIndex = this.users.indexOf(user);
 		this.users.splice(userIndex - 1, 1);
+	}
+
+	public show(): void {
+		console.log(this.users);
 	}
 }
