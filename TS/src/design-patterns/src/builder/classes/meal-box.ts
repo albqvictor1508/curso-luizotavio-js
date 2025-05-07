@@ -12,8 +12,6 @@ export class MealBox implements MealCompositeProtocol {
 	}
 
 	add(...meal: MealCompositeProtocol[]) {
-		for (const m of meal) {
-			this.children.push(m);
-		}
+		meal.forEach((m) => this.children.push(m));
 	}
 }
