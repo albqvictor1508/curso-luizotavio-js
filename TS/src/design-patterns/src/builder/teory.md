@@ -21,5 +21,5 @@
 
 - Classe Product: Os produtos finais são objetos que o cliente deseja consumir. Eles não têm uma interface em comum porque podem ser de tipos diferentes.
 
-- Director: 
+- Director: Esta classe é opcional. Ela pode definir a ordem em que as etapas de construção dos objetos são executadas. (caso precise criar uma ordem na execução dos métodos do builder)
 
