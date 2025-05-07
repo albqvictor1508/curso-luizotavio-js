@@ -26,3 +26,6 @@ export class PersonBuilder {
 		return this.person;
 	}
 }
+
+//isso que é method chaining, chamar os métodos encadeados,isso só é possível pois os métodos retornam this, ou seja, retornam a instância.
+const person = new PersonBuilder().setName("vito").setAge(18).getResult();
