@@ -34,3 +34,4 @@
 
 - O código final pode se tornar muito complexo
 
+*** Na prática não foi abordado o prototype, mas ele poderia ser usado para fazer a função que o código do index.ts ta fazendo, criando o comportamento e entregando para o usuário tudo pronto ***
