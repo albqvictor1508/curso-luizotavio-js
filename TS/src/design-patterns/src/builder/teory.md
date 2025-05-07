@@ -11,3 +11,11 @@
 
 ## O objeto final pode variar de acordo com a necessidade
 
+## Padrão complexo
+
+### Estrutura
+
+- Classe Builder: define a interface de todos os objetos "Builder". As etapas de construção em comum são definidas aqui.
+
+- Director: 
+
