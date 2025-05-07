@@ -23,3 +23,14 @@
 
 - Director: Esta classe é opcional. Ela pode definir a ordem em que as etapas de construção dos objetos são executadas. (caso precise criar uma ordem na execução dos métodos do builder)
 
+### Vantagens
+
+- Separa criação de utilização (facilita o SOLID)
+- O cliente não precisa criar objetos diretamente
+- O mesmo código pode criar objetos diferentes
+- Ajuda na aplicação do SOLID
+
+### Desvantagens
+
+- O código final pode se tornar muito complexo
+
