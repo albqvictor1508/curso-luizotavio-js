@@ -1,8 +1,7 @@
-import { MealBox } from "./classes/meal-box";
-import { Beans, Meat, Rice, Beverage, Dessert } from "./classes/meals";
+import { MainDishBuilder } from "./classes/main-dish-builder";
+import { VeganDishBuilder } from "./classes/vegan-dish-builder";
 
-const rice = new Rice("Arroz", 10.5);
-const bean = new Beans("Feijão", 0.5);
-const meat = new Meat("Carninha papai", 49.99);
-const mealBox = new MealBox();
-mealBox.add(rice, bean, meat);
+const mainDish = new MainDishBuilder().makeMeal();
+mainDish.resetMeal();
+const meal2 = new MainDishBuilder().makeMeal();
+const veganDish = new VeganDishBuilder().makeMeal();
