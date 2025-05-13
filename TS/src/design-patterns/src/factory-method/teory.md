@@ -24,4 +24,14 @@ Definir uma interface para criar um objeto, mas deixar as subclasses decidirem q
 
 - **ConcreteProduct**: Produtos concretos que serão retornados pelas classes que implementam o factory method.
 
-- **ConcreteCreator**: A única responsabilidade dessas classes é implementar o factory method informando qual produto será retornado. Também pode implementar lógica para a criação de produtos.   
+- **ConcreteCreator**: A única responsabilidade dessas classes é implementar o factory method informando qual produto será retornado. Também pode implementar lógica para a criação de produtos.
+
+## Applicability
+
+- Use o Factory Method quando não souber com certeza quais os tipos de objetos o seu código vai precisar.
+
+- Use o Factory Method para permitir a extensão de suas factories para a criação de novos objetos(isso ajuda a aplicar o Open / Closed Principle)
+
+- Use o Factory Method para desacoplar o código que cria do código que usa as classes (Single Responsability Principle)
+
+- Use o Factory Method para dar um hook (gancho) às subclasses para permitir que elas decidam a lógica de criação de objetos
