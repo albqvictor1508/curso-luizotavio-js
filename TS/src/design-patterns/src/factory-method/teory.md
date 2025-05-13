@@ -45,3 +45,7 @@ Definir uma interface para criar um objeto, mas deixar as subclasses decidirem q
 - Ajuda a aplicar o SRP (Single Responsability Principle) pois ele separa o código que cria do código que usa o objeto
 
 - Ajuda no desacoplamento do seu código
+
+## Disadvantages
+
+- Se usado sem necessidade, pode causar uma explosão de subclasses, Será necessário uma classe ConcreteCreator para cada ConcreteProduct
