@@ -12,3 +12,6 @@ export class Person implements Prototype {
 		return newObject;
 	}
 }
+
+const person1 = new Person("victor", 18);
+const person2 = person1.clone();
