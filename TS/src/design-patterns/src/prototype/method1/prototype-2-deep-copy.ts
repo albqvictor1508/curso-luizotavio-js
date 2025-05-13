@@ -2,11 +2,14 @@ export interface Prototype {
 	clone(): Prototype;
 }
 
-class Address {
+class Address implements Prototype {
 	constructor(
 		public street: string,
 		public houseNumber: number,
 	) {}
+	clone(): Address {
+		return new Address(this.street, this.houseNumber);
+	}
 }
 
 export class Person implements Prototype {
@@ -15,8 +18,9 @@ export class Person implements Prototype {
 		public name: string,
 		public age: number,
 	) {}
-	clone(): this {
-		const newObject = Object.create(this);
+	clone(): Person {
+		const newObject = new Person(this.name, this.age);
+		newObject.adresses = this.adresses.map((address) => address.clone());
 		return newObject;
 	}
 
