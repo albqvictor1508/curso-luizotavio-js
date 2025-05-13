@@ -1,10 +1,19 @@
 export type Car = { model: string; engine: number };
 export type CarPrototype = { showDetails(): void };
+export type CarTest<T, U> = { model: T; engine: U };
 
 const carPrototype: CarPrototype = {
 	showDetails: (): void => {
 		console.log(this);
 	},
+};
+
+const carTest = (
+	model: string,
+	engine: number,
+): CarTest<string, number> & CarPrototype => {
+	const carObj = Object.create(carPrototype);
+	return Object.assign(carObj, { model, engine });
 };
 
 const carFactory = (model: string, engine: number): Car & CarPrototype => {
