@@ -1,5 +1,6 @@
 import { BikeFactory } from "./practice/factories/bike-factory";
 import { CarFactory } from "./practice/factories/car-factory";
+import type { Vehicle } from "./practice/vehicle";
 
 export const randomVehicleAlgorithm = () => {
 	const carFactory = new CarFactory();
@@ -18,4 +19,6 @@ export const randomVehicleAlgorithm = () => {
 	const bike4 = bikeFactory.getVehicle("biz");
 	const bike5 = bikeFactory.getVehicle("ishad");
 	const bike6 = bikeFactory.getVehicle("kawasaki ninja");
+
+	const vehicles: Vehicle[] = [];
 };
