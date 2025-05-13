@@ -21,3 +21,7 @@ Definir uma interface para criar um objeto, mas deixar as subclasses decidirem q
 - **Product**: Interface em comum para produtos finais. Classes que implementam o factory method devem retornar produtos que implementam essa interface.
 
 - **Creator**: Responsável pela criação de um factory method abstrato (também pode implementar um factory method). Essa classe pode e deve conter outros membros (métodos e atributos) para sua lógica interna
+
+- **ConcreteProduct**: Produtos concretos que serão retornados pelas classes que implementam o factory method.
+
+- **ConcreteCreator**: A única responsabilidade dessas classes é implementar o factory method informando qual produto será retornado. Também pode implementar lógica para a criação de produtos.   
