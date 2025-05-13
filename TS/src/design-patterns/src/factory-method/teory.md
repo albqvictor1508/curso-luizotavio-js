@@ -35,3 +35,5 @@ Definir uma interface para criar um objeto, mas deixar as subclasses decidirem q
 - Use o Factory Method para desacoplar o código que cria do código que usa as classes (Single Responsability Principle)
 
 - Use o Factory Method para dar um hook (gancho) às subclasses para permitir que elas decidam a lógica de criação de objetos
+
+- Use o Factory Method para eliminar duplicação de código na criação de objetos.
