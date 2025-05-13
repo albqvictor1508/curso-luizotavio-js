@@ -22,3 +22,8 @@ export class ExampleConcreteCreator extends ExampleCreator {
 		return new ExampleConcreteProduct();
 	}
 }
+
+const creator = new ExampleConcreteCreator();
+const product = creator.factoryMethod();
+product.sayHi();
+creator.createAndShow();
