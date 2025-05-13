@@ -19,6 +19,7 @@ export class Person implements Prototype {
 		public age: number,
 	) {}
 	clone(): Person {
+		//deep copy: criando uma nova instância com os mesmo atributos da outra instância
 		const newObject = new Person(this.name, this.age);
 		newObject.adresses = this.adresses.map((address) => address.clone());
 		return newObject;
