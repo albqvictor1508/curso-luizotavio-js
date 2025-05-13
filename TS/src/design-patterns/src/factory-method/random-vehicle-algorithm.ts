@@ -1,8 +1,9 @@
 import { BikeFactory } from "./practice/factories/bike-factory";
 import { CarFactory } from "./practice/factories/car-factory";
+import { getRandomNumber } from "./practice/random-number";
 import type { Vehicle } from "./practice/vehicle";
 
-export const randomVehicleAlgorithm = () => {
+export const randomVehicleAlgorithm = (): Vehicle => {
 	const carFactory = new CarFactory();
 	const bikeFactory = new BikeFactory();
 
@@ -20,5 +21,20 @@ export const randomVehicleAlgorithm = () => {
 	const bike5 = bikeFactory.getVehicle("ishad");
 	const bike6 = bikeFactory.getVehicle("kawasaki ninja");
 
-	const vehicles: Vehicle[] = [];
+	const vehicles: Vehicle[] = [
+		car1,
+		car2,
+		car3,
+		car4,
+		car5,
+		car6,
+		bike1,
+		bike2,
+		bike3,
+		bike4,
+		bike5,
+		bike6,
+	];
+	const randomNumber = getRandomNumber(vehicles.length);
+	return vehicles[randomNumber];
 };
