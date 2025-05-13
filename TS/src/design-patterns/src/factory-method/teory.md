@@ -37,3 +37,11 @@ Definir uma interface para criar um objeto, mas deixar as subclasses decidirem q
 - Use o Factory Method para dar um hook (gancho) às subclasses para permitir que elas decidam a lógica de criação de objetos
 
 - Use o Factory Method para eliminar duplicação de código na criação de objetos.
+
+## Advantages
+
+- Ajuda a aplicar o OCP (Open / Closed Principle) pois ele está aberto para extensão, não para modificação
+
+- Ajuda a aplicar o SRP (Single Responsability Principle) pois ele separa o código que cria do código que usa o objeto
+
+- Ajuda no desacoplamento do seu código
