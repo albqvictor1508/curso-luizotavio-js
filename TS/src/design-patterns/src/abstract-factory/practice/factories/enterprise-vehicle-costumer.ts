@@ -1,7 +1,7 @@
 import { EnterpriseCustomer } from "../customer/enterprise-customer";
-import { Customer } from "../customer/index";
+import type { Customer } from "../customer/index";
 import { EnterpriseVehicle } from "../vehicle/enterprise-vehicle";
-import { Vehicle } from "../vehicle/index";
+import type { Vehicle } from "../vehicle/index";
 import type { CreateVehicleCostumer } from "./create-vehicle-costumer";
 
 export class EnterpriseCreateVehicleCostumer implements CreateVehicleCostumer {
