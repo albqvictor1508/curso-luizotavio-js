@@ -29,3 +29,7 @@ Compor objetos em estrutura de árvore para representar hierarquias partes/todo.
 - É fácil gerar uma hierarquia de objetos
 - É fácil usar polimorfismo e recursão
 - É fácil adicionar novos tipos de elemento na estrutura (OCP)
+
+## Disadvantages
+
+- Dependendo da estrutura, pode quebrar o princípio da segregação de interface (ISP), Objetos do tipo Leaf tendem a ter métodos que não usam ou não fazem nada. 
