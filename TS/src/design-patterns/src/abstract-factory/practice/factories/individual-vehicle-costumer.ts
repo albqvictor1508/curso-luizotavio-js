@@ -1,0 +1,15 @@
+import { EnterpriseCustomer } from "../customer/enterprise-customer";
+import type { Customer } from "../customer/index";
+import { EnterpriseVehicle } from "../vehicle/enterprise-vehicle";
+import type { Vehicle } from "../vehicle/index";
+import type { CreateVehicleCostumer } from "./create-vehicle-costumer";
+
+export class IndividualVehicleCostumer implements CreateVehicleCostumer {
+	createCustomer(customerName: string): Customer {
+		return new EnterpriseCustomer(customerName);
+	}
+	createVehicle(vehicleName: string, customerName: string): Vehicle {
+		const customer = this.createCustomer(customerName);
+		return new EnterpriseVehicle(vehicleName, customer);
+	}
+}
