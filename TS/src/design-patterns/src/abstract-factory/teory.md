@@ -24,3 +24,7 @@ Fornecer uma interface para criação de famílias de objetos relacionados ou de
 - Aplicação clara do Open / Closed Principle (OCP), é fácil adicionar novas fábricas e produtos.
 - Aplicação clara do Single Responsability Principle (SRP), o código que cria está separado do código que usa os objetos.
 
+## Disadvantages
+
+- Muitas classes e maior complexidade será introduzida no código.
+
