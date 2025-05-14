@@ -22,3 +22,10 @@ Compor objetos em estrutura de árvore para representar hierarquias partes/todo.
 
 - Quando sua estrutura de objetos possa ser representada hierarquicamente, como por exemplo, estruturas do tipo árvore
 - Quando você quiser que o código cliente trate objetos compostos e objetos simples da mesma maneira
+
+## Advantages
+
+- É muito fácil criar objetos complexos por composição
+- É fácil gerar uma hierarquia de objetos
+- É fácil usar polimorfismo e recursão
+- É fácil adicionar novos tipos de elemento na estrutura (OCP)
