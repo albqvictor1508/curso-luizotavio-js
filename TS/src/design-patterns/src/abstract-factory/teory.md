@@ -10,3 +10,10 @@ Fornecer uma interface para criação de famílias de objetos relacionados ou de
 - Separa o código que cria do código que usa os objetos (SRP).
 - Permite fácil implementação de novas famílias de objetos (OCP).
 - Toda a programação fica focada nas interfaces e não em implementações.
+
+## When i use ?
+
+- Quando o sistema for independente de como seus produtos são criados, compostos ou representados.
+- Quando o sistema for configurado para uma família de produtos que podem (ou não) trabalhar juntos.
+- Quando o sistema for uma família de objetos projetada para ser usada em conjunto e você necessita garantir essa restrição
+- Você quer fornecer uma biblioteca de classes de produtos e quer revelar somente suas interfaces, não suas implementações
