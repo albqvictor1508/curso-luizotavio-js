@@ -20,3 +20,13 @@ export class ValidateNumber extends ValidateComponent<number> {
 		return true;
 	}
 }
+
+export class ValidationComposite extends ValidateComponent<string> {
+	private children: ValidateComponent<string | number | unknown>[] = [];
+	validate(value: unknown): boolean {
+		for (const child of this.children) {
+			if (!child.validate(value)) return false;
+		}
+		return true;
+	}
+}
