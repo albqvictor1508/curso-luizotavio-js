@@ -1,5 +1,10 @@
-import isEmail from "validator/lib/isEmail";
+import type { EmailValidatorProtocol } from "./validation/email-protocol";
 
 const email = "email@email.com";
 
-isEmail(email) ? console.log("válido") : console.log("inválido");
+const validation = (
+	emailValidator: EmailValidatorProtocol,
+	value: string,
+): boolean => {
+	return emailValidator.isEmail(value);
+};
