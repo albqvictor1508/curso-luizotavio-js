@@ -5,3 +5,7 @@ Converter a interface de uma classe em outra interface esperada pelos clientes. 
 Exemplo.:
 
     `o plug de carregamento do notebook com a tomada, nenhum dos dois funcionariam sozinhos, é preciso que ajam em conjunto para que meu notebook carregue`
+
+## About Adapter
+
+- É um padrão de projeto estrutural (structural)
