@@ -11,4 +11,10 @@ O Bridge é um padrão de projeto estrutural que tem a intenção de desacoplar 
 
 ### Adapter vs Bridge
 
-(GOF pág. 208) A diferença chave entre esses padrões está na suas intenções... O padrão Adapter faz as coisas funcionarem após elas terem sido projetadas; O Bridge as faz funcionar ANTES QUE existam... 
+(GOF pág. 208) A diferença chave entre esses padrões está na suas intenções... O padrão Adapter faz as coisas funcionarem após elas terem sido projetadas; O Bridge as faz funcionar ANTES QUE existam...
+
+## Aplicability
+
+- Você souber que sua estrutura terá abstrações (código de alto nível) e implementações dessa abstração (detalhes) que possam variar de maneira independente.
+- Você souber que o Adapter poderia ser aplicado naquela estrutura (você já conhece a estrutura)
+- Você quiser dividir uma classe que possa ter diversas variantes (como em produtos e suas variações de cores: CanetaAzul, CanetaVermelha, etc)
