@@ -18,3 +18,6 @@ O Bridge é um padrão de projeto estrutural que tem a intenção de desacoplar 
 - Você souber que sua estrutura terá abstrações (código de alto nível) e implementações dessa abstração (detalhes) que possam variar de maneira independente.
 - Você souber que o Adapter poderia ser aplicado naquela estrutura (você já conhece a estrutura)
 - Você quiser dividir uma classe que possa ter diversas variantes (como em produtos e suas variações de cores: CanetaAzul, CanetaVermelha, etc)
+- Você quer trocar as implementações em tempo de execução
+
+## Vantagens
