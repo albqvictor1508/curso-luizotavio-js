@@ -21,3 +21,11 @@ O Bridge é um padrão de projeto estrutural que tem a intenção de desacoplar 
 - Você quer trocar as implementações em tempo de execução
 
 ## Vantagens
+
+- Aplica o SRP ao desaclopar o código da abstração do da implementação.
+- Aplica o OCP ao permitir novas abstrações e/ou implementações para código existente
+- Tem as mesmas vantagens do Adapter
+
+## Disadvantages
+
+- Aumenta a complexidade da aplicação quando implementado em locais incorretos
