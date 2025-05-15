@@ -1,6 +1,9 @@
 import type { DeviceImpl } from "./index";
 
 export class Tv implements DeviceImpl {
+	setName(name: string): void {
+		throw new Error("Method not implemented.");
+	}
 	private volume = 10;
 	private power = false;
 	private name = "TV";
