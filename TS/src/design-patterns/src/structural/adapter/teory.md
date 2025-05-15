@@ -23,3 +23,4 @@ Exemplo.:
 
 - Você não quiser que seu código dependa diretamente de código de terceiros ou legado
 - Você quiser usar uma classe existente mas sua interface for incompatível com a interface que seu código ou domínio precisam.
+- Você quiser reutilizar várias subclasses que não possuam determinada funcionalidade mas for impraticável estender o código de cada uma apenas para adicionar a funcionalidade desejada (o Decorator também faz isso) 
