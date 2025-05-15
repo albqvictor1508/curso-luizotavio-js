@@ -12,3 +12,14 @@ Exemplo.:
 - Faz exatamente oque um adaptador da vida real faz (pense em um adaptador de tomadas de um formato para o outro)
 - É muito usado para definir limites entre camadas da aplicação
 - Também pode ser usado para adaptar interfaces de código legado para um novo código
+
+## 2 Structures
+
+### - Structure By Composition
+
+### - Structure By Multiple Inherance
+
+## Aplicability
+
+- Você não quiser que seu código dependa diretamente de código de terceiros ou legado
+- Você quiser usar uma classe existente mas sua interface for incompatível com a interface que seu código ou domínio precisam.
