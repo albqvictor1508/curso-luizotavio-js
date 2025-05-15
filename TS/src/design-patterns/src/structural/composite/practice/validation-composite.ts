@@ -23,6 +23,15 @@ export class ValidateNumber extends ValidateComponent<number> {
 
 export class ValidationComposite extends ValidateComponent<string> {
 	private children: ValidateComponent<string | number | unknown>[] = [];
+
+	public add(
+		...validate: ValidateComponent<string | number | unknown>[]
+	): void {
+		for (const v of validate) {
+			this.children.push(v);
+		}
+	}
+
 	validate(value: unknown): boolean {
 		for (const child of this.children) {
 			if (!child.validate(value)) return false;
@@ -30,3 +39,7 @@ export class ValidationComposite extends ValidateComponent<string> {
 		return true;
 	}
 }
+
+const validateEmail = new ValidateEmail();
+const validateNumber = new ValidateNumber();
+const validateString = new ValidateString();
