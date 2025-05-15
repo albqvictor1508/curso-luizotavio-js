@@ -27,8 +27,11 @@ export class ProductComposite extends ProductComponent {
 		return this.children.reduce((count, p) => p.getPrice() + count, 0);
 	}
 
-	add(product: ProductComponent): void {
-		this.children.push(product);
+	add(...products: ProductComponent[]): void {
+		for (const p of products) {
+			this.children.push(p);
+		}
+		console.log(this.children);
 	}
 
 	remove(product: ProductComponent): void {
@@ -37,3 +40,11 @@ export class ProductComposite extends ProductComponent {
 		this.children.splice(productIndex - 1, 1);
 	}
 }
+
+const pencil = new ProductLeaf("pencil", 20);
+const tshirt = new ProductLeaf("camisa seaway ratão", 10);
+const sneakers = new ProductLeaf("basquetera", 50);
+const productBox = new ProductComposite();
+productBox.add(pencil, tshirt, sneakers);
+const pen = new ProductLeaf("caneta", 10);
+productBox.add(pen);
