@@ -11,3 +11,4 @@ Exemplo.:
 - É um padrão de projeto estrutural (structural)
 - Faz exatamente oque um adaptador da vida real faz (pense em um adaptador de tomadas de um formato para o outro)
 - É muito usado para definir limites entre camadas da aplicação
+- Também pode ser usado para adaptar interfaces de código legado para um novo código
