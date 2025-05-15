@@ -23,4 +23,14 @@ Exemplo.:
 
 - Você não quiser que seu código dependa diretamente de código de terceiros ou legado
 - Você quiser usar uma classe existente mas sua interface for incompatível com a interface que seu código ou domínio precisam.
-- Você quiser reutilizar várias subclasses que não possuam determinada funcionalidade mas for impraticável estender o código de cada uma apenas para adicionar a funcionalidade desejada (o Decorator também faz isso) 
+- Você quiser reutilizar várias subclasses que não possuam determinada funcionalidade mas for impraticável estender o código de cada uma apenas para adicionar a funcionalidade desejada (o Decorator também faz isso)
+
+## Advantages
+
+- Desacopla o código da aplicação de códigos de terceiros
+- Aplica o SRP ao separar a conversão de interfaces da lógica da aplicação
+- Aplica o OCP ao permitir introduzir novos Adapters para código existente
+
+## Disadvantages
+
+- Aumenta a complexidade da aplicação (Por outro lado, qual outra solução deveria ser feita);
