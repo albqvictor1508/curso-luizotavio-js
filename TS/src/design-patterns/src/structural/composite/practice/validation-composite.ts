@@ -21,12 +21,14 @@ export class ValidateNumber extends ValidateComponent<number> {
 	}
 }
 
-export class ValidationComposite extends ValidateComponent<string> {
-	private children: ValidateComponent<string | number | unknown>[] = [];
+export type ValidationGenericArray = ValidateComponent<
+	string | number | unknown
+>[];
 
-	public add(
-		...validate: ValidateComponent<string | number | unknown>[]
-	): void {
+export class ValidationComposite extends ValidateComponent<string> {
+	private children: ValidationGenericArray = [];
+
+	public add(...validate: ValidationGenericArray): void {
 		for (const v of validate) {
 			this.children.push(v);
 		}
