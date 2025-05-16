@@ -14,4 +14,7 @@ Proxy é um padrão de projeto que tem a intenção de fornecer um substituto ou
 
 ## Variações
 
-- **Proxy virtual**: Controla o acesso a recursos que podem ser caros para criação ou utilização
+- **Proxy virtual:** Controla o acesso a recursos que podem ser caros para criação ou utilização
+- **Proxy Remoto:** Controla acesso a recursos que estão em servidores remotos
+- **Proxy de Proteção:**: Controla acesso a recursos que possam necessitar autenticação ou permissão
+- **Proxy Inteligente:**
