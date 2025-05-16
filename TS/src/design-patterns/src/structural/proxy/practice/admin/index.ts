@@ -4,7 +4,7 @@ export class Admin implements UserProtocol {
 	constructor(public username: string) {}
 
 	async getAdresses(): Promise<UserAddress[]> {
-		return new Promise<UserAddress[]>((resolve, reject) => {
+		return new Promise<UserAddress[]>((resolve, _) => {
 			return setTimeout(() => {
 				resolve([
 					{ street: "Conjunto", number: 230 },
