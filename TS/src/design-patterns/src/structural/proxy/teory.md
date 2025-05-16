@@ -32,3 +32,8 @@ Proxy é um padrão de projeto que tem a intenção de fornecer um substituto ou
 - O código cliente não precisa nem saber que tá usando um Proxy (ele finge ser o objeto real)
 - Você pode adicionar novos Proxies sem mudar o código já testado (OCP)
 - O Proxy funciona mesmo se o objeto real não estiver operacional ou pronto pra uso
+- Você pode controlar o ciclo de vida de objetos reais dentro do proxy
+
+## Desvantagens
+
+- Introduz mais classes ao sistema 
