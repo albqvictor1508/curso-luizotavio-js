@@ -18,3 +18,11 @@ Proxy é um padrão de projeto que tem a intenção de fornecer um substituto ou
 - **Proxy Remoto:** Controla acesso a recursos que estão em servidores remotos
 - **Proxy de Proteção:** Controla acesso a recursos que possam necessitar autenticação ou permissão
 - **Proxy Inteligente:** Além de controlar acesso ao objeto real, também executa tarefas adicionais para saber quando e como executar determinadas ações 
+
+## Aplicabilidade
+
+- Quando tem um objeto caro e não quer permitir acesso direto a esse objeto (proxy virtual)
+- Você quer restringir acesso a partes da sua aplicação (proxy de proteção)
+- Você quer uma ligação entre seu sistema e um sistema remoto (proxy remoto)
+- Você quer fazer cache de chamadas já realizadas (proxy inteligente ou proxy de cache)
+- Você quer interceptar quaisquer chamadas de métodos no objeto real por qualquer motivo (por exemplo, criar logs)
