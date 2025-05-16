@@ -26,3 +26,9 @@ Proxy é um padrão de projeto que tem a intenção de fornecer um substituto ou
 - Você quer uma ligação entre seu sistema e um sistema remoto (proxy remoto)
 - Você quer fazer cache de chamadas já realizadas (proxy inteligente ou proxy de cache)
 - Você quer interceptar quaisquer chamadas de métodos no objeto real por qualquer motivo (por exemplo, criar logs)
+
+## Vantagens
+
+- O código cliente não precisa nem saber que tá usando um Proxy (ele finge ser o objeto real)
+- Você pode adicionar novos Proxies sem mudar o código já testado (OCP)
+- O Proxy funciona mesmo se o objeto real não estiver operacional ou pronto pra uso
