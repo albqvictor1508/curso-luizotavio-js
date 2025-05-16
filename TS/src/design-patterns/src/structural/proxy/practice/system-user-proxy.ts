@@ -16,6 +16,9 @@ export class SystemUserProxy implements UserProtocol {
 
 	async getAdresses(): Promise<UserAddress[]> {
 		const user = this.createUser();
-		return user.getAdresses();
+		if (this.userAdresses === null) {
+			this.userAdresses = await user.getAdresses();
+		}
+		return this.userAdresses;
 	}
 }
