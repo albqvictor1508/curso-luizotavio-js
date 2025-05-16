@@ -1,11 +1,21 @@
+import { Admin } from "./admin";
 import type { UserAddress, UserProtocol } from "./user/user-protocol";
 
 export class SystemUserProxy implements UserProtocol {
-	private readonly user: UserProtocol | null = null;
-	private readonly userAdresses: UserAddress[] | null = null;
+	private user: UserProtocol | null = null;
+	private userAdresses: UserAddress[] | null = null;
 
 	constructor(public username: string) {}
-	getAdresses(): Promise<UserAddress[]> {
-		throw new Error("Method not implemented.");
+
+	private createUser(): UserProtocol {
+		if (this.user === null) {
+			this.user = new Admin(this.username);
+		}
+		return this.user;
+	}
+
+	async getAdresses(): Promise<UserAddress[]> {
+		if (!this.user) return null;
+		return this.user?.getAdresses();
 	}
 }
