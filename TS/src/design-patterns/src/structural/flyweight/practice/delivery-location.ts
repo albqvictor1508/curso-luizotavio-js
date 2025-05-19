@@ -7,6 +7,4 @@ export class DeliveryLocation implements DeliveryFlyweight {
   deliver(name: string, number: number): void {
     console.log("Entrega para %s", name);
   }
-;
-
 }
