@@ -1,3 +1,3 @@
 export interface DeliveryFlyweight {
-  deliver(name: string, number: number);
+  deliver(name: string, number: number): void;
 }
