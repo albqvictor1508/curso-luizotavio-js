@@ -3,3 +3,6 @@ import { DeliveryFactory } from "./delivery-factory";
 
 const factory = new DeliveryFactory();
 deliveryContext(factory, "vito", 30, "conjunto", "sapé");
+
+console.log(factory.getLocations());
+
