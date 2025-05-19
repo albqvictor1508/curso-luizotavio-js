@@ -15,4 +15,8 @@ export class DeliveryFactory {
         this.locations.set(id, new DeliveryLocation(intrinsicState));
         return this.locations.get(id) as DeliveryFlyweight; 
     }
+
+    getLocations(): DeliveryLocationDictionary {
+        return this.locations;
+    }
 }
