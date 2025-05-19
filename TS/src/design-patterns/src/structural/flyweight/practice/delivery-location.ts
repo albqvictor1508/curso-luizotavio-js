@@ -5,7 +5,7 @@ export class DeliveryLocation implements DeliveryFlyweight {
   constructor(private readonly intrinsicState: DeliveryLocationData) {}
   
   deliver(name: string, number: number): void {
-    console.log("Entrega finalizada!");
+    console.log("Entrega para %s", name);
   }
 ;
 
