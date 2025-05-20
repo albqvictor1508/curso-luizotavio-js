@@ -17,5 +17,6 @@ Definir uma família de algoritmos e encapsular cada um deles e fazê-los interc
 - Separa a regra de negócio de variações de algoritmos que possam existir
 - Define uma família de algoritmos cada uma com variação diferente
 - Usa composição para permitir a troca de algoritmos em tempo de execução
+- Permite a criação de vários algoritmos sem a necessidade de condicionais
 
 
