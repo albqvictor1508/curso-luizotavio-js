@@ -62,6 +62,9 @@ export class EcommerceShoppingCart {
 	}
 
 	return total - (total * this.discount / 100);
-
   }
 }
+
+const shoppingCart = new EcommerceShoppingCart();
+shoppingCart.addProduct({name: "savero nova", price: 200});
+shoppingCart.addProduct({name: "savero velha", price: 100});
