@@ -36,4 +36,12 @@ export class EcommerceShoppingCart {
       this.products.push(p);
     });
   }
+
+  getProducts(): EcommerceProductProtocol[] {
+	return this.products;
+  }
+
+  getTotal(): number {
+	return this.products.reduce((count, p) => p.price + count, 0);
+  }
 }
