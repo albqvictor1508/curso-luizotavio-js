@@ -30,6 +30,7 @@ export interface EcommerceProductProtocol {
 
 export class EcommerceShoppingCart {
   private products: EcommerceProductProtocol[] = [];
+  private discount: number = 0;
 
   addProduct(...products: EcommerceProductProtocol[]): void {
     products.forEach(p => {
@@ -43,5 +44,9 @@ export class EcommerceShoppingCart {
 
   getTotal(): number {
 	return this.products.reduce((count, p) => p.price + count, 0);
+  }
+
+  getTotalWithDiscount(): number {
+	if()
   }
 }
