@@ -81,6 +81,20 @@ export class DefaultDiscount extends DiscountStrategy {
 	}
 }
 
+export class NewDiscount extends DiscountStrategy {
+	protected discount: number = 0;
+
+	getDiscount(cart: EcommerceShoppingCart): number {
+		const total = cart.getTotal();
+
+		if(total >= 150) {
+			this.discount = 5;
+		}
+
+		return total - (total * this.discount / 100);
+	}
+}
+
 const shoppingCart = new EcommerceShoppingCart();
 shoppingCart.addProduct({name: "savero nova", price: 200});
 shoppingCart.addProduct({name: "savero velha", price: 100});
