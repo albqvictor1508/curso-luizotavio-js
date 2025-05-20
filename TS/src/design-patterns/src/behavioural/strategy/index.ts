@@ -22,3 +22,14 @@ class Pilot {
 		this.car = car;
 	}
 }
+
+export interface EcommerceProductProtocol {
+  name: string,
+  price: number,
+}
+
+export interface EcommerceShoppingCart {
+  private products: EcommerceProductProtocol[] = [];
+
+  addProduct(...products: EcommerceProductProtocol[]): void;
+}
