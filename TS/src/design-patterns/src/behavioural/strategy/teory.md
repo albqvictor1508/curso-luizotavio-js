@@ -19,4 +19,10 @@ Definir uma família de algoritmos e encapsular cada um deles e fazê-los interc
 - Usa composição para permitir a troca de algoritmos em tempo de execução
 - Permite a criação de vários algoritmos sem a necessidade de condicionais
 
+## Applicability
+
+- quando você tiver variantes de um mesmo algoritmo e precisa trocar esses algoritmos em tempo de execução
+- quando você precisar isolar a regra de negócio do algoritmo que deve ser aplicado (SRP)
+- quando você perceber que está usando condicionais apenas para trocar o resultado final de um algoritmo
+
 
