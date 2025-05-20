@@ -31,4 +31,6 @@ Definir uma família de algoritmos e encapsular cada um deles e fazê-los interc
 - Separa a regra de negócio de algoritmos complexos
 - Aplica o OCP e o SRP
 
+## Disadvantages
+
 
