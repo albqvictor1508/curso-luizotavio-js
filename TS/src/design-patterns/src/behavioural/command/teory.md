@@ -10,3 +10,4 @@ Encapsular uma solicitação como um objeto, desta forma permitindo que você pa
 - É a versão orientada a objetos para funções de callback
 - Permite que comandos possam ser enfileirados, armazenados ou desfeitos.
 - Permite registro de alterações para que possam ser replicadas quando necessário.
+- Permite que você crie comandos compostos.
