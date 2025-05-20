@@ -28,8 +28,12 @@ export interface EcommerceProductProtocol {
   price: number,
 }
 
-export interface EcommerceShoppingCart {
+export class EcommerceShoppingCart {
   private products: EcommerceProductProtocol[] = [];
 
-  addProduct(...products: EcommerceProductProtocol[]): void;
+  addProduct(...products: EcommerceProductProtocol[]): void {
+    products.forEach(p => {
+      this.products.push(p);
+    });
+  }
 }
