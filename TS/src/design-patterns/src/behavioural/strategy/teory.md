@@ -34,4 +34,6 @@ Definir uma família de algoritmos e encapsular cada um deles e fazê-los interc
 ## Disadvantages
 
 - Pode ser complexo criar toda uma hierarquia de classes para aplicar novos algoritmos
+- você pode obter o mesmo resultado com funções caso a linguagem de programação permitir
+- O código cliente precisa conhecer as estratégias que vai usar
 
