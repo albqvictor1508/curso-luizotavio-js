@@ -54,7 +54,7 @@ export class EcommerceShoppingCart {
 }
 
 export class DiscountStrategy {
-	private discount: number = 0;
+	protected discount: number = 0;
 	
 	getDiscount(cart: EcommerceShoppingCart): number {
 		return cart.getTotal();
@@ -62,7 +62,7 @@ export class DiscountStrategy {
 }
 
 export class DefaultDiscount extends DiscountStrategy {
-	private discount: number = 0;
+	protected discount: number = 0;
 
 	getDiscount(cart: EcommerceShoppingCart): number {
 		const total = cart.getTotal();
@@ -77,7 +77,7 @@ export class DefaultDiscount extends DiscountStrategy {
 			this.discount = 30;
 		}
 
-		return cart.getTotal();
+		return total - total * (this.discount / 100);
 	}
 }
 
