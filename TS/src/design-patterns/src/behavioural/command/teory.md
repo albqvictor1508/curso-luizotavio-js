@@ -7,3 +7,4 @@ Encapsular uma solicitação como um objeto, desta forma permitindo que você pa
 ## About Command
 
 - Transforma uma solicitação (um comando) em um objeto com toda a informação necessária para sua execução
+- É a versão orientada a objetos para funções de callback
