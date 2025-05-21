@@ -4,5 +4,11 @@ export class SmartHouseLight {
 
     constructor(public name: string) {}
 
-    
+   getPowerStatus(): string {
+    return this.isOn ? "on" : "off";  
+   }
+   
+   toggle(): void {
+    this.isOn = !this.isOn;
+   } 
 }
