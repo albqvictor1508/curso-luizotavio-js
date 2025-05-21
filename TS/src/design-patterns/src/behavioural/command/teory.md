@@ -25,4 +25,6 @@ Encapsular uma solicitação como um objeto, desta forma permitindo que você pa
 
 O cliente pode usar qualquer classe concreta: "Invoker", "ConcreteCommand" e "Receiver".
 
+Objetos receiver sabem como executar todas as tarefas que são enviadas por comandos.
+
 ## Advantages
