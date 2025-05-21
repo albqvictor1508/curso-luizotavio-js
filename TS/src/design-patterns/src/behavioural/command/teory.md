@@ -34,3 +34,6 @@ Objetos receiver sabem como executar todas as tarefas que são enviadas por coma
 - Quando você quer permitir que solicitações possam ser feitas e desfeitas
 
 ## Advantages
+
+- Você pode criar comandos simples e complexos (ou até compostos de outros comandos)
+- Você pode implementar fazer e desfazer
