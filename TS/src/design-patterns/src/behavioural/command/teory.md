@@ -13,3 +13,5 @@ Encapsular uma solicitação como um objeto, desta forma permitindo que você pa
 - Permite que você crie comandos compostos.
 - Desacopla o código do objeto que faz a solicitação com o objeto que recebe a solicitação
 - Usa a composição ao invés de herança
+
+## Advantages
