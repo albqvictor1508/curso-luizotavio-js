@@ -37,3 +37,4 @@ Objetos receiver sabem como executar todas as tarefas que são enviadas por coma
 
 - Você pode criar comandos simples e complexos (ou até compostos de outros comandos)
 - Você pode implementar fazer e desfazer
+- Comandos são objetos normais, portanto podem fazer tudo que objetos normais fazem
