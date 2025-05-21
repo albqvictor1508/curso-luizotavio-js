@@ -10,5 +10,11 @@ export class SmartHouseLight {
    
    toggle(): void {
     this.isOn = !this.isOn;
-   } 
+   }
+   
+   increaseIntensity(): number {
+    if(this.intensity >= 100) return this.intensity;
+    this.intensity += 10;
+    return this.intensity;
+   }
 }
