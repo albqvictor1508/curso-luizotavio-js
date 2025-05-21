@@ -27,4 +27,9 @@ O cliente pode usar qualquer classe concreta: "Invoker", "ConcreteCommand" e "Re
 
 Objetos receiver sabem como executar todas as tarefas que são enviadas por comandos.
 
+## Applicability
+
+- Quando você quer desacoplar o objeto que envia a solicitação do objeto que a receberá
+- Quando você quer tratar um comando como um objeto (com a possibilidade de armazenar),
+
 ## Advantages
