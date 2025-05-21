@@ -14,3 +14,13 @@ export class LightPowerCommand implements SmartHouseCommand {
         this.light.toggle();
     }
 }
+
+export class LightIntensityCommand implements SmartHouseCommand {
+    execute(): void {
+        throw new Error("Method not implemented.");
+    }
+    undo(): void {
+        throw new Error("Method not implemented.");
+    }
+    
+}
