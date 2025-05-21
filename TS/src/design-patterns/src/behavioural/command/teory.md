@@ -39,3 +39,7 @@ Objetos receiver sabem como executar todas as tarefas que são enviadas por coma
 - Você pode implementar fazer e desfazer
 - Comandos são objetos normais, portanto podem fazer tudo que objetos normais fazem
 - Desacopla o objeto que envia do objeto que recebe a solicitação
+
+## Disadvantages
+
+- Muitas classes podem tornar o sistema mais complexo.
