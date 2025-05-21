@@ -21,4 +21,6 @@ Encapsular uma solicitação como um objeto, desta forma permitindo que você pa
 - Invoker: quem chama o comando.
 - Receiver: executam o comando.
 
+"Invoker" pode estar associado com um ou mais comandos, e pode delegar tarefas para esses comandos.
+
 ## Advantages
