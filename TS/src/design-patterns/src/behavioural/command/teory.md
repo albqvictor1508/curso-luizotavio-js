@@ -31,5 +31,6 @@ Objetos receiver sabem como executar todas as tarefas que são enviadas por coma
 
 - Quando você quer desacoplar o objeto que envia a solicitação do objeto que a receberá
 - Quando você quer tratar um comando como um objeto (com a possibilidade de armazenar),
+- Quando você quer permitir que solicitações possam ser feitas e desfeitas
 
 ## Advantages
