@@ -14,4 +14,8 @@ Encapsular uma solicitação como um objeto, desta forma permitindo que você pa
 - Desacopla o código do objeto que faz a solicitação com o objeto que recebe a solicitação
 - Usa a composição ao invés de herança
 
+## Structure
+
+- Command: A interface de objetos que podem executar comandos.
+- 
 ## Advantages
