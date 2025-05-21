@@ -11,5 +11,7 @@ export class SmartHouseApp {
         this.commands.get(key)?.execute();
     }
 
-
+    undoCommand(key: string): void {
+        this.commands.get(key)?.undo();
+    }
 }
