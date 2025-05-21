@@ -23,4 +23,6 @@ Encapsular uma solicitação como um objeto, desta forma permitindo que você pa
 
 "Invoker" pode estar associado com um ou mais comandos, e pode delegar tarefas para esses comandos.
 
+O cliente pode usar qualquer classe concreta: "Invoker", "ConcreteCommand" e "Receiver".
+
 ## Advantages
