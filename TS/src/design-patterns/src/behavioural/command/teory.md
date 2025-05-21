@@ -17,5 +17,5 @@ Encapsular uma solicitação como um objeto, desta forma permitindo que você pa
 ## Structure
 
 - Command: A interface de objetos que podem executar comandos.
-- 
+- ConcreteCommand: Comandos concretos podem executar solicitações simples por conta própria ou delegar tarefas para um objeto "receiver".
 ## Advantages
