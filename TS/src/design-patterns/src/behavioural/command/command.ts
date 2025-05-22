@@ -16,11 +16,12 @@ export class LightPowerCommand implements SmartHouseCommand {
 }
 
 export class LightIntensityCommand implements SmartHouseCommand {
+    constructor(private readonly light: SmartHouseLight) {}
     execute(): void {
-        throw new Error("Method not implemented.");
+        this.light.increaseIntensity();
     }
     undo(): void {
-        throw new Error("Method not implemented.");
+        this.light.decreaseIntensity();
     }
     
 }
