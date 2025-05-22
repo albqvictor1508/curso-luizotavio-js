@@ -10,7 +10,7 @@ Evita o acoplamento do remetente de uma solicitação ao seu destinatário, dand
 - É a base para outros padrões de projeto conhecidos (como Middleware usado no express)
 - Permite que um objeto **TRATE** a requisição e chame o **PROXIMO** objeto da cadeia.
 - Permite que um objeto **NÃO TRATE** a requisição e chame o **PROXIMO** objeto da cadeia.
-- Permite que um objeto
+- Permite que um objeto **TRATE** a requisição e **FINALIZE** a cadeia.
 
 
 ## Advantages
