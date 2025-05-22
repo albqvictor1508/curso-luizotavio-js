@@ -25,6 +25,12 @@
 - **-h**: facilita a leitura, basicão tb
 - **@**: ver arquivos estendidos
 
+### Other Commands
+
+- ps aux: lista todos os processos rodando
+- cat: concatena e exibe o conteudo do arquivo no terminal
+
+
 #### More
 
 - Estudar todos as permissões e usuários do Unix
