@@ -28,7 +28,8 @@
 ### Other Commands
 
 - ps aux: lista todos os processos rodando
-- cat: concatena e exibe o conteudo do arquivo no terminal
+- cat {nome-do-arquivo}: concatena e exibe o conteudo do arquivo no terminal
+
 
 
 #### More
