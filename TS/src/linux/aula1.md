@@ -9,3 +9,4 @@
 ## Navigation
 
 - cd - basicão, muda de diretório
+- ls - basicão tb, lista tudo, se passa **`-a`**, lista os arquivo escondido
