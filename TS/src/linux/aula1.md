@@ -9,7 +9,14 @@
 ## Navigation
 
 - cd - basicão, muda de diretório
-- ls - basicão tb, lista tudo, 
+- ls - basicão tb, lista tudo
+
+### Cd variations
+
+- **`.`**: seu diretório atual
+- **`..`**: diretório anterior
+- **`~`**: pasta home (no meu caso, /home/albqvictor)
+- **`-`**: volta pra sua pasta anterior, tipo um ctrl + z
 
 ### Ls variations
 
