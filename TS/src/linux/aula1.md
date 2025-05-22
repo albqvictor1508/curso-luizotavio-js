@@ -32,11 +32,18 @@
 - touch - cria arquivo, basicão
 - nano - editor de arquivo, basicão
 - tail - lista as linhas do arquivo
+- wc - conta linhas, palavras e caracteres
 
 ### Tail variations
 
 - **`-{numero}`** - mostra a quantidade de linhas que for adicionado em **`numero`**
 - **`-f`** - monitora o arquivo e atualiza sempre que o arquivo for alterado (tipo um **`-w`** ou **`--watch`**)
+
+### Wc variations
+
+- -**`-w`**: conta palavras
+- -**`-l`**: conta linhas
+- -**`-m`**: conta caracteres
 
 
 #### More
