@@ -9,4 +9,15 @@
 ## Navigation
 
 - cd - basicão, muda de diretório
-- ls - basicão tb, lista tudo, se passa **`-a`**, lista os arquivo escondido
+- ls - basicão tb, lista tudo, 
+
+### Ls variations
+
+- **`-a`**: lista os arquivo escondidos
+- **`-l`**: lista em formato longo (as permissões, número de links, tamanho em bytes, ultima atualização, todas essas tranqueira)
+- **-h**: facilita a leitura, basicão tb
+- **@**: ver arquivos estendidos
+
+#### More
+
+- Estudar todos as permissões e usuários do Unix
