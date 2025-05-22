@@ -6,7 +6,7 @@ Evita o acoplamento do remetente de uma solicitação ao seu destinatário, dand
 
 - É usado quando uma requisição precisa passar  por uma sequência de operações até ser totalmente tratada.
 - Desacopla quem envia de quem vai tratar a requisição
--
+- É muito usado com requisições HTTP.
 
 
 ## Advantages
