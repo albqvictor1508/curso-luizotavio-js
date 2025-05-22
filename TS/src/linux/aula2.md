@@ -9,5 +9,8 @@
     - **`-p`**: vai criar em modo recursivo (consigo criar um monte de pasta dentro dessa pasta)
 
     Ex.: mkdir -p salve/salve1/salve2/salve3/{salve4, salve5, salve6} -> {} indica que vão ser criadas 3 pastas dentro de salve3
+- **`rm`** - apaga
+    **-r** - recursivo (diretórios)
+    **-f** - força a ser apagado
 
 - **`dolphin`** - no meu caso, já que uso arch, é meu file manager
