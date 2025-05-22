@@ -11,6 +11,7 @@ Evita o acoplamento do remetente de uma solicitação ao seu destinatário, dand
 - Permite que um objeto **TRATE** a requisição e chame o **PROXIMO** objeto da cadeia.
 - Permite que um objeto **NÃO TRATE** a requisição e chame o **PROXIMO** objeto da cadeia.
 - Permite que um objeto **TRATE** a requisição e **FINALIZE** a cadeia.
+- O cliente pode iniciar a requisição de qualquer objeto caso necessário.
 
 
 ## Advantages
