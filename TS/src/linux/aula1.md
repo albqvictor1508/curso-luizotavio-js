@@ -36,6 +36,7 @@
 ### Tail variations
 
 - **`-{numero}`** - mostra a quantidade de linhas que for adicionado em **`numero`**
+- **`-f`** - monitora o arquivo e atualiza sempre que o arquivo for alterado (tipo um **`-w`** ou **`--watch`**)
 
 
 #### More
