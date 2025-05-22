@@ -8,4 +8,4 @@
 - **mkdir**: basicão, cria pasta
     - **`-P`**: 
 
-- 
+- **`dolphin`** - no meu caso, já que uso arch, é meu file manager
