@@ -8,7 +8,7 @@ Evita o acoplamento do remetente de uma solicitação ao seu destinatário, dand
 - Desacopla quem envia de quem vai tratar a requisição
 - É muito usado com requisições HTTP.
 - É a base para outros padrões de projeto conhecidos (como Middleware usado no express)
-- Permite que um objeto **TRATE**
+- Permite que um objeto **TRATE** a requisição e chame o **PROXIMO** objeto da cadeia.
 
 
 ## Advantages
