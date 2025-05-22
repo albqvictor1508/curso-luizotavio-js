@@ -6,6 +6,8 @@
     Obs.: Segundo o manual do cp, se tiver uma "/" no final do diretório original, cp pode copiar apenas o conteúdo do diretório e não o diretório em si (eu não vi isso ocorrer em testes)
 
 - **mkdir**: basicão, cria pasta
-    - **`-P`**: vai criar em modo recursivo (consigo criar um monte de pasta dentro dessa pasta)
+    - **`-p`**: vai criar em modo recursivo (consigo criar um monte de pasta dentro dessa pasta)
+
+    Ex.: mkdir -p salve/salve1/salve2/salve3/{salve4, salve5, salve6} -> {} indica que vão ser criadas 3 pastas dentro de salve3
 
 - **`dolphin`** - no meu caso, já que uso arch, é meu file manager
