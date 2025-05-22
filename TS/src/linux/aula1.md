@@ -29,7 +29,8 @@
 
 - ps aux: lista todos os processos rodando
 - cat {nome-do-arquivo}: concatena e exibe o conteudo do arquivo no terminal
-
+- touch - cria arquivo, basicão
+- nano - editor de arquivo, basicão
 
 
 #### More
