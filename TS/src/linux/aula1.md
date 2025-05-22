@@ -31,6 +31,11 @@
 - cat {nome-do-arquivo}: concatena e exibe o conteudo do arquivo no terminal
 - touch - cria arquivo, basicão
 - nano - editor de arquivo, basicão
+- tail - lista as linhas do arquivo
+
+### Tail variations
+
+- **`-{numero}`** - mostra a quantidade de linhas que for adicionado em **`numero`**
 
 
 #### More
